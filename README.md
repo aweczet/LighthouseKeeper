@@ -8,9 +8,9 @@ Do współtworzenia projektu należy mieć:
 - zainstalowanego Gita (https://git-scm.com/download/win - przy instalacji warto wybrać inny edytor niż vim, np. Nano)
 - zainstalowane Unity w wersji 2019.4.13f1 (do pobrania z UnityHub)
 ## Git
-Zanim nastąpi pobranie projektu należy zaakceptować zaproszenie do współtworzenia projektu. Zaproszenie przychodzi na maila i tam też trzeba potwierdzić zaproszenie.
-W celu pobrania projektu należy przejść do folderu, w którym chcemy mieć projekt (folder o nazwie LighthouseKeeper z projektem zostanie utworzony w nim automatycznie) i w nim uruchomić `git bash` (Prawy Przycisk Myszy > `git bash here`). Następnie wpisać komendę:
-`git clone https://github.com/aweczet/LighthouseKeeper.git`
+Zanim nastąpi pobranie projektu należy zaakceptować zaproszenie do współtworzenia projektu. Zaproszenie przychodzi na maila i tam też trzeba potwierdzić zaproszenie.\
+W celu pobrania projektu należy przejść do folderu, w którym chcemy mieć projekt (folder o nazwie LighthouseKeeper z projektem zostanie utworzony w nim automatycznie) i w nim uruchomić `git bash` (Prawy Przycisk Myszy > `git bash here`). Następnie wpisać komendę:\
+`git clone https://github.com/aweczet/LighthouseKeeper.git`\
 Podczas klonowania repozytorium wyskoczy okienko z logowaniem do githuba. Należy się zalogować i autoryzować gita. Dzięki temu klonowanie będzie kontynuowane, zostanie automatycznie utworzony folder z projektem i powinno to ściągnąć od razu wszystkie pliki.\
 Przydatne komendy gita:
 - `git pull` - sprawdza czy są jakieś zmiany w repozytorium i ewentualnie pobiera wszystko co się zmieniło.
