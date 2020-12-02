@@ -31,6 +31,7 @@ ehthumbs.db
 [Bb]uild
 sysinfo.txt
 *.stackdump
+<<<<<<< HEAD
 
 
 /[Ll]ibrary/
@@ -100,3 +101,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+=======
+Temp/UnityLockfile
+>>>>>>> 6b41a8977c3e741f62d6ebdf04e1cbe7ecbf9a7b
