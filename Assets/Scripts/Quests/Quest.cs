@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Klasa zawieracjąca informacje na temat pojedynczego questa oraz
+/// metodę pozwalającą na jego zakończenie (i wypisanie podkreślników)
+/// </summary>
+
 [System.Serializable]
 public class Quest
 {

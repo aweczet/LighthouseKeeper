@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.Audio;
 using System;
 
+/// <summary>
+/// Klasa odpowiadająca za odtworzenie wybranego dźwięku/melodii
+/// </summary>
+
 public class AudioManager : MonoBehaviour
 {
 	public static AudioManager instance;

@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Klasa odpowiadająca za zmianę koloru flagi. Wyjaśnia się sama w sobie
+/// </summary>
+
 public class ColorChange
 {
     private GameObject flag;

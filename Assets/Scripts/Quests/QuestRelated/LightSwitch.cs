@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Klasa odpowiadająca za przełączenie światła ?
+/// w razie pytań tą klasę pisał Marko
+/// </summary>
+
 
 public class LightSwitch
 {

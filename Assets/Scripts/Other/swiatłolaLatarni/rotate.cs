@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Klasa odpowiada za ??? Po nazwie domyślam się, że obrót latarni?
+/// Są 3 takie same klasy rotate, rotate1, rotate2
+/// w razie pytań tą klasę pisał Marko
+/// </summary>
+
 public class rotate : MonoBehaviour
 {
     // Start is called before the first frame update

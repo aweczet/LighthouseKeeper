@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Klasa zawiera informacje na temat celu questa
+/// </summary>
+
 [System.Serializable]
 public class QuestGoal
 {
@@ -14,6 +18,7 @@ public class QuestGoal
         return (currentAmmount >= requiredAmmount);
     }
 
+    // Metoda obracająca przycisk (imitacja przełączenia)
     public void FlipModel(Transform selection)
     {
         selection.transform.localScale = new Vector3(selection.transform.localScale.x * -1,
@@ -39,6 +44,7 @@ public class QuestGoal
     //}
 }
 
+// Typy questów
 public enum GoalType
 {
     press,

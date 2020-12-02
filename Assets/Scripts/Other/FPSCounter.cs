@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Klasa odpowiada za licznik FPS w prawym górnym rogu
+/// </summary>
+
 public class FPSCounter : MonoBehaviour
 {
     public Text displayText;

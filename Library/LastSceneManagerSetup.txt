@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/_Albert/Day&NightTest.unity
+- path: Assets/Scenes/Dni/Pierwszy dzien.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Klasa odpowiada za wylosowanie numeru w barometrze oraz ustawienie wskazówki
+/// (chyba) -> w razie pytań tą klasę pisał Marko
+/// </summary>
+
 public class random : MonoBehaviour
 {
     //public Text numerek;

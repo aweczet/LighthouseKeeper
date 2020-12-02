@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Klasa odpowiadajca za inicjalizację UI związanego z questami
+/// Wszystko jest robione podwójnie dlatego, że u nas skreślenie (po wykoaniu) questa
+/// polega na wyświetleniu na nazwie questa, obiektu tekstowego zaiwerającego podkreślniki
+/// </summary>
+
 public class QuestSetup
 {
     public GameObject newQuestUI;
