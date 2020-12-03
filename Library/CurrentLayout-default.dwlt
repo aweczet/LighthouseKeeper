@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 26
+  controlID: 28
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 27
+  controlID: 56
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 28
+  controlID: 57
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 477
     height: 731
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -440,20 +440,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/_Piotr
+    - Assets/Scripts/Player
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Scenes/_Piotr
+  - Assets/Scripts/Player
   m_LastFoldersGridSize: 71
   m_LastProjectPath: D:\ZUT\semestr4\IO\GIT\LighthouseKeeper
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 203}
-    m_SelectedIDs: 0e3c0000
-    m_LastClickedID: 15374
-    m_ExpandedIDs: 0000000036390000383900003a3900003c3900003e390000403900004239000044390000583900006a390000
+    scrollPos: {x: 0, y: 331}
+    m_SelectedIDs: 983c0000
+    m_LastClickedID: 15512
+    m_ExpandedIDs: 00000000ae390000b0390000b2390000b4390000b6390000b8390000ba390000bc390000be390000c0390000ea390000823c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -481,7 +481,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000036390000383900003a3900003c3900003e39000040390000423900004439000046390000
+    m_ExpandedIDs: 00000000ae390000b0390000b2390000b4390000b6390000b8390000ba390000bc390000be390000c0390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,24 +565,24 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1}
-      m_SelectedIDs: 2490ffff
-      m_LastClickedID: -28636
-      m_ExpandedIDs: 06e6ffff38edffff00efffff84f0fffff8f1ffff74f3ffff04f5ffff40fbffff21000000444900006449000076490000b24a0000bc4b0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: ec740000
+      m_LastClickedID: 29932
+      m_ExpandedIDs: 22c1fffff0c2ffff1ec7ffffe8cbffff02ccffff42cdffff60cdffff56cffffff4faffff40fbffffb6340000d6340000e8340000223500009a350000fc3600003637000022740000ec740000bc7500008e760000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: wrench
-        m_OriginalName: wrench
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -28636
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -628,9 +628,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -148.11465, y: 6.1793365, z: -2.7007933}
+    m_Target: {x: -90.59223, y: 18.73687, z: -1.5016847}
     speed: 2
-    m_Value: {x: -148.11465, y: 6.1793365, z: -2.7007933}
+    m_Value: {x: -90.59223, y: 18.73687, z: -1.5016847}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -676,20 +676,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.15488838, y: -0.6889516, z: 0.1544249, w: 0.6910219}
+    m_Target: {x: 0.15162916, y: -0.6035348, z: 0.118263245, w: 0.7738074}
     speed: 2
-    m_Value: {x: 0.15465632, y: -0.6899863, z: 0.15465683, w: 0.68998665}
+    m_Value: {x: 0.15162842, y: -0.6035319, z: 0.11826266, w: 0.77380365}
   m_Size:
-    m_Target: 34.832676
+    m_Target: 20.806322
     speed: 2
-    m_Value: 36.474007
+    m_Value: 20.806322
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1.4
-    m_SpeedNormalized: 0.7000002
+    m_Speed: 1.3
+    m_SpeedNormalized: 0.6400003
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -729,9 +729,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 532
-    width: 1213
-    height: 251
+    y: 530.4
+    width: 1058
+    height: 253
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
