@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/_Piotr/7_dzien.unity
+- path: Assets/Scenes/Dni/9_dzien.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
