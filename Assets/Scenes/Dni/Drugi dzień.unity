@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07639018, g: 0.080487706, b: 0.07264741, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.07639021, g: 0.08048771, b: 0.0726474, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17085,8 +17085,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
   sounds:
-  - name: mission_completed
-    clip: {fileID: 8300000, guid: 3732af393be24184192510cbcd4b6e6e, type: 3}
+  - name: background
+    clip: {fileID: 8300000, guid: 6fe487522614f7045b44b50bb1267203, type: 3}
     volume: 0.1
     volumeVariance: 0.1
     pitch: 1
