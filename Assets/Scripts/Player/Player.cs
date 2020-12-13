@@ -41,6 +41,9 @@ public class Player : MonoBehaviour
             {
                 questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
                 lighthouseQuestID = numberOfAllQuestes;
+                Debug.Log(quest.questName);
+                
+
             }
 
             quest.questName = questSetup.newQuestUI.GetComponent<Text>();
@@ -48,14 +51,14 @@ public class Player : MonoBehaviour
 
             if (quest.questGoal.goalType == GoalType.color)
             {
-
                 random barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<random>();
                 quest.questGoal.requiredAmmount = barometr.zmienna;
-  
             }
-            
+
             numberOfActiveQuests += quest.isActive ? 1 : 0;
             numberOfAllQuestes++;
+
+            
 
             //if (quest.isActive)
             //{
@@ -80,6 +83,7 @@ public class Player : MonoBehaviour
             //}
             //numberOfAllQuestes++;
         }
+
         if (uniqueobject != null)
             uniqueobject.SetActive(collectedUnique);
         questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
