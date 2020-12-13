@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         // Ustawienie UI questów żeby dostosowało się do ilości questów
+        
         canvas = GameObject.Find("UICanvas/QuestPanel");
         foreach (Quest quest in quests)
         {
