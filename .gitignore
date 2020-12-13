@@ -33,6 +33,7 @@ sysinfo.txt
 *.stackdump
 <<<<<<< HEAD
 
+*.meta
 [Ll]ibrary/*
 /[Ll]ibrary/
 /[Tt]emp/
