@@ -48,9 +48,10 @@ public class Player : MonoBehaviour
 
             if (quest.questGoal.goalType == GoalType.color)
             {
-                random barometr = new random();
-                barometr.liczby();
+
+                random barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<random>();
                 quest.questGoal.requiredAmmount = barometr.zmienna;
+  
             }
             
             numberOfActiveQuests += quest.isActive ? 1 : 0;

@@ -14798,6 +14798,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barometer
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14967931d2e993d4eb4bca0296e3d3d0,
+        type: 3}
+      propertyPath: m_TagString
+      value: barometr
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14967931d2e993d4eb4bca0296e3d3d0, type: 3}
 --- !u!4 &1151912193 stripped
@@ -14824,6 +14829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758330c2aac6ea54dbb3180d1c987669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  losowa: 0
   zmienna: 0
   wskazowka: {fileID: 559990061}
 --- !u!1 &1193534504

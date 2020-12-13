@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Selectable
   - light
+  - barometr
   layers:
   - Default
   - TransparentFX
