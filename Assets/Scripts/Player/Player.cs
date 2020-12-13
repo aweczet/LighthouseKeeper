@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     public Quest[] quests;
     public int numberOfActiveQuests;
 
+    public GameObject uniquepickup;
+    public GameObject uniqueobject;
+    public static bool collectedUnique = false;
+
     private QuestSetup questSetup;
     private GameObject canvas;
 
@@ -74,7 +78,8 @@ public class Player : MonoBehaviour
             //}
             //numberOfAllQuestes++;
         }
-
+        if (uniqueobject != null)
+            uniqueobject.SetActive(collectedUnique);
         questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
 
     }
@@ -85,6 +90,10 @@ public class Player : MonoBehaviour
         {
             quests[lighthouseQuestID].isActive = true;
             lightHouseQuest();            
+        }
+        if (collectedUnique == true && uniqueobject.activeSelf == false)
+        {
+            uniqueobject.SetActive(true);
         }
 
         //if (allDone)
@@ -122,6 +131,11 @@ public class Player : MonoBehaviour
     // Wciśnięcie LPM na zaznaczonym obiekcie
     public void PressedOnSelectable(GameObject item)
     {
+        if (item == uniquepickup)
+        {
+            Destroy(item);
+            collectedUnique = true;
+        }
         numberOfActiveQuests = 0;
         foreach (Quest quest in quests)
         {
