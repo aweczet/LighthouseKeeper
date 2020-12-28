@@ -11,9 +11,7 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
-    public int level;
     public Quest[] quests;
-
     public int numberOfActiveQuests;
 
     public GameObject uniquepickup;
@@ -31,7 +29,8 @@ public class Player : MonoBehaviour
     private int numberOfAllQuestes;
     private int lighthouseQuestID;
 
-    private Stack<int> loadedLevels;
+    public int level;
+    public Stack<int> loadedLevels;
     [System.NonSerialized]
     private bool initialized;
 
@@ -42,10 +41,12 @@ public class Player : MonoBehaviour
     }
 
     public void addSceneToStack(int buildIndex) {
-        Debug.Log(buildIndex);
         if (!initialized) Init();
         // Dodaje scene do Stosu
         loadedLevels.Push(buildIndex);
+        loadedLevels.Push(buildIndex);
+        level = loadedLevels.Pop();
+        Debug.Log("level "+ level);
     }
 
     void Awake()
@@ -240,8 +241,9 @@ public class Player : MonoBehaviour
     public void LoadPlayer () {
         PlayerData data = SaveSystem.LoadPlayer();
         level = data.level;
-        
         quests = data.quests;
+        loadedLevels = data.loadedLevels;
+
         // numberOfActiveQuests = data.numberOfActiveQuests;
         // uniquepickup = data.uniquepickup;
         // uniqueobject = data.uniqueobject;

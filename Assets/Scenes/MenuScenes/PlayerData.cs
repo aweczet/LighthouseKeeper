@@ -5,9 +5,13 @@ using UnityEngine;
 [System.Serializable]
 
 public class PlayerData {
-    public int level;
-    
     public Quest[] quests;
+
+    public int level;
+    public Stack<int> loadedLevels;
+
+    public float[] position; // to też być z playera z innej sceny
+
     // public int numberOfActiveQuests;
     // public GameObject uniquepickup;
     // public GameObject uniqueobject;
@@ -21,12 +25,19 @@ public class PlayerData {
     // private int numberOfAllQuestes;
     // private int lighthouseQuestID;
     
-    public float[] position; // to też musi być z playera z innej sceny
 
     public PlayerData (Player player) { // Player player
-        level = player.level;
-        
         quests = player.quests;
+        
+        level = player.level;
+        loadedLevels = player.loadedLevels;
+
+        // to musi być z playera z innej sceny
+        position = new float[3];
+        position[0] = player.transform.position.x;
+        position[1] = player.transform.position.y;
+        position[2] = player.transform.position.z;
+
         // numberOfActiveQuests = player.numberOfActiveQuests;
         // uniquepickup = player.uniquepickup;
         // uniqueobject = player.uniqueobject;
@@ -39,11 +50,5 @@ public class PlayerData {
         // allDone = player.allDone;
         // numberOfAllQuestes = player.numberOfAllQuestes;
         // lighthouseQuestID = player.lighthouseQuestID;
-
-        position = new float[3];
-        position[0] = player.transform.position.x;
-        position[1] = player.transform.position.y;
-        position[2] = player.transform.position.z;
-
     }
 }
