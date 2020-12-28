@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerData {
     public int level;
     
-    // public Quest[] quests;
+    public Quest[] quests;
     // public int numberOfActiveQuests;
     // public GameObject uniquepickup;
     // public GameObject uniqueobject;
@@ -23,10 +23,10 @@ public class PlayerData {
     
     public float[] position; // to też musi być z playera z innej sceny
 
-    public PlayerData (PlayerTemp player) { // Player player
+    public PlayerData (Player player) { // Player player
         level = player.level;
         
-        // quests = player.quests;
+        quests = player.quests;
         // numberOfActiveQuests = player.numberOfActiveQuests;
         // uniquepickup = player.uniquepickup;
         // uniqueobject = player.uniqueobject;
