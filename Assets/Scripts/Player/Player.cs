@@ -44,8 +44,7 @@ public class Player : MonoBehaviour
         if (!initialized) Init();
         // Dodaje scene do Stosu
         loadedLevels.Push(buildIndex);
-        loadedLevels.Push(buildIndex);
-        level = loadedLevels.Pop();
+        level = loadedLevels.Peek();
         Debug.Log("level "+ level);
     }
 
