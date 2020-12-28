@@ -15,8 +15,13 @@ public class DialogueManager : MonoBehaviour {
 
     public Dialogue dialogue;
 
+    public Player player;
+
     // Start is called before the first frame update
     void Start() {
+        // Dodaje scene do Stosu
+        player.addSceneToStack(SceneManager.GetActiveScene().buildIndex);
+
         sentences = new Queue<string>();
         StartDialogue(dialogue);
     }

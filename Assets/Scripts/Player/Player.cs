@@ -31,7 +31,22 @@ public class Player : MonoBehaviour
     private int numberOfAllQuestes;
     private int lighthouseQuestID;
 
-    // private Stack<int> loadedLevels;
+    private Stack<int> loadedLevels;
+    [System.NonSerialized]
+    private bool initialized;
+
+    private void Init() {
+        // Obsługa sceny na której jesteśmy
+        loadedLevels = new Stack<int>();
+        initialized = true;
+    }
+
+    public void addSceneToStack(int buildIndex) {
+        Debug.Log(buildIndex);
+        if (!initialized) Init();
+        // Dodaje scene do Stosu
+        loadedLevels.Push(buildIndex);
+    }
 
     void Awake()
     {
