@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     private int numberOfAllQuestes;
     private int lighthouseQuestID;
 
-    public int level;
+    public int level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex+1;
     public Stack<int> loadedLevels;
     [System.NonSerialized]
     private bool initialized;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         // Dodaje scene do Stosu
         loadedLevels.Push(buildIndex);
         level = loadedLevels.Peek();
-        Debug.Log("level "+ level);
+        Debug.Log("added level " + level);
     }
 
     void Awake()
@@ -127,6 +127,10 @@ public class Player : MonoBehaviour
         //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //    Debug.Log("Quests Completed");
         //}
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Menu
+        }
     }
 
     // Używane do questu lokalizacji
@@ -262,6 +266,7 @@ public class Player : MonoBehaviour
         position.z = data.position[2];
         transform.position = position;
 
+        Debug.Log("level load " + level);
         SceneManager.LoadScene(level);
     }
 }

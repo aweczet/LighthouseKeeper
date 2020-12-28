@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class rotate2 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Player player;
     public float sec = 8f;
+
+    // Start is called before the first frame update
     void Start()
     {
+        // Dodaje scene następną (dzień 4/retrospekcja) do Stosu (dlatego +1)
+        player.addSceneToStack(SceneManager.GetActiveScene().buildIndex +1);
         if (gameObject.active)
             StartCoroutine(LateCall());
     }
@@ -22,5 +26,10 @@ public class rotate2 : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector3(40f, 0, 0)*Time.deltaTime); //applying rotation.
+        
+        // nie działa
+        // if (Input.GetKeyDown(KeyCode.Escape)) {
+        //     UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Menu
+        // }
     }
 }

@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 [System.Serializable]
 
 public class PlayerData {
     public Quest[] quests;
 
-    public int level;
+    public int level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex+1;
     public Stack<int> loadedLevels;
 
     public float[] position; // to też być z playera z innej sceny
@@ -30,6 +32,7 @@ public class PlayerData {
         quests = player.quests;
         
         level = player.level;
+        Debug.Log("level PlayerData "+level);
         loadedLevels = player.loadedLevels;
 
         // to musi być z playera z innej sceny

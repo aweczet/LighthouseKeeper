@@ -13,25 +13,27 @@ public class MainMenu : MonoBehaviour
     public Player player;
     
     void Start() {
-        // Dodaje scene do Stosu
-        player.addSceneToStack(SceneManager.GetActiveScene().buildIndex);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public void ContinueGame() {
+        SceneManager.LoadScene(player.level);
     }
-    public void GoToSettingsMenu()
-    {
+
+    public void PlayGame() {
+        SceneManager.LoadScene(1);
+    }
+
+    public void GoToSettingsMenu() {
         SceneManager.LoadScene("SettingsMenu");
     }
-    public void GoToMainMenu()
-    {
+
+    public void GoToMainMenu() {
         SceneManager.LoadScene("MainMenu");
     }
    
-    public void QuitGame()
-    {
+    public void QuitGame() {
         Application.Quit();
     }
 }
