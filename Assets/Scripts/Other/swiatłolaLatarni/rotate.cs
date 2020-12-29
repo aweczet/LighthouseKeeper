@@ -13,16 +13,19 @@ public class rotate : MonoBehaviour
 {
     // Start is called before the first frame update
     public float sec = 8f;
+    int nextScene;
     void Start()
     {
         if (gameObject.active)
+        {
+            nextScene = SceneManager.GetActiveScene().buildIndex + 1;
             StartCoroutine(LateCall());
+        }
     }
     IEnumerator LateCall()
     {
         yield return new WaitForSeconds(sec);
-       
-        SceneManager.LoadScene("Drugi dzień");
+        SceneManager.LoadScene(nextScene);
     }
 
     void Update()

@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
             quests[lighthouseQuestID].isActive = true;
             lightHouseQuest();            
         }
-        if (collectedUnique == true && uniqueobject.activeSelf == false)
+        if (collectedUnique == true && uniqueobject != null && uniqueobject.activeSelf == false)
         {
             uniqueobject.SetActive(true);
         }
