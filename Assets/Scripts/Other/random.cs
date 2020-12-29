@@ -11,46 +11,50 @@ using UnityEngine.UI;
 public class random : MonoBehaviour
 {
     //public Text numerek;
-    int losowa;
+    public int losowa=0;
     public int zmienna=0;
     public Transform wskazowka;
+    int tymczasowa;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        //Debug.Log(Random.Range(1, 3));
-        losowa = Random.Range(0, -180)+90;
-        //numerek.text = " " + Random.Range(1, 3);
-        //wskazowka.eulerAngles = new Vector3(0, 0, Random.Range(0, losowa) - losowa / 2);
-        wskazowka.eulerAngles = new Vector3(0,-121, losowa);
-        //Debug.Log(losowa);
+
         
+        losowa = Random.Range(0, -180) + 90;
+        Debug.Log("Losowa: " + losowa);
+    
+        wskazowka.eulerAngles = new Vector3(0, -121, losowa);
+        liczby();
     }
+ 
     //public random()
     //{
     //    this.zmienna = zmienna;
     //}
     public void liczby()
     {
-        
+        //losowa = Random.Range(0, -180) + 90;
+        Debug.Log("Losowa w funkcji:" + losowa);
+       
         if (losowa <= 90 && losowa >= 55)
         {
             zmienna = 1;
-            Debug.Log(zmienna);
+            Debug.Log("Pierwsza zmienna" +zmienna);
         }
         else if (losowa <= 55 && losowa >= 0)
         {
             zmienna = 2;
-            Debug.Log(zmienna);
+            Debug.Log("Druga zmienna" + zmienna);
         }
         else if (losowa <= 0 && losowa >= -55)
         {
             zmienna = 3;
-            Debug.Log(zmienna);
+            Debug.Log("Trzecia zmienna" + zmienna);
         }
         else
         {
             zmienna = 4;
-            Debug.Log(zmienna);
+            Debug.Log("Czwarta zmienna" + zmienna);
         }
     }
 

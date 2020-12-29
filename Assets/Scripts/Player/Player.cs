@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 /// <summary>
 /// Klasa odpowiadająca za wszystkie informacje o graczu
@@ -28,9 +29,29 @@ public class Player : MonoBehaviour
     private int numberOfAllQuestes;
     private int lighthouseQuestID;
 
+    public int level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex+1;
+    public Stack<int> loadedLevels;
+    [System.NonSerialized]
+    private bool initialized;
+
+    private void Init() {
+        // Obsługa sceny na której jesteśmy
+        loadedLevels = new Stack<int>();
+        initialized = true;
+    }
+
+    public void addSceneToStack(int buildIndex) {
+        if (!initialized) Init();
+        // Dodaje scene do Stosu
+        loadedLevels.Push(buildIndex);
+        level = loadedLevels.Peek();
+        Debug.Log("added level " + level);
+    }
+
     void Awake()
     {
         // Ustawienie UI questów żeby dostosowało się do ilości questów
+        
         canvas = GameObject.Find("UICanvas/QuestPanel");
         foreach (Quest quest in quests)
         {
@@ -40,6 +61,9 @@ public class Player : MonoBehaviour
             {
                 questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
                 lighthouseQuestID = numberOfAllQuestes;
+                Debug.Log(quest.questName);
+                
+
             }
 
             quest.questName = questSetup.newQuestUI.GetComponent<Text>();
@@ -47,13 +71,14 @@ public class Player : MonoBehaviour
 
             if (quest.questGoal.goalType == GoalType.color)
             {
-                random barometr = new random();
-                barometr.liczby();
+                random barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<random>();
                 quest.questGoal.requiredAmmount = barometr.zmienna;
             }
-            
+
             numberOfActiveQuests += quest.isActive ? 1 : 0;
             numberOfAllQuestes++;
+
+            
 
             //if (quest.isActive)
             //{
@@ -78,6 +103,7 @@ public class Player : MonoBehaviour
             //}
             //numberOfAllQuestes++;
         }
+
         if (uniqueobject != null)
             uniqueobject.SetActive(collectedUnique);
         questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
@@ -101,6 +127,10 @@ public class Player : MonoBehaviour
         //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //    Debug.Log("Quests Completed");
         //}
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Menu
+        }
     }
 
     // Używane do questu lokalizacji
@@ -205,5 +235,38 @@ public class Player : MonoBehaviour
         questSetup.SetCanvasPosition(canvas, numberOfAllQuestes);
         questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
         numberOfActiveQuests++;
+    }
+
+    public void SavePlayer () {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer () {
+        PlayerData data = SaveSystem.LoadPlayer();
+        level = data.level;
+        quests = data.quests;
+        loadedLevels = data.loadedLevels;
+
+        // numberOfActiveQuests = data.numberOfActiveQuests;
+        // uniquepickup = data.uniquepickup;
+        // uniqueobject = data.uniqueobject;
+        // collectedUnique = data.collectedUnique;
+        // questSetup = data.questSetup;
+        // canvas = data.canvas;
+        // lightSwitch = data.lightSwitch;
+        // colorChange = data.colorChange;
+        // barometr = data.barometr;
+        // allDone = data.allDone;
+        // numberOfAllQuestes = data.numberOfAllQuestes;
+        // lighthouseQuestID = data.lighthouseQuestID;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+
+        Debug.Log("level load " + level);
+        SceneManager.LoadScene(level);
     }
 }

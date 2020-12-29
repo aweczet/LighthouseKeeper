@@ -15,8 +15,13 @@ public class DialogueManager : MonoBehaviour {
 
     public Dialogue dialogue;
 
+    public Player player;
+
     // Start is called before the first frame update
     void Start() {
+        // Dodaje scene do Stosu
+        player.addSceneToStack(SceneManager.GetActiveScene().buildIndex);
+
         sentences = new Queue<string>();
         StartDialogue(dialogue);
     }
@@ -46,6 +51,12 @@ public class DialogueManager : MonoBehaviour {
         StartCoroutine(TypeSentence(sentence));
     }
 
+    void Update () {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Menu
+        }
+    }
+
     IEnumerator TypeSentence (string sentence) {
         dialogueText.text = "";
         foreach(char letter in sentence.ToCharArray()) {
@@ -56,6 +67,8 @@ public class DialogueManager : MonoBehaviour {
 
     void EndDialogue() {
         animator.SetBool("IsOpen", false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // Dodaje następną scene (dzień 1) do Stosu (dlatego +1)
+        player.addSceneToStack(SceneManager.GetActiveScene().buildIndex +1);
+        SceneManager.LoadScene(player.level);
     }
 }
