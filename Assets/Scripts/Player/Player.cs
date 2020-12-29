@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     private int numberOfAllQuestes;
     private int lighthouseQuestID;
 
-    public int level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex+1;
+    public int level;
     public Stack<int> loadedLevels;
     [System.NonSerialized]
     private bool initialized;
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         // Ustawienie UI questów żeby dostosowało się do ilości questów
-        
+        level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
         canvas = GameObject.Find("UICanvas/QuestPanel");
         foreach (Quest quest in quests)
         {

@@ -7536,6 +7536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532e4fab7ba79fb48b8bd77386b3b23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 791647996}
   sec: 5
 --- !u!1001 &597148539
 PrefabInstance:
@@ -8262,6 +8263,7 @@ MonoBehaviour:
   numberOfActiveQuests: 0
   uniquepickup: {fileID: 0}
   uniqueobject: {fileID: 0}
+  level: 0
 --- !u!1001 &811965743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14755,6 +14757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758330c2aac6ea54dbb3180d1c987669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  losowa: 0
   zmienna: 0
   wskazowka: {fileID: 559990061}
 --- !u!1 &1193534504

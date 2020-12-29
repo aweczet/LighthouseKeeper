@@ -13,20 +13,22 @@ public class rotate : MonoBehaviour
 {
     public Player player;
     public float sec = 8f;
-
+    int nextScene;
     // Start is called before the first frame update
     void Start()
     {
         // Dodaje scene następną (dzień 2) do Stosu (dlatego +1)
         player.addSceneToStack(SceneManager.GetActiveScene().buildIndex +1);
         if (gameObject.active)
+        {
+            nextScene = SceneManager.GetActiveScene().buildIndex + 1;
             StartCoroutine(LateCall());
+        }
     }
     IEnumerator LateCall()
     {
         yield return new WaitForSeconds(sec);
-       
-        SceneManager.LoadScene("Drugi dzień");
+        SceneManager.LoadScene(nextScene);
     }
 
     void Update()
