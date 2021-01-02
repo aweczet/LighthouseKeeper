@@ -13547,6 +13547,8 @@ GameObject:
   - component: {fileID: 856752741}
   - component: {fileID: 856752740}
   - component: {fileID: 856752739}
+  - component: {fileID: 856752744}
+  - component: {fileID: 856752745}
   m_Layer: 0
   m_Name: DoorHolder
   m_TagString: Untagged
@@ -13564,7 +13566,7 @@ Animator:
   m_GameObject: {fileID: 856752738}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bfa8e6ff4f6b0dd41b5007dfd3198205, type: 2}
+  m_Controller: {fileID: 9100000, guid: cfa4e015afdef5d44afcf523e37cfece, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13582,7 +13584,7 @@ BoxCollider:
   m_GameObject: {fileID: 856752738}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -13648,6 +13650,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856752744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856752738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605f9567252283d4a8926b99add0160c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &856752745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856752738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.313095, y: 6.9863033, z: 5.9651413}
+  m_Center: {x: 0.3609848, y: 2.9931517, z: -2.4825706}
 --- !u!1 &865087132
 GameObject:
   m_ObjectHideFlags: 0
@@ -17718,6 +17745,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1897421238}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1897421240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 30b2e48f03c24084c9d58975c95b860e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1897421238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1897421241
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897421240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0009557, y: 4.790675, z: 7.365511}
+  m_Center: {x: 0.51251787, y: 1.3294789, z: 3.8392673}
 --- !u!1 &1919773935
 GameObject:
   m_ObjectHideFlags: 0
