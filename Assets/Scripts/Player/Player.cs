@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
 
     public int level;
     public Stack<int> loadedLevels;
+    public GameObject monologbox;
     [System.NonSerialized]
     private bool initialized;
 
@@ -148,6 +149,7 @@ public class Player : MonoBehaviour
                         if (quest.questGoal.IsReached())
                         {
                             quest.completed();
+                            StartCoroutine(quest.questGoal.showMonolog(monologbox));
                             numberOfActiveQuests--;
                         }
                         Destroy(questItem.transform.parent.gameObject);
@@ -200,7 +202,10 @@ public class Player : MonoBehaviour
                                 colorChange = new ColorChange(quest.questItem[0], quest.questGoal.currentAmmount);
                                 //quest.questGoal.requiredAmmount = barometr.zmienna;
                                 break;
-
+                            case GoalType.talk:
+                                quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
+                                item.GetComponent<RetrospectionTalk>().onMouseDown();
+                                break;
                             default:
                                 break;
                         }
@@ -210,6 +215,7 @@ public class Player : MonoBehaviour
                         if (quest.questGoal.IsReached())
                         {
                             quest.completed();
+                            StartCoroutine(quest.questGoal.showMonolog(monologbox));
                             numberOfActiveQuests--;
                         }
                     }

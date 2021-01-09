@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// Klasa zawiera informacje na temat celu questa
@@ -12,6 +13,7 @@ public class QuestGoal
     public GoalType goalType;
     public int requiredAmmount;
     public int currentAmmount;
+    public string monolog;
 
     public bool IsReached()
     {
@@ -25,6 +27,20 @@ public class QuestGoal
                         selection.transform.localScale.y,
                         selection.transform.localScale.z * -1);
     }
+
+    public IEnumerator showMonolog(GameObject textbg){
+        Debug.Log("1");
+        if(monolog != ""){
+            TextMeshProUGUI text = textbg.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+            text.SetText(monolog);
+            textbg.SetActive(true);
+            yield return new WaitForSeconds(5);
+            textbg.SetActive(false);
+            text.SetText("");
+        }
+    }
+
+    
 
     //public void objectPressed()
     //{
@@ -52,5 +68,6 @@ public enum GoalType
     light,
     color,
     area,
+    talk,
     lighthouse
 }
