@@ -32,7 +32,7 @@ public class RetrospectionTalk : MonoBehaviour
         textbox.SetActive(true);
         foreach(string dialog in dialogi){
             text.SetText(dialog);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.3f);
             yield return StartCoroutine(WaitForClick());
             
         }
