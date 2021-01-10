@@ -8190,6 +8190,7 @@ GameObject:
   - component: {fileID: 791647993}
   - component: {fileID: 791647996}
   - component: {fileID: 791647995}
+  - component: {fileID: 791647997}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Player
@@ -8275,6 +8276,7 @@ MonoBehaviour:
       goalType: 1
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 326582797}
   - isActive: 1
@@ -8285,6 +8287,7 @@ MonoBehaviour:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 884580559}
   - isActive: 1
@@ -8295,6 +8298,7 @@ MonoBehaviour:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 242442013}
   - isActive: 1
@@ -8305,6 +8309,7 @@ MonoBehaviour:
       goalType: 3
       requiredAmmount: 0
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 1891143282}
     - {fileID: 187747279}
@@ -8316,6 +8321,7 @@ MonoBehaviour:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 1485238383}
   - isActive: 0
@@ -8326,6 +8332,7 @@ MonoBehaviour:
       goalType: 5
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 583457826}
     - {fileID: 2034926817}
@@ -8333,6 +8340,27 @@ MonoBehaviour:
   uniquepickup: {fileID: 0}
   uniqueobject: {fileID: 2142941661}
   level: 0
+  monologbox: {fileID: 0}
+--- !u!114 &791647997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791647992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcaef84a9ed82cd489c5a252476c83d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 00000000
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  items: []
+  info: {fileID: 0}
 --- !u!1001 &811965743
 PrefabInstance:
   m_ObjectHideFlags: 0

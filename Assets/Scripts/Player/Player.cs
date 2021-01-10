@@ -129,9 +129,9 @@ public class Player : MonoBehaviour
         //    Debug.Log("Quests Completed");
         //}
 
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Menu
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape)) {
+        //    UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Menu
+        //}
     }
 
     // Używane do questu lokalizacji
