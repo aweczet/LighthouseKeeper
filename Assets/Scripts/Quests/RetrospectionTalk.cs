@@ -46,6 +46,7 @@ public class RetrospectionTalk : MonoBehaviour
                 inventory.isFull[i] = true;
                 GameObject uiitem = Instantiate(key, inventory.slots[i].transform, false);
                 uiitem.SetActive(true);
+                inventory.items[i] = GameObject.Find("First Person Player/HeldItem/key");
                 break;
             }
         }
