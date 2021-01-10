@@ -8764,7 +8764,7 @@ MonoBehaviour:
       goalType: 2
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: "\u015Awieci XD"
+      monolog: "Lampka dzia\u0142a."
     questItem:
     - {fileID: 302202853}
     - {fileID: 879288407}
