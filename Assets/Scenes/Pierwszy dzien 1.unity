@@ -7407,6 +7407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532e4fab7ba79fb48b8bd77386b3b23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   sec: 5
 --- !u!1001 &597148539
 PrefabInstance:
@@ -8109,6 +8110,7 @@ MonoBehaviour:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: blabla
     questItem:
     - {fileID: 242442013}
   - isActive: 1
@@ -8119,6 +8121,7 @@ MonoBehaviour:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 43811242}
   - isActive: 1
@@ -8129,6 +8132,7 @@ MonoBehaviour:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: Fantastyczne miesjce do zycia
     questItem:
     - {fileID: 884580559}
   - isActive: 1
@@ -8139,6 +8143,7 @@ MonoBehaviour:
       goalType: 1
       requiredAmmount: 3
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 1831825014}
     - {fileID: 1403354347}
@@ -8151,6 +8156,7 @@ MonoBehaviour:
       goalType: 2
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 302202853}
     - {fileID: 879288407}
@@ -8162,12 +8168,15 @@ MonoBehaviour:
       goalType: 5
       requiredAmmount: 1
       currentAmmount: 0
+      monolog: 
     questItem:
     - {fileID: 583457826}
     - {fileID: 2034926817}
   numberOfActiveQuests: 0
   uniquepickup: {fileID: 2138503244}
   uniqueobject: {fileID: 0}
+  level: 0
+  monologbox: {fileID: 0}
 --- !u!1001 &811965743
 PrefabInstance:
   m_ObjectHideFlags: 0
