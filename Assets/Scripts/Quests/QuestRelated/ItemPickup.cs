@@ -8,6 +8,7 @@ public class ItemPickup : MonoBehaviour
 {
     private PlayerInventory inventory;
     public GameObject itemButton;
+    public string itemTag;
 
     private void Start() {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
@@ -19,6 +20,7 @@ public class ItemPickup : MonoBehaviour
                 GameObject uiitem = Instantiate(itemButton, inventory.slots[i].transform, false);
                 uiitem.SetActive(true);
                 inventory.items[i] = GameObject.Find("First Person Player/HeldItem/"+gameObject.name);
+                inventory.itemTag[i] = itemTag;
                 break;
             }
         }
