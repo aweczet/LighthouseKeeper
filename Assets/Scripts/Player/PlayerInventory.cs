@@ -10,10 +10,11 @@ public class PlayerInventory : MonoBehaviour
     public bool[] isFull;
     public GameObject[] slots;
     public GameObject[] items;
+    public string[] itemTag;
     public GameObject info;
 
-    private bool isSthInHand = false;
-    private int it = 0;
+    public bool isActive = false;
+    public int activeItemID = 0;
 
     /*private void Update() {
         if (Input.GetKey(KeyCode.Tab))
@@ -24,25 +25,26 @@ public class PlayerInventory : MonoBehaviour
 
     private void Update(){
         if(Input.GetKeyUp(KeyCode.Tab) && !isEqEmpty()){
-            if(isSthInHand){
-                for(int i = it+1; i < isFull.Length; i++){
+            if(isActive){
+                for(int i = activeItemID+1; i < isFull.Length; i++){
                     if(isFull[i]){
-                        items[it].SetActive(false);
+                        items[activeItemID].SetActive(false);
                         items[i].SetActive(true);
-                        it = i;
+                        activeItemID = i;
                         return;
                     }
                 }
-                items[it].SetActive(false);
-                it = 0;
-                isSthInHand = false;
+                items[activeItemID].SetActive(false);
+                activeItemID = 0;
+                isActive = false;
             }
             else{
-                for(int i = it; i < isFull.Length; i++){
+                activeItemID = 0;
+                for(int i = activeItemID; i < isFull.Length; i++){
                     if(isFull[i]){
                         items[i].SetActive(true);
-                        it = i;
-                        isSthInHand = true;
+                        activeItemID = i;
+                        isActive = true;
                         break;
                     }
                 }
