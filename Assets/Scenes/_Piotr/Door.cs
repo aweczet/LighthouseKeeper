@@ -7,7 +7,9 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
 
     private Animator animator;
-    
+    bool enter = false;
+
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -23,20 +25,26 @@ public class Door : MonoBehaviour
         animator.SetBool("isOpen", false);
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        OpenDoor();
+        enter = true;    
+        //OpenDoor();
+             
     }
-
 
     private void OnTriggerExit(Collider other)
     {
+        enter = false;
         CloseDoor();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0) && enter)
+        {
+            OpenDoor();
+
+        }
     }
 }
