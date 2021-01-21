@@ -5,7 +5,8 @@ using UnityEngine;
 public class monolog_animacja : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public Animator animator;
+    void Awake()
     { 
         StartCoroutine(LateCall());
     }
@@ -15,6 +16,6 @@ public class monolog_animacja : MonoBehaviour
     {
         Animator anim = gameObject.GetComponent<Animator>();
         yield return new WaitForSeconds(3);
-        anim.Play("fade_out_monolog");
+        anim.SetBool("fade_out_monolog",true);
     }
 }

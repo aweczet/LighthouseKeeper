@@ -612,7 +612,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70469269}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 93271b8c1fa280447b569bf5c1752d9f, type: 2}
   m_CullingMode: 0
@@ -635,6 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ccf2d8b1ae6fcd45af93dd75be08771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 70469273}
 --- !u!1001 &71254716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9135,8 +9136,6 @@ MonoBehaviour:
     - {fileID: 583457826}
     - {fileID: 2034926817}
   numberOfActiveQuests: 0
-  uniquepickup: {fileID: 2138503244}
-  uniqueobject: {fileID: 0}
   level: 0
   monologbox: {fileID: 70469269}
 --- !u!114 &791647997
@@ -20123,12 +20122,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d30a2c86524b6845b48f179416bd747, type: 3}
---- !u!1 &2138503244 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2309738419288812629, guid: 6d30a2c86524b6845b48f179416bd747,
-    type: 3}
-  m_PrefabInstance: {fileID: 2138503243}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543450651697872009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd3bc51ab1140bf489eae1bd2e9f9f02,
