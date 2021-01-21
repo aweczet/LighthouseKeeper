@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07639021, g: 0.08048771, b: 0.0726474, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.07639018, g: 0.080487706, b: 0.07264741, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1717,6 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 20880345}
+  itemTag: 
 --- !u!65 &300225982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1878,6 +1879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1682133013}
+  itemTag: 
 --- !u!1 &333630094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,6 +3028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 533212398}
+  itemTag: 
 --- !u!65 &543671378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8781,8 +8784,6 @@ MonoBehaviour:
     - {fileID: 583457826}
     - {fileID: 2034926817}
   numberOfActiveQuests: 0
-  uniquepickup: {fileID: 2138503244}
-  uniqueobject: {fileID: 0}
   level: 0
   monologbox: {fileID: 1360590408}
 --- !u!114 &791647997
@@ -8808,7 +8809,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  itemTag: []
   info: {fileID: 1425898051}
+  isActive: 0
+  activeItemID: 0
 --- !u!1001 &811965743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15693,6 +15697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 20880345}
+  itemTag: 
 --- !u!114 &1403354351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17628,6 +17633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 533212398}
+  itemTag: 
 --- !u!114 &1831825018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18146,6 +18152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1682133013}
+  itemTag: 
 --- !u!114 &1900954488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24277,7 +24284,7 @@ PrefabInstance:
     - target: {fileID: 2309738419288812629, guid: 6d30a2c86524b6845b48f179416bd747,
         type: 3}
       propertyPath: m_Name
-      value: Switch
+      value: Unique1
       objectReference: {fileID: 0}
     - target: {fileID: 3118186897209849583, guid: 6d30a2c86524b6845b48f179416bd747,
         type: 3}
@@ -24342,6 +24349,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2138503243}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2138503245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138503244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14376b71db007c344999435571b0cc62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniquepickup: {fileID: 2138503244}
+  uniqueobject: {fileID: 0}
 --- !u!4 &543450651697872009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd3bc51ab1140bf489eae1bd2e9f9f02,
