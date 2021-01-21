@@ -14,9 +14,7 @@ public class Player : MonoBehaviour
     public Quest[] quests;
     public int numberOfActiveQuests;
 
-    public GameObject uniquepickup;
-    public GameObject uniqueobject;
-    public static bool collectedUnique = false;
+    public static bool collected_1 = false;
 
     private QuestSetup questSetup;
     private GameObject canvas;
@@ -105,25 +103,17 @@ public class Player : MonoBehaviour
             //}
             //numberOfAllQuestes++;
         }
-
-        if (uniqueobject != null)
-            uniqueobject.SetActive(collectedUnique);
         questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
-
     }
+
     private void Update()
     {
         // W przypadku gdy skończymy wszystkie questy to dodawany jest quest latarni
-        if(numberOfActiveQuests == 0)
+        if (numberOfActiveQuests == 0)
         {
             quests[lighthouseQuestID].isActive = true;
-            lightHouseQuest();            
+            lightHouseQuest();
         }
-        if (collectedUnique == true && uniqueobject != null && uniqueobject.activeSelf == false)
-        {
-            uniqueobject.SetActive(true);
-        }
-
         //if (allDone)
         //{
         //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -229,11 +219,6 @@ public class Player : MonoBehaviour
                     }
                 }
             }
-        }
-        if (item == uniquepickup)
-        {
-            Destroy(item);
-            collectedUnique = true;
         }
     }
     // Dodanie questu latarni do listy w ui
