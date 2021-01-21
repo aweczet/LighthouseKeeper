@@ -25,26 +25,26 @@ public class Door : MonoBehaviour
         animator.SetBool("isOpen", false);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        enter = true;    
-        //OpenDoor();
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    enter = true;    
+    //    //OpenDoor();
              
-    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        enter = false;
-        CloseDoor();
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    enter = false;
+    //    CloseDoor();
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && enter)
-        {
-            OpenDoor();
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(0) && enter)
+    //    {
+    //        OpenDoor();
 
-        }
-    }
+    //    }
+    //}
 }
