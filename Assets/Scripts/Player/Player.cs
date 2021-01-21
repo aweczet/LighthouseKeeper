@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     [System.NonSerialized]
     private bool initialized;
 
+
     private void Init() {
         // Obsługa sceny na której jesteśmy
         loadedLevels = new Stack<int>();
@@ -163,11 +164,6 @@ public class Player : MonoBehaviour
     // Wciśnięcie LPM na zaznaczonym obiekcie
     public void PressedOnSelectable(GameObject item)
     {
-        if (item == uniquepickup)
-        {
-            Destroy(item);
-            collectedUnique = true;
-        }
         numberOfActiveQuests = 0;
         foreach (Quest quest in quests)
         {
@@ -233,6 +229,11 @@ public class Player : MonoBehaviour
                     }
                 }
             }
+        }
+        if (item == uniquepickup)
+        {
+            Destroy(item);
+            collectedUnique = true;
         }
     }
     // Dodanie questu latarni do listy w ui
