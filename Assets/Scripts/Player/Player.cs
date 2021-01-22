@@ -14,7 +14,9 @@ public class Player : MonoBehaviour
     public Quest[] quests;
     public int numberOfActiveQuests;
 
-    public static bool collected_1 = false;
+    public static bool unique_collected_1 = false;
+    public static bool unique_collected_2 = false;
+    public static bool unique_collected_3 = false;
 
     private QuestSetup questSetup;
     private GameObject canvas;
