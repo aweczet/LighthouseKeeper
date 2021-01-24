@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/_Maciej/2_dzien.unity
     guid: 0641f85fbfa6bd642a7ea864f3e19fcc
   - enabled: 1
+    path: Assets/Scenes/_Maciej/3_dzien.unity
+    guid: 6170802b642c71642a31c1de5a5b3413
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/RETROSPEKCJA 1.unity
+    guid: 8c7286544139fe148aaca1e7d4740cd3
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/4_dzien.unity
+    guid: b381d338fb18c03499f5ccb026fade3f
+  - enabled: 1
     path: "Assets/Scenes/Dni/old_days/Drugi dzie\u0144.unity"
     guid: e0458ead9e2d9544b97172335dfd6698
   - enabled: 0
