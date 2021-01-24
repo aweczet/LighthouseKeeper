@@ -18,7 +18,7 @@ public class rotate : MonoBehaviour
     void Start()
     {
         // Dodaje scene następną (dzień 2) do Stosu (dlatego +1)
-        player.addSceneToStack(SceneManager.GetActiveScene().buildIndex +1);
+        //player.addSceneToStack(SceneManager.GetActiveScene().buildIndex +1);
         if (gameObject.active)
         {
             nextScene = SceneManager.GetActiveScene().buildIndex + 1;

@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue.unity
     guid: 64e6126c62026ef4fba21eec256c013c
   - enabled: 1
-    path: Assets/Scenes/Dni/Pierwszy dzien.unity
-    guid: ebd8331d267b4604db115ce79f34eb6c
+    path: Assets/Scenes/_Maciej/1_dzien.unity
+    guid: c203cfe4046bb3f47a1439aafe49f7f2
   - enabled: 1
-    path: "Assets/Scenes/Dni/Drugi dzie\u0144.unity"
+    path: Assets/Scenes/_Maciej/2_dzien.unity
+    guid: 0641f85fbfa6bd642a7ea864f3e19fcc
+  - enabled: 1
+    path: "Assets/Scenes/Dni/old_days/Drugi dzie\u0144.unity"
     guid: e0458ead9e2d9544b97172335dfd6698
-  - enabled: 1
-    path: "Assets/Scenes/Dni/Trzeci dzie\u0144.unity"
-    guid: e1ffe6bee9380cc4aa3cec706d496522
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
