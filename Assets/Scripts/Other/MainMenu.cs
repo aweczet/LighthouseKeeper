@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public Player player;
+    public PlayerData player;
     
     void Start() {
         Cursor.visible = true;
@@ -18,6 +18,8 @@ public class MainMenu : MonoBehaviour
     }
 
     public void ContinueGame() {
+        player = SaveSystem.LoadPlayer();
+        Debug.Log("MainManu.cs lvl: " + player.level);
         SceneManager.LoadScene(player.level);
     }
 

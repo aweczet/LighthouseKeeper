@@ -14,8 +14,11 @@ public class Quest
     public bool isActive = true;
     public string title;
 
-    [HideInInspector] public Text questName;
-    [HideInInspector] public Text strike;
+    // [HideInInspector] public Text questName;
+    // [HideInInspector] public Text strike;
+
+    public Text questName;
+    public Text strike;
 
     //public Light swiatlo;
     public QuestGoal questGoal;

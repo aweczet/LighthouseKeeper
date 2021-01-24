@@ -32,7 +32,6 @@ public class PlayerData {
         quests = player.quests;
         
         level = player.level;
-        Debug.Log("level PlayerData "+level);
         loadedLevels = player.loadedLevels;
 
         // to musi być z playera z innej sceny

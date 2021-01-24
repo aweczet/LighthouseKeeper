@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
         questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
     }
 
-    private void Update()
+    public void Update()
     {
         // W przypadku gdy skończymy wszystkie questy to dodawany jest quest latarni
         if (numberOfActiveQuests == 0)
@@ -122,9 +122,13 @@ public class Player : MonoBehaviour
         //    Debug.Log("Quests Completed");
         //}
 
-        //if (Input.GetKeyDown(KeyCode.Escape)) {
-        //    UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Menu
-        //}
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Debug.Log("Przed esc lvl był: " + level);
+
+            SavePlayer();
+            Debug.Log("tego już nie pokazuje i menu też nie (menu wywoływane linijkę niżej).");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Menu
+        }
     }
 
     // Używane do questu lokalizacji
