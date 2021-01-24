@@ -194,6 +194,7 @@ public class Player : MonoBehaviour
                                 quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 item.GetComponent<RetrospectionTalk>().onMouseDown();
                                 break;
+
                             default:
                                 break;
                         }

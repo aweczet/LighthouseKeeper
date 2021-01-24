@@ -819,8 +819,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: lamp (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 903803b6fbf663740b63fd054ef4b9d0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Selectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 903803b6fbf663740b63fd054ef4b9d0, type: 3}
+--- !u!1 &264294485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 903803b6fbf663740b63fd054ef4b9d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 264294484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &264294486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264294485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.922, b: 0.475, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!64 &264294488
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264294485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3955282482629499392, guid: 903803b6fbf663740b63fd054ef4b9d0, type: 3}
 --- !u!1 &272793454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,7 +2085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &539846339
 Transform:
   m_ObjectHideFlags: 0
@@ -7732,16 +7775,17 @@ MonoBehaviour:
     questItem:
     - {fileID: 982389832}
   - isActive: 0
-    title: "Wr\xF3\u0107 do pracy"
+    title: "Wymie\u0144 lampe"
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
-      goalType: 4
+      goalType: 7
       requiredAmmount: 1
       currentAmmount: 0
       monolog: "Znowu moge pracowa\u0107"
     questItem:
-    - {fileID: 1574466249}
+    - {fileID: 2058248006}
+    - {fileID: 264294485}
   numberOfActiveQuests: 0
   level: 0
   monologbox: {fileID: 1534724034}
@@ -9852,12 +9896,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1574466249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6201773461360807585, guid: 992dfa869f7a63c4b908c951a2e8c9d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 985674827}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1612832183
 GameObject:
   m_ObjectHideFlags: 0
@@ -15535,13 +15573,14 @@ GameObject:
   - component: {fileID: 2058248007}
   - component: {fileID: 2058248009}
   - component: {fileID: 2058248008}
+  - component: {fileID: 2058248010}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2058248007
 Transform:
   m_ObjectHideFlags: 0
@@ -15636,6 +15675,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2058248010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058248006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc64af16dada10a47b2dc34ecc5b2548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2073232028
 PrefabInstance:
   m_ObjectHideFlags: 0
