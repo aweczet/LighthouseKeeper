@@ -17,11 +17,15 @@ public class Quest
     // [HideInInspector] public Text questName;
     // [HideInInspector] public Text strike;
 
+    [System.NonSerialized]
     public Text questName;
+    [System.NonSerialized]
     public Text strike;
 
     //public Light swiatlo;
     public QuestGoal questGoal;
+    
+    [System.NonSerialized]
     public GameObject[] questItem;
     
     public void completed()

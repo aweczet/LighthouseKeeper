@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 
 public class PlayerData {
+    // [System.NonSerialized]
+
     public Quest[] quests;
 
     public int level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex+1;
