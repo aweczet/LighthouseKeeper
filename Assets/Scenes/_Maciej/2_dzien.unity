@@ -10375,7 +10375,7 @@ MonoBehaviour:
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
-      goalType: 6
+      goalType: 7
       requiredAmmount: 1
       currentAmmount: 0
       monolog: 

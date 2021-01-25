@@ -22,7 +22,7 @@ public class lightOff : MonoBehaviour
             light.SetActive(false);
         }
         
-        if (gameObject.active && Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             nextScene = SceneManager.GetActiveScene().buildIndex + 1;
             SceneManager.LoadScene(nextScene);

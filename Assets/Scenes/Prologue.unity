@@ -826,7 +826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1601833038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,16 +834,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601833037}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b0fe49dff4358a47b023e4bcd1ad1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quests: []
   numberOfActiveQuests: 0
-  uniquepickup: {fileID: 0}
-  uniqueobject: {fileID: 0}
   level: 1
+  monologbox: {fileID: 0}
 --- !u!4 &1601833039
 Transform:
   m_ObjectHideFlags: 0

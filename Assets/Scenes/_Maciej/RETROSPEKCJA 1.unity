@@ -15574,13 +15574,14 @@ GameObject:
   - component: {fileID: 2058248009}
   - component: {fileID: 2058248008}
   - component: {fileID: 2058248010}
+  - component: {fileID: 2058248011}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2058248007
 Transform:
   m_ObjectHideFlags: 0
@@ -15687,6 +15688,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc64af16dada10a47b2dc34ecc5b2548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2058248011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058248006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9106a5d13c7b94f98d3de1209e15fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 2058248006}
 --- !u!1001 &2073232028
 PrefabInstance:
   m_ObjectHideFlags: 0
