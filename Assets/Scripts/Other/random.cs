@@ -18,8 +18,6 @@ public class random : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-
-        
         losowa = Random.Range(0, -180) + 90;
         Debug.Log("Losowa: " + losowa);
     

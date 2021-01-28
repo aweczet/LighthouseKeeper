@@ -186,10 +186,10 @@ public class Player : MonoBehaviour
                                 lightSwitch = new LightSwitch(quest.questItem[0]);
                                 break;
 
-                            case GoalType.color:
-                                colorChange = new ColorChange(quest.questItem[0], quest.questGoal.currentAmmount);
-                                //quest.questGoal.requiredAmmount = barometr.zmienna;
-                                break;
+                            // case GoalType.color:
+                            //     colorChange = new ColorChange(quest.questItem[0], quest.questGoal.currentAmmount);
+                            //     //quest.questGoal.requiredAmmount = barometr.zmienna;
+                            //     break;
                             case GoalType.talk:
                                 quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 item.GetComponent<RetrospectionTalk>().onMouseDown();

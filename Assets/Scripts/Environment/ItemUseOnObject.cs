@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class ItemUseOnObject : MonoBehaviour
@@ -26,6 +28,26 @@ public class ItemUseOnObject : MonoBehaviour
                         playereq.itemTag[playereq.activeItemID] = "";
                         playereq.isActive = false;
                         break;
+                    case objectType.flag_setup:
+                        random barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<random>();
+
+                        String holdFlagId = playereq.items[playereq.activeItemID].gameObject.name;
+                        holdFlagId = holdFlagId.Substring(holdFlagId.Length - 1);
+
+                        if (barometr.zmienna == Int32.Parse(holdFlagId))
+                        {
+                            GameObject mainflag = GameObject.Find("main_flag/Flag");
+                            Debug.Log(mainflag);
+                            ColorChange flagMat = new ColorChange(mainflag, Int32.Parse(holdFlagId) - 1);
+                            
+                            playereq.isFull[playereq.activeItemID] = false;
+                            playereq.items[playereq.activeItemID].SetActive(false);
+                            playereq.items[playereq.activeItemID] = null;
+                            playereq.itemTag[playereq.activeItemID] = "";
+                            playereq.isActive = false;
+                        }
+
+                        break;
                     default:
                         return;
                 }
@@ -37,5 +59,6 @@ public class ItemUseOnObject : MonoBehaviour
 
 public enum objectType{
     door_animation,
-    book_putaway
+    book_putaway,
+    flag_setup
 }
