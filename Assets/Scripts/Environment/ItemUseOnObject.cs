@@ -29,12 +29,12 @@ public class ItemUseOnObject : MonoBehaviour
                         playereq.isActive = false;
                         break;
                     case objectType.flag_setup:
-                        random barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<random>();
+                        Randomizer barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
 
                         String holdFlagId = playereq.items[playereq.activeItemID].gameObject.name;
                         holdFlagId = holdFlagId.Substring(holdFlagId.Length - 1);
 
-                        if (barometr.zmienna == Int32.Parse(holdFlagId))
+                        if (barometr.flagColorID == Int32.Parse(holdFlagId))
                         {
                             GameObject mainflag = GameObject.Find("main_flag/Flag");
                             Debug.Log(mainflag);

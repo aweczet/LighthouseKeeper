@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     private LightSwitch lightSwitch;
     private ColorChange colorChange;
-    private random barometr;
+    private Randomizer barometr;
 
     private bool allDone = false;
     private int numberOfAllQuestes;
@@ -73,8 +73,8 @@ public class Player : MonoBehaviour
 
             if (quest.questGoal.goalType == GoalType.color)
             {
-                random barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<random>();
-                quest.questGoal.requiredAmmount = barometr.zmienna;
+                Randomizer barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
+                quest.questGoal.requiredAmmount = barometr.flagColorID;
             }
 
             numberOfActiveQuests += quest.isActive ? 1 : 0;
