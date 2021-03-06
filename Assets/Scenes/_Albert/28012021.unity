@@ -25681,9 +25681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758330c2aac6ea54dbb3180d1c987669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  losowa: 0
-  zmienna: 0
-  wskazowka: {fileID: 963765712}
+  randomAngle: 0
+  flagColorID: 0
+  barometerIndicator: {fileID: 963765712}
 --- !u!1 &1656521688
 GameObject:
   m_ObjectHideFlags: 0
