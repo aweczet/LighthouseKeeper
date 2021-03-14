@@ -17,8 +17,8 @@ public class ItemPickup : MonoBehaviour
         for (int i = 0; i < inventory.slots.Length; i++) {
             if(inventory.isFull[i] == false) {
                 inventory.isFull[i] = true;
-                GameObject uiitem = Instantiate(itemButton, inventory.slots[i].transform, false);
-                uiitem.SetActive(true);
+                inventory.itemIcon[i] = Instantiate(itemButton, inventory.slots[i].transform, false);
+                inventory.itemIcon[i].SetActive(true);
                 inventory.items[i] = GameObject.Find("First Person Player/HeldItem/"+gameObject.name);
                 inventory.itemTag[i] = itemTag;
                 break;

@@ -10,11 +10,13 @@ public class PlayerInventory : MonoBehaviour
     public bool[] isFull;
     public GameObject[] slots;
     public GameObject[] items;
+    public GameObject[] itemIcon;
     public string[] itemTag;
     public GameObject info;
 
     public bool isActive = false;
     public int activeItemID = 0;
+
 
     /*private void Update() {
         if (Input.GetKey(KeyCode.Tab))
@@ -51,6 +53,22 @@ public class PlayerInventory : MonoBehaviour
             }
             
         }
+
+        if(Input.GetKeyUp(KeyCode.G)){
+            if(isActive){
+                isFull[activeItemID] = false;
+                itemTag[activeItemID] = "";
+                items[activeItemID].SetActive(false);
+                Destroy(itemIcon[activeItemID]);
+                Vector3 tempp = GameObject.FindGameObjectWithTag("Player").transform.position;
+                Vector3 temp = new Vector3(tempp.x, tempp.y, tempp.z);
+                temp += Camera.main.transform.forward;
+                Debug.Log(temp.y);
+                Instantiate(items[activeItemID], temp, new Quaternion(0, 110, 0, 1), GameObject.Find("Ground").transform).SetActive(true);
+                items[activeItemID] = null;
+                isActive = false;
+            }
+        }
     }
 
     private bool isEqEmpty(){
@@ -60,5 +78,9 @@ public class PlayerInventory : MonoBehaviour
         }
         Debug.Log(true);
         return true;
+    }
+
+    private void dropItem(){
+
     }
 }
