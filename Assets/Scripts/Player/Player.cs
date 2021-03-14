@@ -208,6 +208,9 @@ public class Player : MonoBehaviour
                             numberOfActiveQuests--;
                         }
                     }
+                    else if(item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated){
+                        Destroy(item);
+                    }
                 }
 
             }

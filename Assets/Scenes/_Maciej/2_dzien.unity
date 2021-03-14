@@ -8953,7 +8953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  sec: 5
+  sec: 30
 --- !u!1001 &597148539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10358,7 +10358,6 @@ MonoBehaviour:
     - {fileID: 1831825014}
     - {fileID: 322469765}
     - {fileID: 1403354347}
-    - {fileID: 0}
   - isActive: 1
     title: "Wejd\u017A na latarni\u0119"
     questName: {fileID: 0}
@@ -10404,6 +10403,11 @@ MonoBehaviour:
   - {fileID: 455316586}
   - {fileID: 979089871}
   items:
+  - {fileID: 1939583726}
+  - {fileID: 1779901795}
+  - {fileID: 835789435}
+  - {fileID: 0}
+  itemIcon:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -20231,9 +20235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758330c2aac6ea54dbb3180d1c987669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  losowa: 0
-  zmienna: 0
-  wskazowka: {fileID: 963765712}
+  randomAngle: 0
+  flagColorID: 0
+  barometerIndicator: {fileID: 963765712}
 --- !u!1 &1656521688
 GameObject:
   m_ObjectHideFlags: 0

@@ -6184,7 +6184,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cd5cc76585e451b4eb802af3ddf01fdb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.3
+      value: 9.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd5cc76585e451b4eb802af3ddf01fdb,
         type: 3}
@@ -15187,6 +15187,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  itemIcon: []
   itemTag:
   - 
   - 
@@ -24970,9 +24971,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758330c2aac6ea54dbb3180d1c987669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  losowa: 0
-  zmienna: 0
-  wskazowka: {fileID: 963765712}
+  randomAngle: 0
+  flagColorID: 0
+  barometerIndicator: {fileID: 963765712}
 --- !u!1 &1656521688
 GameObject:
   m_ObjectHideFlags: 0

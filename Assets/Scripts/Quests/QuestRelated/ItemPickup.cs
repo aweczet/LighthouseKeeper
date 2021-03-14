@@ -9,10 +9,12 @@ public class ItemPickup : MonoBehaviour
     private PlayerInventory inventory;
     public GameObject itemButton;
     public string itemTag;
+    public bool nonQuestRelated = false;
 
     private void Start() {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
     }
+
     private void OnDestroy() {
         for (int i = 0; i < inventory.slots.Length; i++) {
             if(inventory.isFull[i] == false) {
