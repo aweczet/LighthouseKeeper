@@ -69,7 +69,6 @@ public class PlayerInventory : MonoBehaviour
 
     private void dropItem(){
         isFull[activeItemID] = false;
-        itemTag[activeItemID] = "";
         items[activeItemID].SetActive(false);
         Destroy(itemIcon[activeItemID]);
         Vector3 tempp = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -78,9 +77,11 @@ public class PlayerInventory : MonoBehaviour
         GameObject dropped = Instantiate(items[activeItemID], temp, new Quaternion(0, 110, 0, 1), GameObject.Find("Ground").transform);
         dropped.SetActive(true);
         dropped.GetComponent<ItemPickup>().nonQuestRelated = true;
+        dropped.GetComponent<ItemPickup>().itemTag = itemTag[activeItemID];
         dropped.name = items[activeItemID].name;
         dropped.AddComponent<Rigidbody>();
         items[activeItemID] = null;
+        itemTag[activeItemID] = "";
         isActive = false;
     }
 
