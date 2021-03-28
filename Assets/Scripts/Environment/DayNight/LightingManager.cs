@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 /// <summary>
@@ -66,6 +67,12 @@ public class LightingManager : MonoBehaviour
                 if ((timeOfDay / 24f) == .04)
                     Debug.Log("1 am");
                 UpdateLighting(timeOfDay / 24f);
+            }
+            if (SceneManager.GetActiveScene().name == "MenuFloating")
+            {
+                maxTime = 24;
+                if (timeOfDay < 5 || timeOfDay > 19)
+                    timeOfDay = 5;
             }
         }
         else

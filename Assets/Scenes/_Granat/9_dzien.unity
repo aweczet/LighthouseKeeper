@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.99996674, g: 0.8117955, b: 0.6651043, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 0.9548229, b: 0.88708675, a: 1}
   m_AmbientEquatorColor: {r: 0.39560342, g: 0.5658152, b: 0.6603774, a: 1}
   m_AmbientGroundColor: {r: 0.5283019, g: 0.2267711, b: 0.46357885, a: 1}
   m_AmbientIntensity: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07639018, g: 0.080487706, b: 0.07264741, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.10455712, g: 0.13075662, b: 0.18008564, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12628,7 +12628,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.5293595, g: 0.51888406, b: 0.5042184, a: 1}
+  m_Color: {r: 0.9795782, g: 0.95867676, b: 0.9294147, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -12674,7 +12674,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.5e-43, y: 9.4e-44, z: 0, w: -5.791656e-10}
+  m_BoundingSphereOverride: {x: 0, y: 9.798e-42, z: 0, w: 0.0000000024301698}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -12685,7 +12685,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0, y: 0.9961947, z: 0, w: 0.087155804}
+  m_LocalRotation: {x: 0.06949112, y: 0.60125935, z: -0.79428655, w: 0.052603412}
   m_LocalPosition: {x: -5.7, y: 59.4, z: 39.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -12706,7 +12706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionalLight: {fileID: 705507994}
   preset: {fileID: 11400000, guid: aad13b53a3c83844e99810077a42484b, type: 2}
-  timeOfDay: 6
+  timeOfDay: 13.05
 --- !u!1 &713190620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 711a085d196579b43868d428d467d53f,
