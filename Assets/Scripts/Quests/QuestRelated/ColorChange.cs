@@ -3,18 +3,18 @@
 /// <summary>
 /// Klasa odpowiadająca za zmianę koloru flagi. Wyjaśnia się sama w sobie
 /// </summary>
-
 public class ColorChange
 {
-    private Color[] colors = { Color.green, Color.blue, Color.yellow, Color.red};
     public Material material;
+    private readonly Color[] _colors = {Color.green, Color.blue, Color.yellow, Color.red};
+
     public ColorChange(GameObject flag, int colorID)
     {
         Debug.Log(flag);
-        this.material = flag.GetComponent<Renderer>().material;
-        material.color = colors[colorID];
+        material = flag.GetComponent<Renderer>().material;
+        material.color = _colors[colorID];
     }
-    
+
     // private GameObject flag;
     // private Material material;
     // //private random barometr;

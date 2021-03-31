@@ -1,64 +1,68 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ItemUseOnObject : MonoBehaviour
 {
-    PlayerInventory playereq;
     public string requiredItemTag;
-    public objectType action;
+    public ObjectType action;
 
-    private void Start() {
-        playereq = GameObject.FindWithTag("Player").GetComponent<PlayerInventory>();
+    private PlayerInventory _playerInventory;
+
+    private void Start()
+    {
+        _playerInventory = GameObject.FindWithTag("Player").GetComponent<PlayerInventory>();
     }
 
-    private void OnMouseDown() {
-        if(gameObject.GetComponent<Outline>().OutlineWidth > 0.0f){
-            if(playereq.isActive && playereq.itemTag[playereq.activeItemID] == requiredItemTag){
-                switch(action){
-                    case objectType.door_animation:
-                        gameObject.GetComponent<Animator>().enabled = true;
-                        break;
-                    case objectType.book_putaway:
-                        playereq.isFull[playereq.activeItemID] = false;
-                        playereq.items[playereq.activeItemID].SetActive(false);
-                        playereq.items[playereq.activeItemID] = null;
-                        playereq.itemTag[playereq.activeItemID] = "";
-                        playereq.isActive = false;
-                        break;
-                    case objectType.flag_setup:
-                        Randomizer barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
+    private void OnMouseDown()
+    {
+        if (!(gameObject.GetComponent<Outline>().OutlineWidth > 0.0f))
+            return;
+        if (!_playerInventory.isActive || _playerInventory.itemTag[_playerInventory.activeItemID] != requiredItemTag)
+            return;
+        switch (action)
+        {
+            case ObjectType.DoorAnimation:
+                gameObject.GetComponent<Animator>().enabled = true;
+                break;
 
-                        String holdFlagId = playereq.items[playereq.activeItemID].gameObject.name;
-                        holdFlagId = holdFlagId.Substring(holdFlagId.Length - 1);
+            case ObjectType.BookPutaway:
+                RemoveFromInventory();
+                break;
 
-                        if (barometr.flagColorID == Int32.Parse(holdFlagId))
-                        {
-                            GameObject mainflag = GameObject.Find("main_flag/Flag");
-                            Debug.Log(mainflag);
-                            ColorChange flagMat = new ColorChange(mainflag, Int32.Parse(holdFlagId) - 1);
-                            
-                            playereq.isFull[playereq.activeItemID] = false;
-                            playereq.items[playereq.activeItemID].SetActive(false);
-                            playereq.items[playereq.activeItemID] = null;
-                            playereq.itemTag[playereq.activeItemID] = "";
-                            playereq.isActive = false;
-                        }
+            case ObjectType.FlagSetup:
+                Randomizer barometerInfo = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
 
-                        break;
-                    default:
-                        return;
+                string holdingFlagName = _playerInventory.items[_playerInventory.activeItemID].gameObject.name;
+                int holdingFlagId = int.Parse(holdingFlagName.Substring(holdingFlagName.Length - 1));
+
+                // How does it work?
+                if (barometerInfo.flagColorID == holdingFlagId)
+                {
+                    GameObject mainFlag = GameObject.Find("main_flag/Flag");
+                    Debug.Log(mainFlag);
+                    ColorChange flagMat = new ColorChange(mainFlag, holdingFlagId - 1);
+
+                    RemoveFromInventory();
                 }
-            }
+                break;
+            
+            default:
+                return;
         }
     }
 
+    private void RemoveFromInventory()
+    {
+        _playerInventory.isFull[_playerInventory.activeItemID] = false;
+        _playerInventory.items[_playerInventory.activeItemID].SetActive(false);
+        _playerInventory.items[_playerInventory.activeItemID] = null;
+        _playerInventory.itemTag[_playerInventory.activeItemID] = "";
+        _playerInventory.isActive = false;
+    }
 }
 
-public enum objectType{
-    door_animation,
-    book_putaway,
-    flag_setup
+public enum ObjectType
+{
+    DoorAnimation,
+    BookPutaway,
+    FlagSetup
 }
