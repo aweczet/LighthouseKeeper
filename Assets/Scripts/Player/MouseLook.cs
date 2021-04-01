@@ -5,10 +5,10 @@ using UnityEngine;
 /// <summary>
 /// Klasa odpowiadająca za sterowanie myszą
 /// </summary>
-
 public class MouseLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 150f;
+    private float _maxMouseSensitivity = 150;
 
     public Transform playerBody;
 
@@ -18,8 +18,23 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         playerBody.Rotate(Vector3.up * 90);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        LockMouse();
+    }
+
+    public void LockMouse(bool mode = false)
+    {
+        if (!mode)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            mouseSensitivity = _maxMouseSensitivity;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            mouseSensitivity = 0;
+        }
+
+        Cursor.visible = mode;
     }
 
     // Update is called once per frame
