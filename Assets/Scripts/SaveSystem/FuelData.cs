@@ -1,18 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class FuelData : MonoBehaviour
+﻿[System.Serializable]
+public class FuelData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float fuelAmount;
 
-    // Update is called once per frame
-    void Update()
+    public FuelData(FuelTank fuelTank)
     {
-        
+        fuelAmount = fuelTank.fuelAmount;
     }
 }

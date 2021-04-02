@@ -7,12 +7,16 @@ public class SaveOperator : MonoBehaviour
     private bool _visible;
     private Transform _player;
     private MouseLook _mouseLook;
+    private FuelTank _fueltank;
+
     private void Start()
     {
         _canvasPanel = GameObject.Find("Canvas/testUIPanel");
         _player = GameObject.FindWithTag("Player").transform;
         _mouseLook = _player.GetChild(1).GetComponent<MouseLook>();
+        _fueltank = GameObject.Find("fueltank").transform.GetComponent<FuelTank>();
         ToggleUI(_visible);
+        Debug.Log("start:\t" + _fueltank);
     }
 
     private void Update()
@@ -32,8 +36,9 @@ public class SaveOperator : MonoBehaviour
 
     public void SavePlayer()
     {
-        Debug.Log("Save player pos:\t" + _player.position);
+        Debug.Log("save:\t" + _fueltank);
         SaveSystemTest.SavePlayer(_player);
+        SaveSystemTest.SaveFuelTank(_fueltank);
     }
 
     public void LoadPlayer()
@@ -41,7 +46,12 @@ public class SaveOperator : MonoBehaviour
         _player.GetComponent<PlayerMovement>().gameObject.SetActive(false);
         PlayerDataTest data = SaveSystemTest.LoadPlayer();
         _player.position = data.LoadPosition(data.playerPosition);
-        Debug.Log("Load player pos:\t" + _player.position);
         _player.GetComponent<PlayerMovement>().gameObject.SetActive(true);
+
+        Debug.Log("load:\t" + _fueltank);
+        FuelData fuelData = SaveSystemTest.LoadFuelTank();
+        Debug.Log("load2:\t" + _fueltank.fuelAmount);
+        Debug.Log("load3:\t" + fuelData);
+        _fueltank.fuelAmount = fuelData.fuelAmount;
     }
 }

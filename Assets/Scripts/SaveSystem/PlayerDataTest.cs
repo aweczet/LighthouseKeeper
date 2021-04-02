@@ -18,10 +18,6 @@ public class PlayerDataTest
             retPosition[i] = position[i];
         }
 
-        if (position[0] == retPosition[0])
-        {
-            Debug.Log("Save position");
-        }
         return retPosition;
     }
 
