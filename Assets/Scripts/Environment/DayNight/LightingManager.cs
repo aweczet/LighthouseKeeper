@@ -45,9 +45,8 @@ public class LightingManager : MonoBehaviour
 
         SetMaxTime();
 
-        AddTime();
-
-        SetTimeOnMenu();
+        if (Application.isPlaying)
+            AddTime();
     }
 
     // Adds last quest after finishing all active quests
@@ -72,6 +71,7 @@ public class LightingManager : MonoBehaviour
     // Adds time if needed 
     private void AddTime()
     {
+        SetTimeOnMenu();
         // Sprawdza czy aktualna godzina jest mniejsza od (aktualnie) maksymalnej godziny
         // Jeżeli tak, to dodaje do czasu wartość czasu spędzonego w grze
         if (!(timeOfDay < _maxTime))
