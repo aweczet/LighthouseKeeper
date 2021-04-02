@@ -208,7 +208,7 @@ public class Player : MonoBehaviour
                             numberOfActiveQuests--;
                         }
                     }
-                    else if(item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated){
+                    else if(item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated && !gameObject.GetComponent<PlayerInventory>().isEqFull()){
                         Destroy(item);
                     }
                 }
