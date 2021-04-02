@@ -11,6 +11,8 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
+    // public Vector3 playerPosition;
+    
     public Quest[] quests;
     public int numberOfActiveQuests;
 
@@ -50,7 +52,18 @@ public class Player : MonoBehaviour
         Debug.Log("added level " + level);
     }
 
-    void Awake()
+    public void StrikeAllInactiveQuests()
+    {
+        foreach (Quest quest in quests)
+        {
+            if (quest.questGoal.goalType != GoalType.lighthouse)
+            {
+                quest.StrikeQuest();
+            }
+        }
+    }
+    
+    private void Awake()
     {
         // Ustawienie UI questów żeby dostosowało się do ilości questów
         level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
@@ -64,8 +77,6 @@ public class Player : MonoBehaviour
                 questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
                 lighthouseQuestID = numberOfAllQuestes;
                 Debug.Log(quest.questName);
-                
-
             }
 
             quest.questName = questSetup.newQuestUI.GetComponent<Text>();
@@ -235,36 +246,36 @@ public class Player : MonoBehaviour
         numberOfActiveQuests++;
     }
 
-    public void SavePlayer () {
-        SaveSystem.SavePlayer(this);
-    }
-
-    public void LoadPlayer () {
-        PlayerData data = SaveSystem.LoadPlayer();
-        level = data.level;
-        quests = data.quests;
-        loadedLevels = data.loadedLevels;
-
-        // numberOfActiveQuests = data.numberOfActiveQuests;
-        // uniquepickup = data.uniquepickup;
-        // uniqueobject = data.uniqueobject;
-        // collectedUnique = data.collectedUnique;
-        // questSetup = data.questSetup;
-        // canvas = data.canvas;
-        // lightSwitch = data.lightSwitch;
-        // colorChange = data.colorChange;
-        // barometr = data.barometr;
-        // allDone = data.allDone;
-        // numberOfAllQuestes = data.numberOfAllQuestes;
-        // lighthouseQuestID = data.lighthouseQuestID;
-
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        transform.position = position;
-
-        Debug.Log("level load " + level);
-        SceneManager.LoadScene(level);
-    }
+    // public void SavePlayer () {
+    //     SaveSystem.SavePlayer(this);
+    // }
+    //
+    // public void LoadPlayer () {
+    //     PlayerData data = SaveSystem.LoadPlayer();
+    //     level = data.level;
+    //     quests = data.quests;
+    //     loadedLevels = data.loadedLevels;
+    //
+    //     // numberOfActiveQuests = data.numberOfActiveQuests;
+    //     // uniquepickup = data.uniquepickup;
+    //     // uniqueobject = data.uniqueobject;
+    //     // collectedUnique = data.collectedUnique;
+    //     // questSetup = data.questSetup;
+    //     // canvas = data.canvas;
+    //     // lightSwitch = data.lightSwitch;
+    //     // colorChange = data.colorChange;
+    //     // barometr = data.barometr;
+    //     // allDone = data.allDone;
+    //     // numberOfAllQuestes = data.numberOfAllQuestes;
+    //     // lighthouseQuestID = data.lighthouseQuestID;
+    //
+    //     Vector3 position;
+    //     position.x = data.position[0];
+    //     position.y = data.position[1];
+    //     position.z = data.position[2];
+    //     transform.position = position;
+    //
+    //     Debug.Log("level load " + level);
+    //     SceneManager.LoadScene(level);
+    // }
 }

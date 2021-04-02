@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class PlayerDataTest
+public class PlayerData
 {
     public float[] playerPosition;
 
-    public PlayerDataTest(Transform player)
+    public PlayerData(Transform player)
     {
         playerPosition = SavePosition(player.position);
     }

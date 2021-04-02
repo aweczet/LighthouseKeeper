@@ -5,18 +5,20 @@ public class SaveOperator : MonoBehaviour
 {
     private GameObject _canvasPanel;
     private bool _visible;
-    private Transform _player;
+    private Transform _playerTransform;
+    private Player _player;
     private MouseLook _mouseLook;
     private FuelTank _fueltank;
 
     private void Start()
     {
-        _canvasPanel = GameObject.Find("Canvas/testUIPanel");
-        _player = GameObject.FindWithTag("Player").transform;
-        _mouseLook = _player.GetChild(1).GetComponent<MouseLook>();
+        _canvasPanel = GameObject.Find("testUIPanel");
+        _playerTransform = GameObject.FindWithTag("Player").transform;
+        _player = _playerTransform.GetComponent<Player>();
+        _mouseLook = _playerTransform.GetChild(1).GetComponent<MouseLook>();
         _fueltank = GameObject.Find("fueltank").transform.GetComponent<FuelTank>();
+        
         ToggleUI(_visible);
-        Debug.Log("start:\t" + _fueltank);
     }
 
     private void Update()
@@ -34,24 +36,23 @@ public class SaveOperator : MonoBehaviour
         _mouseLook.LockMouse(visible);
     }
 
-    public void SavePlayer()
+    public void SaveGame()
     {
-        Debug.Log("save:\t" + _fueltank);
-        SaveSystemTest.SavePlayer(_player);
-        SaveSystemTest.SaveFuelTank(_fueltank);
+        SaveSystem.SaveGame(_player);
     }
 
-    public void LoadPlayer()
+    public void LoadGame()
     {
-        _player.GetComponent<PlayerMovement>().gameObject.SetActive(false);
-        PlayerDataTest data = SaveSystemTest.LoadPlayer();
-        _player.position = data.LoadPosition(data.playerPosition);
-        _player.GetComponent<PlayerMovement>().gameObject.SetActive(true);
+        _playerTransform.GetComponent<PlayerMovement>().gameObject.SetActive(false);
+        LighthouseData data = SaveSystem.LoadGame();
+        _playerTransform.position = data.FloatsToVector3(data.playerPosition);
+        _player.numberOfActiveQuests = data.numberOfActiveQuests;
+        for (int i = 0; i < data.questsStatus.Length; i++)
+        {
+            _player.quests[i].isActive = data.questsStatus[i];
+        }
 
-        Debug.Log("load:\t" + _fueltank);
-        FuelData fuelData = SaveSystemTest.LoadFuelTank();
-        Debug.Log("load2:\t" + _fueltank.fuelAmount);
-        Debug.Log("load3:\t" + fuelData);
-        _fueltank.fuelAmount = fuelData.fuelAmount;
+        _player.StrikeAllInactiveQuests();
+        _playerTransform.GetComponent<PlayerMovement>().gameObject.SetActive(true);
     }
 }

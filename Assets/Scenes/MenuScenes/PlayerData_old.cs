@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 [System.Serializable]
 
-public class PlayerData {
+public class PlayerData_old {
     public Quest[] quests;
 
     public int level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex+1;
@@ -28,7 +28,7 @@ public class PlayerData {
     // private int lighthouseQuestID;
     
 
-    public PlayerData (Player player) { // Player player
+    public PlayerData_old (Player player) { // Player player
         quests = player.quests;
         
         level = player.level;
