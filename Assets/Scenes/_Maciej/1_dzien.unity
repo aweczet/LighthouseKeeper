@@ -1241,6 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1779901795}
   itemTag: 
+  nonQuestRelated: 0
 --- !u!114 &139662319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2203,6 +2204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1779901795}
   itemTag: doorbook
+  nonQuestRelated: 0
 --- !u!1 &333630094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,6 +3110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 465754595}
   itemTag: lighter
+  nonQuestRelated: 0
 --- !u!4 &465754601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bba59e026f0184b4dbb16bf034c3bf7d,
@@ -13566,7 +13569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  sec: 5
+  sec: 5.04
 --- !u!1001 &597148539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13962,6 +13965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 668338357}
   itemTag: 
+  nonQuestRelated: 0
 --- !u!1 &688443169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd26373e9522d6243aa02d6933a138f8,
@@ -14006,6 +14010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 835789435}
   itemTag: 
+  nonQuestRelated: 0
 --- !u!65 &688443173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14594,6 +14599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1939583726}
   itemTag: 
+  nonQuestRelated: 0
 --- !u!65 &747456360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14856,7 +14862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791647992}
   m_LocalRotation: {x: 0, y: 0.9961947, z: 0, w: 0.08715588}
-  m_LocalPosition: {x: 116.9, y: 8.9, z: 68.21}
+  m_LocalPosition: {x: -85.47, y: 43.49, z: -1.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 66272385}
@@ -14912,61 +14918,15 @@ MonoBehaviour:
       monolog: "Zamkni\u0119te.. Klucze dostan\u0119 p\xF3\u017Aniej"
     questItem:
     - {fileID: 884580559}
-  - isActive: 1
-    title: "Id\u017A do latarni"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 4
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: "A wi\u0119c to ona... "
-    questItem:
-    - {fileID: 1058442690}
-  - isActive: 1
-    title: "Wejd\u017A na latarni\u0119"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 4
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: "Pi\u0119kny widok"
-    questItem:
-    - {fileID: 1820543359}
-  - isActive: 1
-    title: "Zbierz porzucone ksi\u0105\u017Cki"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 1
-      requiredAmmount: 3
-      currentAmmount: 0
-      monolog: "Ba\u0142agan posprz\u0105tany"
-    questItem:
-    - {fileID: 1831825014}
-    - {fileID: 322469765}
-    - {fileID: 1403354347}
-  - isActive: 1
-    title: "Podnie\u015B zapalniczke"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 1
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: Zapalniczka jest mi potrzebna do zapalenia latarni
-    questItem:
-    - {fileID: 465754595}
   - isActive: 0
-    title: "Zapal latarni\u0119"
+    title: "Id\u017A do latarni"
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
       goalType: 7
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: 
+      monolog: "A wi\u0119c to ona... "
     questItem:
     - {fileID: 583457826}
     - {fileID: 1057378052}
@@ -14996,12 +14956,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  itemIcon: []
   itemTag:
   - 
   - 
   - 
   - 
-  info: {fileID: 1240007201}
   isActive: 0
   activeItemID: 0
 --- !u!1 &802222355
@@ -21848,12 +21808,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!1 &1058442690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6201773461360807585, guid: 992dfa869f7a63c4b908c951a2e8c9d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1865005208}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1076051514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ba49289bcfa4e124dbda95cfea03838e,
@@ -23191,6 +23145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 835789435}
   itemTag: 
+  nonQuestRelated: 0
 --- !u!114 &1403354351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24559,9 +24514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758330c2aac6ea54dbb3180d1c987669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  losowa: 0
-  zmienna: 0
-  wskazowka: {fileID: 963765712}
+  randomAngle: 0
+  flagColorID: 0
+  barometerIndicator: {fileID: 963765712}
 --- !u!1 &1656521688
 GameObject:
   m_ObjectHideFlags: 0
@@ -25688,12 +25643,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798748642}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1820543359 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6201773461360807585, guid: 992dfa869f7a63c4b908c951a2e8c9d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1485238381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1831825014 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ce5e439ebaca684fad07fc5eb281fa2,
@@ -25720,6 +25669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1939583726}
   itemTag: 
+  nonQuestRelated: 0
 --- !u!114 &1831825018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26480,6 +26430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuel: {fileID: 1998757618}
+  fuelAmount: 0
 --- !u!1 &1926676806
 GameObject:
   m_ObjectHideFlags: 0

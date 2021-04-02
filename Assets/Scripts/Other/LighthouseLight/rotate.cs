@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 public class rotate : MonoBehaviour
 {
     public Player player;
-    public float sec = 8f;
+    public float sec = 5f;
     int nextScene;
     // Start is called before the first frame update
     void Start()
