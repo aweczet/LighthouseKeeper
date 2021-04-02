@@ -177,8 +177,12 @@ public class Player : MonoBehaviour
                                 quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 break;
                             case GoalType.collect:
-                                Destroy(questItem);
-                                quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
+                                if(!gameObject.GetComponent<PlayerInventory>().isEqFull())
+                                {
+                                    Destroy(questItem);
+                                    quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
+                                }
+                                quest.questGoal.currentAmmount--;
                                 break;
 
                             case GoalType.light:
