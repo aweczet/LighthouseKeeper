@@ -7,29 +7,20 @@ using UnityEngine;
 ///</summary>
 public class PlayerInventory : MonoBehaviour
 {
-    //[HideInInspector]
+    [HideInInspector]
     public bool[] isFull;
-    //[HideInInspector]
+    [HideInInspector]
     public GameObject[] slots;
     public GameObject[] items;
-    //[HideInInspector]
+    [HideInInspector]
     public GameObject[] itemIcon;
-    //[HideInInspector]
+    [HideInInspector]
     public string[] itemTag;
-    //public GameObject info;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool isActive = false;
-    //[HideInInspector]
+    [HideInInspector]
     public int activeItemID = 0;
-
-
-    /*private void Update() {
-        if (Input.GetKey(KeyCode.Tab))
-            info.SetActive(true);
-        else
-            info.SetActive(false);
-    }*/
 
     private void Start(){
         isFull = new bool[items.Length];
@@ -63,7 +54,15 @@ public class PlayerInventory : MonoBehaviour
             if(isFull[i])
                 return false;
         }
-        Debug.Log(true);
+        return true;
+    }
+
+    public bool isEqFull(){
+        for(int i = 0; i < isFull.Length; i++){
+            Debug.Log(isFull[i]);
+            if(!isFull[i])
+                return false;
+        }
         return true;
     }
 
