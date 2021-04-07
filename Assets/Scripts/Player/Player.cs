@@ -193,7 +193,11 @@ public class Player : MonoBehaviour
                                     Destroy(questItem);
                                     quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 }
-                                quest.questGoal.currentAmmount--;
+                                else
+                                {
+                                    quest.questGoal.currentAmmount--;
+                                }
+                                
                                 break;
 
                             case GoalType.light:
