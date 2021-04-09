@@ -21,7 +21,8 @@ public class LightSwitch
     public void toggleLight()
     {
         if (theLight.activeInHierarchy)
-            theLight.SetActive(false);
+            Debug.Log('0') ;
+            //theLight.SetActive(false);
         else
             theLight.SetActive(true);
     }

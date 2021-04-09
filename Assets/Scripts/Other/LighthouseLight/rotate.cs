@@ -14,6 +14,7 @@ public class rotate : MonoBehaviour
     public Player player;
     public float sec = 5f;
     int nextScene;
+    int lighter_used;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class rotate : MonoBehaviour
 
     void Update()
     {
+    
         transform.Rotate(new Vector3(40f, 0, 0)*Time.deltaTime); //applying rotation.
 
         // nie działa
