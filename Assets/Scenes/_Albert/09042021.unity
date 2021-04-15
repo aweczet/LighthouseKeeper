@@ -15734,7 +15734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791647992}
   m_LocalRotation: {x: 0, y: 0.9961947, z: 0, w: 0.08715588}
-  m_LocalPosition: {x: -65.9, y: 23.29, z: 7.6}
+  m_LocalPosition: {x: -85.87, y: 54.32, z: -1.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 66272385}
@@ -15790,66 +15790,6 @@ MonoBehaviour:
       monolog: "Zamkni\u0119te.. Klucze dostan\u0119 p\xF3\u017Aniej"
     questItem:
     - {fileID: 884580559}
-  - isActive: 1
-    title: "Id\u017A do latarni"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 4
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: "A wi\u0119c to ona... "
-    questItem:
-    - {fileID: 1058442690}
-  - isActive: 1
-    title: "Wejd\u017A na latarni\u0119"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 4
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: "Pi\u0119kny widok"
-    questItem:
-    - {fileID: 1820543359}
-  - isActive: 1
-    title: "Zbierz porzucone ksi\u0105\u017Cki"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 1
-      requiredAmmount: 3
-      currentAmmount: 0
-      monolog: "Ba\u0142agan posprz\u0105tany"
-    questItem:
-    - {fileID: 1831825014}
-    - {fileID: 322469765}
-    - {fileID: 1403354347}
-  - isActive: 1
-    title: "Podnie\u015B zapalniczke"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 1
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: Zapalniczka jest mi potrzebna do zapalenia latarni
-    questItem:
-    - {fileID: 465754595}
-  - isActive: 1
-    title: "PODNIE\u015A FLAG\u0118"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 1
-      requiredAmmount: 4
-      currentAmmount: 0
-      monolog: 
-    questItem:
-    - {fileID: 1886321030}
-    - {fileID: 1694371111}
-    - {fileID: 2041888785}
-    - {fileID: 483916161}
   - isActive: 0
     title: "Zapal latarni\u0119"
     questName: {fileID: 0}
@@ -22830,12 +22770,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!1 &1058442690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6201773461360807585, guid: 992dfa869f7a63c4b908c951a2e8c9d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1865005208}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1076051514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ba49289bcfa4e124dbda95cfea03838e,
@@ -27358,12 +27292,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd4b3fd31b80c7143b4940d698def5a7, type: 3}
---- !u!1 &1820543359 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6201773461360807585, guid: 992dfa869f7a63c4b908c951a2e8c9d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1485238381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1831825014 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ce5e439ebaca684fad07fc5eb281fa2,
@@ -29686,7 +29614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104579605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.08, y: 21.3, z: 4.63}
+  m_LocalPosition: {x: -81.7, y: 51.06, z: -2.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 911973093}
