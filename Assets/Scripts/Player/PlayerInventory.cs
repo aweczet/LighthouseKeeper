@@ -59,7 +59,6 @@ public class PlayerInventory : MonoBehaviour
 
     public bool isEqFull(){
         for(int i = 0; i < isFull.Length; i++){
-            Debug.Log(isFull[i]);
             if(!isFull[i])
                 return false;
         }

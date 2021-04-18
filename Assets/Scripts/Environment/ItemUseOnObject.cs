@@ -38,7 +38,6 @@ public class ItemUseOnObject : MonoBehaviour
                 if (barometerInfo.flagColorID == holdingFlagId)
                 {
                     GameObject mainFlag = GameObject.Find("main_flag/Flag");
-                    Debug.Log(mainFlag);
                     ColorChange flagMat = new ColorChange(mainFlag, holdingFlagId - 1);
 
                     RemoveFromInventory();

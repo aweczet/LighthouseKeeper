@@ -49,7 +49,6 @@ public class Player : MonoBehaviour
         // Dodaje scene do Stosu
         loadedLevels.Push(buildIndex);
         level = loadedLevels.Peek();
-        Debug.Log("added level " + level);
     }
 
     public void StrikeAllInactiveQuests()
@@ -76,7 +75,6 @@ public class Player : MonoBehaviour
             {
                 questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
                 lighthouseQuestID = numberOfAllQuestes;
-                Debug.Log(quest.questName);
             }
 
             quest.questName = questSetup.newQuestUI.GetComponent<Text>();

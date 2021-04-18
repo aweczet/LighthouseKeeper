@@ -29,7 +29,6 @@ public class QuestGoal
     }
 
     public IEnumerator showMonolog(GameObject textbg){
-        Debug.Log("1");
         if(monolog != ""){
             TextMeshProUGUI text = textbg.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
             text.SetText(monolog);

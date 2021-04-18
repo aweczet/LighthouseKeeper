@@ -24,7 +24,6 @@ public class Quest
     public void completed()
     {
         isActive = false;
-        Debug.Log(title + " completed");
 
         StrikeQuest();
         //swiatlo.transform.position = new Vector3(-58, 22, 13);

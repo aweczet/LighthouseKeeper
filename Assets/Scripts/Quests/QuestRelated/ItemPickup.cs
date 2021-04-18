@@ -15,7 +15,7 @@ public class ItemPickup : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
-        DontDestroyOnLoad(itemButton);
+        //DontDestroyOnLoad(itemButton);
     }
 
     private void OnDestroy()
