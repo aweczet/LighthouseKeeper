@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07639021, g: 0.08048771, b: 0.0726474, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.07639018, g: 0.080487706, b: 0.07264741, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14131,7 +14131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionalLight: {fileID: 705507994}
   preset: {fileID: 11400000, guid: aad13b53a3c83844e99810077a42484b, type: 2}
-  timeOfDay: 6
+  timeOfDay: 9.84
 --- !u!1 &713190620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 711a085d196579b43868d428d467d53f,
