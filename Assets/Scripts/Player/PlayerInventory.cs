@@ -21,6 +21,8 @@ public class PlayerInventory : MonoBehaviour
     public bool isActive = false;
     [HideInInspector]
     public int activeItemID = 0;
+    [HideInInspector]
+    public int lastAddedID = 0;
 
     private void Start(){
         isFull = new bool[items.Length];
@@ -81,6 +83,16 @@ public class PlayerInventory : MonoBehaviour
         items[activeItemID] = null;
         itemTag[activeItemID] = "";
         isActive = false;
+    }
+
+    public void removeItemAfterQuest(int id){
+        isFull[id] = false;
+        items[id].SetActive(false);
+        Destroy(itemIcon[id]);
+        items[id] = null;
+        itemTag[id] = "";
+        if(activeItemID == id)
+            isActive = false;
     }
 
     private void nextItem(){

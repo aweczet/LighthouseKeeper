@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class Quest
 {
     public bool isActive = true;
+    [HideInInspector] public bool isCompleted = false;
     public string title;
 
     [HideInInspector] public Text questName;
@@ -20,12 +21,19 @@ public class Quest
     //public Light swiatlo;
     public QuestGoal questGoal;
     public GameObject[] questItem;
+    public bool destroyItems = false;
+    [HideInInspector] public int[] itemID;
 
     public void completed()
     {
         isActive = false;
-
+        isCompleted = true;
         StrikeQuest();
+        if(destroyItems){
+            for(int i = 0; i < questItem.Length; i++)
+                GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerInventory>().removeItemAfterQuest(itemID[i]);
+
+        }
         //swiatlo.transform.position = new Vector3(-58, 22, 13);
     }
 

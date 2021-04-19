@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public static bool unique_collected_3 = false;
 
     private QuestSetup questSetup;
+    private QuestSetup[] questSetups;
     private GameObject canvas;
 
     private LightSwitch lightSwitch;
@@ -28,9 +29,11 @@ public class Player : MonoBehaviour
     private Randomizer barometr;
 
     private bool allDone = false;
-    private int numberOfAllQuestes;
+    private int numberOfAllQuestes = 0;
     private int lighthouseQuestID;
+    private int activeQuestID;
 
+    public bool isRetrospection = false;
     public int level;
     public Stack<int> loadedLevels;
     public GameObject monologbox;
@@ -67,28 +70,51 @@ public class Player : MonoBehaviour
         // Ustawienie UI questów żeby dostosowało się do ilości questów
         level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
         canvas = GameObject.Find("UICanvas/QuestPanel");
+        questSetups = new QuestSetup[quests.Length];
         foreach (Quest quest in quests)
         {
-            // Nie testowana zmiana - powinna działać, ale w razie co jest zostawiona w komentarzu niżej wersja, która działa
-            questSetup = new QuestSetup(canvas, quest.title, quest.questName, quest.strike, numberOfActiveQuests);
-            if (!quest.isActive)
+            if(!isRetrospection)
             {
-                questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
-                lighthouseQuestID = numberOfAllQuestes;
+                // Nie testowana zmiana - powinna działać, ale w razie co jest zostawiona w komentarzu niżej wersja, która działa
+                questSetup = new QuestSetup(canvas, quest.title, quest.questName, quest.strike, numberOfActiveQuests);
+                if (!quest.isActive)
+                {
+                    questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
+                    lighthouseQuestID = numberOfAllQuestes;
+                }
+
+                quest.questName = questSetup.newQuestUI.GetComponent<Text>();
+                quest.strike = questSetup.newQuestStrikeUI.GetComponent<Text>();
+
+                if (quest.questGoal.goalType == GoalType.color)
+                {
+                    Randomizer barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
+                    quest.questGoal.requiredAmmount = barometr.flagColorID;
+                }
+
+                numberOfActiveQuests += quest.isActive ? 1 : 0;
+                numberOfAllQuestes++;
             }
-
-            quest.questName = questSetup.newQuestUI.GetComponent<Text>();
-            quest.strike = questSetup.newQuestStrikeUI.GetComponent<Text>();
-
-            if (quest.questGoal.goalType == GoalType.color)
+            else
             {
-                Randomizer barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
-                quest.questGoal.requiredAmmount = barometr.flagColorID;
+                questSetups[numberOfAllQuestes] = new QuestSetup(canvas, quest.title, quest.questName, quest.strike, numberOfAllQuestes);
+                if (numberOfAllQuestes == 0)
+                {
+                    quest.isActive = true;
+                    quest.questName = questSetups[numberOfAllQuestes].newQuestUI.GetComponent<Text>();
+                    quest.strike = questSetups[numberOfAllQuestes].newQuestStrikeUI.GetComponent<Text>();
+                    numberOfActiveQuests = 1;
+                    activeQuestID = 0;
+                }
+                else
+                {
+                    questSetups[numberOfAllQuestes].newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
+                }
+                quest.questName = questSetups[numberOfAllQuestes].newQuestUI.GetComponent<Text>();
+                quest.strike = questSetups[numberOfAllQuestes].newQuestStrikeUI.GetComponent<Text>();
+                numberOfAllQuestes++;
             }
-
-            numberOfActiveQuests += quest.isActive ? 1 : 0;
-            numberOfAllQuestes++;
-
+            quest.itemID = new int[quest.questItem.Length];
             
 
             //if (quest.isActive)
@@ -114,7 +140,15 @@ public class Player : MonoBehaviour
             //}
             //numberOfAllQuestes++;
         }
-        questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
+        if(!isRetrospection)
+        {
+            questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
+        }
+        else
+        {
+            questSetups[0].SetCanvasPosition(canvas, numberOfActiveQuests);
+        }
+        
     }
 
     private void Update()
@@ -122,9 +156,26 @@ public class Player : MonoBehaviour
         // W przypadku gdy skończymy wszystkie questy to dodawany jest quest latarni
         if (numberOfActiveQuests == 0)
         {
-            quests[lighthouseQuestID].isActive = true;
-            lightHouseQuest();
+            if(!isRetrospection)
+            {
+                quests[lighthouseQuestID].isActive = true;
+                lightHouseQuest();
+            }
+            else
+            {
+                if(!quests[numberOfAllQuestes-1].isCompleted)
+                {
+                    numberOfActiveQuests = 1;
+                    activeQuestID++;
+                    Debug.Log(activeQuestID);
+                    quests[activeQuestID].isActive = true;
+                    questSetups[activeQuestID].SetCanvasPosition(canvas, activeQuestID+1);
+                    questSetups[activeQuestID].newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
+                }
+            }
+            
         }
+
         //if (allDone)
         //{
         //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -190,6 +241,9 @@ public class Player : MonoBehaviour
                                 {
                                     Destroy(questItem);
                                     quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
+                                    Debug.Log(quest.questGoal.currentAmmount);
+                                    Debug.Log(quest.itemID.Length);
+                                    quest.itemID[quest.questGoal.currentAmmount] = gameObject.GetComponent<PlayerInventory>().lastAddedID;
                                 }
                                 else
                                 {
