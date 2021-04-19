@@ -48,16 +48,16 @@ public class SaveOperator : MonoBehaviour
 
     public void LoadGame()
     {
-        _playerTransform.GetComponent<PlayerMovement>().gameObject.SetActive(false);
-        LighthouseData data = SaveSystem.LoadGame();
-        _playerTransform.position = data.FloatsToVector3(data.playerPosition);
-        _player.numberOfActiveQuests = data.numberOfActiveQuests;
-        for (int i = 0; i < data.questsStatus.Length; i++)
-        {
-            _player.quests[i].isActive = data.questsStatus[i];
-        }
-
-        _player.StrikeAllInactiveQuests();
-        _playerTransform.GetComponent<PlayerMovement>().gameObject.SetActive(true);
+        // _playerTransform.GetComponent<PlayerMovement>().gameObject.SetActive(false);
+        // LighthouseData data = SaveSystem.LoadGame();
+        // _playerTransform.position = data.FloatsToVector3(data.playerPosition);
+        // _player.numberOfActiveQuests = data.numberOfActiveQuests;
+        // for (int i = 0; i < data.questsStatus.Length; i++)
+        // {
+        //     _player.quests[i].isActive = data.questsStatus[i];
+        // }
+        //
+        // _player.StrikeAllInactiveQuests();
+        // _playerTransform.GetComponent<PlayerMovement>().gameObject.SetActive(true);
     }
 }

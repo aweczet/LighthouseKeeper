@@ -22,6 +22,7 @@ public class SaveManager : MonoBehaviour
         if (data != null)
         {
             SceneManager.LoadScene(data.sceneId);
+            Player.unique_collected_1 = data.uniqueCollected1;
         }
     }
 }

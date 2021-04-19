@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 public class LighthouseData
 {
     public int sceneId;
-    public float[] playerPosition;
-    public int numberOfActiveQuests;
 
-    public bool[] questsStatus;
+    public bool uniqueCollected1;
+    // public bool unique_collected_2;
+    // public bool unique_collected_3;
+    
+    // public float[] playerPosition;
+    // public int numberOfActiveQuests;
+    //
+    // public bool[] questsStatus;
     
     //     level = data.level;
     //     quests = data.quests;
@@ -30,38 +35,39 @@ public class LighthouseData
     public LighthouseData(Player player)
     {
         sceneId = player.level;
-        var playerTransform = player.GetComponent<Transform>();
-        playerPosition = Vector3ToFloats(playerTransform.position);
-
-        numberOfActiveQuests = player.numberOfActiveQuests;
-    
-        questsStatus = new bool[player.quests.Length-1];
-
-        for (int i = 0; i < player.quests.Length-1; i++)
-        {
-            questsStatus[i] = player.quests[i].isActive;
-        }
+        uniqueCollected1 = Player.unique_collected_1;
+        // var playerTransform = player.GetComponent<Transform>();
+        // playerPosition = Vector3ToFloats(playerTransform.position);
+        //
+        // numberOfActiveQuests = player.numberOfActiveQuests;
+        //
+        // questsStatus = new bool[player.quests.Length-1];
+        //
+        // for (int i = 0; i < player.quests.Length-1; i++)
+        // {
+        //     questsStatus[i] = player.quests[i].isActive;
+        // }
     }
 
-    private float[] Vector3ToFloats(Vector3 vector3)
-    {
-        float[] floats = new float[3];
-        for (int i = 0; i < 3; i++)
-        {
-            floats[i] = vector3[i];
-        }
-
-        return floats;
-    }
-
-    public Vector3 FloatsToVector3(float[] floats)
-    {
-        Vector3 vector3 = new Vector3();
-        for (int i = 0; i < 3; i++)
-        {
-            vector3[i] = floats[i];
-        }
-
-        return vector3;
-    }
+    // private float[] Vector3ToFloats(Vector3 vector3)
+    // {
+    //     float[] floats = new float[3];
+    //     for (int i = 0; i < 3; i++)
+    //     {
+    //         floats[i] = vector3[i];
+    //     }
+    //
+    //     return floats;
+    // }
+    //
+    // public Vector3 FloatsToVector3(float[] floats)
+    // {
+    //     Vector3 vector3 = new Vector3();
+    //     for (int i = 0; i < 3; i++)
+    //     {
+    //         vector3[i] = floats[i];
+    //     }
+    //
+    //     return vector3;
+    // }
 }
