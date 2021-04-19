@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         // Ustawienie UI questów żeby dostosowało się do ilości questów
-        level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
+        level = SceneManager.GetActiveScene().buildIndex + 1;
         canvas = GameObject.Find("UICanvas/QuestPanel");
         foreach (Quest quest in quests)
         {
@@ -161,7 +161,6 @@ public class Player : MonoBehaviour
                 }
             }
         }
-           
     }
 
     // Wciśnięcie LPM na zaznaczonym obiekcie

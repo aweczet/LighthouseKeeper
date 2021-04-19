@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class LighthouseData
 {
+    public int sceneId;
     public float[] playerPosition;
     public int numberOfActiveQuests;
 
@@ -27,6 +29,7 @@ public class LighthouseData
 
     public LighthouseData(Player player)
     {
+        sceneId = player.level;
         var playerTransform = player.GetComponent<Transform>();
         playerPosition = Vector3ToFloats(playerTransform.position);
 

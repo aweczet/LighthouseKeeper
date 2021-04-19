@@ -36,6 +36,11 @@ public class SaveOperator : MonoBehaviour
         _mouseLook.LockMouse(visible);
     }
 
+    public void DeleteSave()
+    {
+        SaveSystem.DeleteData();
+    }
+    
     public void SaveGame()
     {
         SaveSystem.SaveGame(_player);
