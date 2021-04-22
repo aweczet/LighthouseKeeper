@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class LighthouseData
 {
     public int sceneId;
-
+    
     public bool uniqueCollected1;
     // public bool unique_collected_2;
     // public bool unique_collected_3;
@@ -35,7 +35,9 @@ public class LighthouseData
     public LighthouseData(Player player)
     {
         sceneId = player.level;
-        uniqueCollected1 = Player.unique_collected_1;
+        uniqueCollected1 = Player.UniqueCollected1;
+        
+        
         // var playerTransform = player.GetComponent<Transform>();
         // playerPosition = Vector3ToFloats(playerTransform.position);
         //

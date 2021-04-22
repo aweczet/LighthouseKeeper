@@ -48,6 +48,7 @@ public class SaveOperator : MonoBehaviour
 
     public void LoadGame()
     {
+        throw new NotImplementedException();
         // _playerTransform.GetComponent<PlayerMovement>().gameObject.SetActive(false);
         // LighthouseData data = SaveSystem.LoadGame();
         // _playerTransform.position = data.FloatsToVector3(data.playerPosition);

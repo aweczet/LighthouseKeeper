@@ -7,80 +7,80 @@ using System.Collections.Generic;
 /// <summary>
 /// Klasa odpowiadająca za wszystkie informacje o graczu
 /// </summary>
-
-
 public class Player : MonoBehaviour
 {
     // public Vector3 playerPosition;
-    
+
     public Quest[] quests;
     public int numberOfActiveQuests;
 
-    public static bool unique_collected_1 = false;
-    public static bool unique_collected_2 = false;
-    public static bool unique_collected_3 = false;
+    public static bool UniqueCollected1 = false;
+    public static bool UniqueCollected2 = false;
+    public static bool UniqueCollected3 = false;
 
-    private QuestSetup questSetup;
-    private GameObject canvas;
+    private QuestSetup _questSetup;
+    private GameObject _canvas;
+    private PlayerInventory _playerInventory;
 
-    private LightSwitch lightSwitch;
-    private ColorChange colorChange;
-    private Randomizer barometr;
+    private LightSwitch _lightSwitch;
+    private ColorChange _colorChange;
+    private Randomizer _barometr;
 
-    private bool allDone = false;
-    private int numberOfAllQuestes;
-    private int lighthouseQuestID;
+    // private bool _allDone = false;
+    private int _numberOfAllQuestes;
+    private int _lighthouseQuestID;
 
     public int level;
-    public Stack<int> loadedLevels;
+
+    // public Stack<int> loadedLevels;
     public GameObject monologbox;
-    [System.NonSerialized]
-    private bool initialized;
+    // [System.NonSerialized]
+    // private bool initialized;
 
 
-    private void Init() {
-        // Obsługa sceny na której jesteśmy
-        loadedLevels = new Stack<int>();
-        initialized = true;
-    }
+    // private void Init() {
+    //     // Obsługa sceny na której jesteśmy
+    //     loadedLevels = new Stack<int>();
+    //     initialized = true;
+    // }
+    //
+    // public void addSceneToStack(int buildIndex) {
+    //     if (!initialized) Init();
+    //     // Dodaje scene do Stosu
+    //     loadedLevels.Push(buildIndex);
+    //     level = loadedLevels.Peek();
+    //     Debug.Log("added level " + level);
+    // }
 
-    public void addSceneToStack(int buildIndex) {
-        if (!initialized) Init();
-        // Dodaje scene do Stosu
-        loadedLevels.Push(buildIndex);
-        level = loadedLevels.Peek();
-        Debug.Log("added level " + level);
-    }
+    // public void StrikeAllInactiveQuests()
+    // {
+    //     foreach (Quest quest in quests)
+    //     {
+    //         if (quest.questGoal.goalType != GoalType.lighthouse)
+    //         {
+    //             quest.StrikeQuest();
+    //         }
+    //     }
+    // }
 
-    public void StrikeAllInactiveQuests()
-    {
-        foreach (Quest quest in quests)
-        {
-            if (quest.questGoal.goalType != GoalType.lighthouse)
-            {
-                quest.StrikeQuest();
-            }
-        }
-    }
-    
     private void Awake()
     {
-        // Ustawienie UI questów żeby dostosowało się do ilości questów
         level = SceneManager.GetActiveScene().buildIndex + 1;
-        canvas = GameObject.Find("UICanvas/QuestPanel");
+        // Ustawienie UI questów żeby dostosowało się do ilości questów
+        _canvas = GameObject.Find("UICanvas/QuestPanel");
         foreach (Quest quest in quests)
         {
             // Nie testowana zmiana - powinna działać, ale w razie co jest zostawiona w komentarzu niżej wersja, która działa
-            questSetup = new QuestSetup(canvas, quest.title, quest.questName, quest.strike, numberOfActiveQuests);
+            _questSetup = new QuestSetup(_canvas, quest.title, quest.questName, quest.strike, numberOfActiveQuests);
             if (!quest.isActive)
             {
-                questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
-                lighthouseQuestID = numberOfAllQuestes;
-                Debug.Log(quest.questName);
+                _questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
+                _lighthouseQuestID = _numberOfAllQuestes;
+                // Debug.Log(quest.questName);
             }
 
-            quest.questName = questSetup.newQuestUI.GetComponent<Text>();
-            quest.strike = questSetup.newQuestStrikeUI.GetComponent<Text>();
+            quest.questName = _questSetup.newQuestUI.GetComponent<Text>();
+            quest.strike = _questSetup.newQuestStrikeUI.GetComponent<Text>();
 
             if (quest.questGoal.goalType == GoalType.color)
             {
@@ -89,9 +89,7 @@ public class Player : MonoBehaviour
             }
 
             numberOfActiveQuests += quest.isActive ? 1 : 0;
-            numberOfAllQuestes++;
-
-            
+            _numberOfAllQuestes++;
 
             //if (quest.isActive)
             //{
@@ -116,7 +114,9 @@ public class Player : MonoBehaviour
             //}
             //numberOfAllQuestes++;
         }
-        questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
+
+        _questSetup.SetCanvasPosition(_canvas, numberOfActiveQuests);
+        _playerInventory = GetComponent<PlayerInventory>();
     }
 
     private void Update()
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
         // W przypadku gdy skończymy wszystkie questy to dodawany jest quest latarni
         if (numberOfActiveQuests == 0)
         {
-            quests[lighthouseQuestID].isActive = true;
+            quests[_lighthouseQuestID].isActive = true;
             lightHouseQuest();
         }
         //if (allDone)
@@ -156,6 +156,7 @@ public class Player : MonoBehaviour
                             StartCoroutine(quest.questGoal.showMonolog(monologbox));
                             numberOfActiveQuests--;
                         }
+
                         Destroy(questItem.transform.parent.gameObject);
                     }
                 }
@@ -166,6 +167,11 @@ public class Player : MonoBehaviour
     // Wciśnięcie LPM na zaznaczonym obiekcie
     public void PressedOnSelectable(GameObject item)
     {
+        if (item.GetComponent<HarpoonInteraction>() != null)
+        {
+            item.GetComponent<HarpoonInteraction>().Shoot();
+            return;
+        }
         numberOfActiveQuests = 0;
         foreach (Quest quest in quests)
         {
@@ -187,7 +193,7 @@ public class Player : MonoBehaviour
                                 quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 break;
                             case GoalType.collect:
-                                if(!gameObject.GetComponent<PlayerInventory>().isEqFull())
+                                if (!_playerInventory.isEqFull())
                                 {
                                     Destroy(questItem);
                                     quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
@@ -196,12 +202,12 @@ public class Player : MonoBehaviour
                                 {
                                     quest.questGoal.currentAmmount--;
                                 }
-                                
+
                                 break;
 
                             case GoalType.light:
                             case GoalType.lighthouse:
-                                lightSwitch = new LightSwitch(quest.questItem[0]);
+                                _lightSwitch = new LightSwitch(quest.questItem[0]);
                                 break;
 
                             // case GoalType.color:
@@ -226,11 +232,12 @@ public class Player : MonoBehaviour
                             numberOfActiveQuests--;
                         }
                     }
-                    else if(item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated && !gameObject.GetComponent<PlayerInventory>().isEqFull()){
+                    else if (item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated &&
+                             !_playerInventory.isEqFull())
+                    {
                         Destroy(item);
                     }
                 }
-
             }
             else
             {
@@ -238,18 +245,19 @@ public class Player : MonoBehaviour
                 {
                     if (item == questItem)
                     {
-                        if(quest.questGoal.goalType == GoalType.light)
-                            lightSwitch.toggleLight();
+                        if (quest.questGoal.goalType == GoalType.light)
+                            _lightSwitch.toggleLight();
                     }
                 }
             }
         }
     }
+
     // Dodanie questu latarni do listy w ui
     private void lightHouseQuest()
     {
-        questSetup.SetCanvasPosition(canvas, numberOfAllQuestes);
-        questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
+        _questSetup.SetCanvasPosition(_canvas, _numberOfAllQuestes);
+        _questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
         numberOfActiveQuests++;
     }
 
