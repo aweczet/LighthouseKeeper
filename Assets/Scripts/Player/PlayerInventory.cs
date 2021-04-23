@@ -86,6 +86,7 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void removeItemAfterQuest(int id){
+        Debug.Log("removeitemafterquest "+id);
         isFull[id] = false;
         items[id].SetActive(false);
         Destroy(itemIcon[id]);

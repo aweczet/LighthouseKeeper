@@ -756,7 +756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480.9, y: -221}
+  m_AnchoredPosition: {x: 100, y: 0}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &74669908
@@ -2648,7 +2648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -402.9, y: -221}
+  m_AnchoredPosition: {x: 200, y: 0}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455316588
@@ -9050,6 +9050,7 @@ MonoBehaviour:
     - {fileID: 176768220}
     destroyItems: 0
     itemID: 
+    questItemLength: 0
   - isActive: 1
     isCompleted: 0
     title: "Sprawd\u017A barometr"
@@ -9064,6 +9065,7 @@ MonoBehaviour:
     - {fileID: 884580559}
     destroyItems: 0
     itemID: 
+    questItemLength: 0
   - isActive: 1
     isCompleted: 0
     title: Ustaw kolor flagi
@@ -9079,6 +9081,7 @@ MonoBehaviour:
     - {fileID: 1793897360}
     destroyItems: 0
     itemID: 
+    questItemLength: 0
   - isActive: 1
     isCompleted: 0
     title: "Zbierz porzucone ksi\u0105\u017Cki"
@@ -9095,6 +9098,7 @@ MonoBehaviour:
     - {fileID: 1403354347}
     destroyItems: 1
     itemID: 
+    questItemLength: 0
   - isActive: 1
     isCompleted: 0
     title: "Wejd\u017A na latarni\u0119"
@@ -9109,6 +9113,7 @@ MonoBehaviour:
     - {fileID: 1820543359}
     destroyItems: 0
     itemID: 
+    questItemLength: 0
   - isActive: 0
     isCompleted: 0
     title: "Zapal latarni\u0119"
@@ -9124,6 +9129,7 @@ MonoBehaviour:
     - {fileID: 2034926817}
     destroyItems: 0
     itemID: 
+    questItemLength: 0
   numberOfActiveQuests: 0
   isRetrospection: 0
   level: 0
@@ -15230,7 +15236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323.1, y: -221}
+  m_AnchoredPosition: {x: 300, y: 0}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &979089873
@@ -15582,7 +15588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -559.3, y: -221}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017976351
@@ -15948,11 +15954,11 @@ RectTransform:
   m_Father: {fileID: 333630098}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1270199400
 GameObject:
   m_ObjectHideFlags: 0
@@ -16149,17 +16155,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b8184ab40907e104eaf3073e55fd8098,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.10742569
+      value: -44.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8184ab40907e104eaf3073e55fd8098,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7999649
+      value: -7.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8184ab40907e104eaf3073e55fd8098,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.562832
+      value: 45.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8184ab40907e104eaf3073e55fd8098,
         type: 3}
@@ -19203,17 +19209,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: bd26373e9522d6243aa02d6933a138f8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.553
+      value: -43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd26373e9522d6243aa02d6933a138f8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd26373e9522d6243aa02d6933a138f8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.977
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd26373e9522d6243aa02d6933a138f8,
         type: 3}

@@ -23,6 +23,7 @@ public class Quest
     public GameObject[] questItem;
     public bool destroyItems = false;
     [HideInInspector] public int[] itemID;
+    [HideInInspector] public int questItemLength;
 
     public void completed()
     {
@@ -30,8 +31,9 @@ public class Quest
         isCompleted = true;
         StrikeQuest();
         if(destroyItems){
-            for(int i = 0; i < questItem.Length; i++)
-                GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerInventory>().removeItemAfterQuest(itemID[i]);
+            PlayerInventory inv = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerInventory>();
+            for(int i = 0; i < questItemLength; i++)
+                inv.removeItemAfterQuest(itemID[i]);
 
         }
         //swiatlo.transform.position = new Vector3(-58, 22, 13);

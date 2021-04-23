@@ -115,6 +115,7 @@ public class Player : MonoBehaviour
                 numberOfAllQuestes++;
             }
             quest.itemID = new int[quest.questItem.Length];
+            quest.questItemLength = quest.questItem.Length;
             
 
             //if (quest.isActive)
@@ -239,7 +240,8 @@ public class Player : MonoBehaviour
                             case GoalType.collect:
                                 if(!gameObject.GetComponent<PlayerInventory>().isEqFull())
                                 {
-                                    Destroy(questItem);
+                                    questItem.GetComponent<ItemPickup>().pickUpItem();
+                                    questItem.SetActive(false);
                                     quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                     Debug.Log(quest.questGoal.currentAmmount);
                                     Debug.Log(quest.itemID.Length);
@@ -280,7 +282,8 @@ public class Player : MonoBehaviour
                         }
                     }
                     else if(item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated && !gameObject.GetComponent<PlayerInventory>().isEqFull()){
-                        Destroy(item);
+                        item.GetComponent<ItemPickup>().pickUpItem();
+                        item.SetActive(false);
                     }
                 }
 

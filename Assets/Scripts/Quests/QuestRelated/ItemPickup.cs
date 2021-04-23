@@ -11,7 +11,6 @@ public class ItemPickup : MonoBehaviour
     public GameObject itemButton;
     public string itemTag;
     public bool nonQuestRelated = false;
-    private bool isDestroyed = false;
 
     private void Start()
     {
@@ -19,27 +18,20 @@ public class ItemPickup : MonoBehaviour
         //DontDestroyOnLoad(itemButton);
     }
 
-    private void OnDestroy()
+    public void pickUpItem()
     {   
-        if(!isDestroyed)
+        for (int i = 0; i < inventory.slots.Length; i++)
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
+            if (inventory.isFull[i] == false)
             {
-                if (inventory.isFull[i] == false)
-                {
-                    inventory.isFull[i] = true;
-                    if(inventory.itemIcon != null)
-                    {
-                        inventory.itemIcon[i] = Instantiate(itemButton, inventory.slots[i].transform, false);
-                        inventory.itemIcon[i].SetActive(true);
-                    }
-                    inventory.items[i] = GameObject.Find("First Person Player/HeldItem/" + gameObject.name);
-                    inventory.itemTag[i] = itemTag;
-                    inventory.lastAddedID = i;
-                    break;
-                }
+                inventory.isFull[i] = true;
+                inventory.itemIcon[i] = Instantiate(itemButton, inventory.slots[i].transform, false);
+                inventory.itemIcon[i].SetActive(true);
+                inventory.items[i] = GameObject.Find("First Person Player/HeldItem/" + gameObject.name);
+                inventory.itemTag[i] = itemTag;
+                inventory.lastAddedID = i;
+                break;
             }
-            isDestroyed = true;
         }
     }
 }
