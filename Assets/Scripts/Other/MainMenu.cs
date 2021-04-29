@@ -9,10 +9,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     private Player _player;
+    public GameObject CanvasMainMenu, CanvasSettingsMenu;
     
     private void Start() {
         SetUpCursor();
         _player = GameObject.FindWithTag("Player").transform.GetComponent<Player>();
+        CanvasSettingsMenu.gameObject.SetActive(false);
     }
 
     private void SetUpCursor()
@@ -31,11 +33,13 @@ public class MainMenu : MonoBehaviour
     }
 
     public void GoToSettingsMenu() {
-        SceneManager.LoadScene("SettingsMenu");
+        CanvasMainMenu.gameObject.SetActive(false);
+        CanvasSettingsMenu.gameObject.SetActive(true);
     }
 
     public void GoToMainMenu() {
-        SceneManager.LoadScene("MainMenu");
+        CanvasSettingsMenu.gameObject.SetActive(false);
+        CanvasMainMenu.gameObject.SetActive(true);
     }
    
     public void QuitGame() {
