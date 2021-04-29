@@ -15,28 +15,47 @@ public class Randomizer : MonoBehaviour
     
     void Awake()
     {
-        randomAngle = Random.Range(0, -180) + 90;
+        randomAngle = Random.Range(0, -230) + 115;
         barometerIndicator.eulerAngles = new Vector3(0, -121, randomAngle);
         SetUpFlagColorID();
     }
     
     public void SetUpFlagColorID()
     {
-        if (randomAngle <= 90 && randomAngle >= 55)
-        {
-            flagColorID = 1;
+        while( (randomAngle <= 74 && randomAngle >= 59) || (randomAngle <= 9 && randomAngle >= -9) || (randomAngle <= -59 && randomAngle >= -74)) {
+            Awake();
         }
-        else if (randomAngle <= 55 && randomAngle >= 0)
+        if (randomAngle <= 115 && randomAngle >= 75)
         {
-            flagColorID = 2;
+            flagColorID = 1; // zielony
         }
-        else if (randomAngle <= 0 && randomAngle >= -55)
+        else if (randomAngle <= 50 && randomAngle >= 10)
         {
-            flagColorID = 3;
+            flagColorID = 2; // niebieski
         }
-        else
+        else if (randomAngle <= -10 && randomAngle >= -50)
         {
-            flagColorID = 4;
+            flagColorID = 3; // zolty
         }
+        else if (randomAngle <= -75 && randomAngle >= -115)
+        {
+            flagColorID = 4; // czerwony
+        }
+        // if (randomAngle <= 90 && randomAngle >= 55)
+        // {
+        //     flagColorID = 1;
+        // }
+        // else if (randomAngle <= 55 && randomAngle >= 0)
+        // {
+        //     flagColorID = 2;
+        // }
+        // else if (randomAngle <= 0 && randomAngle >= -55)
+        // {
+        //     flagColorID = 3;
+        // }
+        // else
+        // {
+        //     flagColorID = 4;
+        // }
     }
 }
