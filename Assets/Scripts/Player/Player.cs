@@ -261,7 +261,10 @@ public class Player : MonoBehaviour
 
                             case GoalType.light:
                             case GoalType.lighthouse:
-                                lightSwitch = new LightSwitch(quest.questItem[0]);
+                                if(!quest.questItem[1].GetComponent<ItemUseOnObject>() || (gameObject.GetComponent<PlayerInventory>().isActive && gameObject.GetComponent<PlayerInventory>().itemTag[gameObject.GetComponent<PlayerInventory>().activeItemID] == quest.questItem[1].GetComponent<ItemUseOnObject>().requiredItemTag))
+                                    lightSwitch = new LightSwitch(quest.questItem[0]);
+                                else
+                                    quest.questGoal.currentAmmount--;
                                 break;
 
                             // case GoalType.color:

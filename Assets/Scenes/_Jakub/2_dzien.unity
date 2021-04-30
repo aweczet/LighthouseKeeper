@@ -15776,7 +15776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quests:
-  - isActive: 1
+  - isActive: 0
     isCompleted: 0
     title: "Id\u017A przed dom"
     questName: {fileID: 0}
@@ -15791,7 +15791,7 @@ MonoBehaviour:
     destroyItems: 0
     itemID: 
     questItemLength: 0
-  - isActive: 1
+  - isActive: 0
     isCompleted: 0
     title: "Id\u017A do latarni"
     questName: {fileID: 0}
@@ -15821,7 +15821,7 @@ MonoBehaviour:
     destroyItems: 0
     itemID: 
     questItemLength: 0
-  - isActive: 1
+  - isActive: 0
     isCompleted: 0
     title: "Zbierz porzucone ksi\u0105\u017Cki"
     questName: {fileID: 0}
@@ -15853,7 +15853,7 @@ MonoBehaviour:
     destroyItems: 0
     itemID: 
     questItemLength: 0
-  - isActive: 1
+  - isActive: 0
     isCompleted: 0
     title: "PODNIE\u015A FLAG\u0118"
     questName: {fileID: 0}
@@ -22884,13 +22884,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057378052}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4961c1f93807d44478e8647ad0e6ef5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   requiredItemTag: lighter
-  action: 0
+  action: 3
 --- !u!64 &1057378054
 MeshCollider:
   m_ObjectHideFlags: 0

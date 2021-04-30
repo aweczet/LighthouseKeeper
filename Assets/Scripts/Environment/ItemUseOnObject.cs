@@ -43,7 +43,10 @@ public class ItemUseOnObject : MonoBehaviour
                     RemoveFromInventory();
                 }
                 break;
-            
+            case ObjectType.TagPlaceholder:
+                return;
+                break;
+
             default:
                 return;
         }
@@ -63,5 +66,6 @@ public enum ObjectType
 {
     DoorAnimation,
     BookPutaway,
-    FlagSetup
+    FlagSetup,
+    TagPlaceholder
 }
