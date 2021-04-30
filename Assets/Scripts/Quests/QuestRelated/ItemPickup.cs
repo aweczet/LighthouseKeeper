@@ -30,7 +30,7 @@ public class ItemPickup : MonoBehaviour
                 inventory.items[i] = GameObject.Find("First Person Player/HeldItem/" + gameObject.name);
                 inventory.itemTag[i] = itemTag;
                 inventory.lastAddedID = i;
-                break;
+                return;
             }
         }
     }
