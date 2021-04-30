@@ -89,7 +89,10 @@ public class Player : MonoBehaviour
                 if (quest.questGoal.goalType == GoalType.color)
                 {
                     Randomizer barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
-                    quest.questGoal.requiredAmmount = barometr.flagColorID;
+                    quest.questItem[0] = GameObject.Find("flag_"+barometr.flagColorID);
+                    quest.questGoal.goalType = GoalType.collect;
+                    quest.questItem[0].GetComponent<ItemPickup>().nonQuestRelated = false;
+                    quest.questItem[0].GetComponent<ItemPickup>().itemTag = "flag";
                 }
 
                 numberOfActiveQuests += quest.isActive ? 1 : 0;
@@ -168,7 +171,6 @@ public class Player : MonoBehaviour
                 {
                     numberOfActiveQuests = 1;
                     activeQuestID++;
-                    Debug.Log(activeQuestID);
                     quests[activeQuestID].isActive = true;
                     questSetups[activeQuestID].SetCanvasPosition(canvas, activeQuestID+1);
                     questSetups[activeQuestID].newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
@@ -217,6 +219,11 @@ public class Player : MonoBehaviour
     // Wciśnięcie LPM na zaznaczonym obiekcie
     public void PressedOnSelectable(GameObject item)
     {
+        if(item.active && item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated && !gameObject.GetComponent<PlayerInventory>().isEqFull()){
+            item.GetComponent<ItemPickup>().pickUpItem();
+            item.SetActive(false);
+            return;
+        }
         numberOfActiveQuests = 0;
         foreach (Quest quest in quests)
         {
@@ -243,8 +250,6 @@ public class Player : MonoBehaviour
                                     questItem.GetComponent<ItemPickup>().pickUpItem();
                                     questItem.SetActive(false);
                                     quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
-                                    Debug.Log(quest.questGoal.currentAmmount);
-                                    Debug.Log(quest.itemID.Length);
                                     quest.itemID[quest.questGoal.currentAmmount] = gameObject.GetComponent<PlayerInventory>().lastAddedID;
                                 }
                                 else
@@ -280,10 +285,6 @@ public class Player : MonoBehaviour
                             StartCoroutine(quest.questGoal.showMonolog(monologbox));
                             numberOfActiveQuests--;
                         }
-                    }
-                    else if(item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated && !gameObject.GetComponent<PlayerInventory>().isEqFull()){
-                        item.GetComponent<ItemPickup>().pickUpItem();
-                        item.SetActive(false);
                     }
                 }
 
