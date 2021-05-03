@@ -10,7 +10,6 @@ public class ColorChange
 
     public ColorChange(GameObject flag, int colorID)
     {
-        Debug.Log(flag);
         material = flag.GetComponent<Renderer>().material;
         material.color = _colors[colorID];
     }
