@@ -169,7 +169,7 @@ public class Player : MonoBehaviour
     {
         if (item.GetComponent<HarpoonInteraction>() != null)
         {
-            item.GetComponent<HarpoonInteraction>().Shoot();
+            item.GetComponent<HarpoonInteraction>().LockIn();
             return;
         }
         numberOfActiveQuests = 0;
