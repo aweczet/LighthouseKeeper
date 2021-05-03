@@ -12,7 +12,10 @@ public class MouseLook : MonoBehaviour
 
     public Transform playerBody;
 
-    float xRotation = 0f;
+    private float _xRotation = 0f;
+    private float _yRotation = 0f;
+
+    public bool harpooning;
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +47,10 @@ public class MouseLook : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        xRotation -= mouseY;
-        // Zabezpieczenie przed spojrzeniem za bardzo w górę lub w dół
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        _xRotation -= mouseY;
+        _xRotation = harpooning ? Mathf.Clamp(_xRotation, -20f, 20f) : Mathf.Clamp(_xRotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        transform.localRotation = Quaternion.Euler(_xRotation, 0, 0);
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }

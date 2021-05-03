@@ -14,11 +14,11 @@ public class unique_object : MonoBehaviour
     void Start()
     {
         if (uniqueobject1 != null)
-            uniqueobject1.SetActive(Player.unique_collected_1);
+            uniqueobject1.SetActive(Player.UniqueCollected1);
         if (uniqueobject2 != null)
-            uniqueobject2.SetActive(Player.unique_collected_2);
+            uniqueobject2.SetActive(Player.UniqueCollected2);
         if (uniqueobject3 != null)
-            uniqueobject3.SetActive(Player.unique_collected_3);
+            uniqueobject3.SetActive(Player.UniqueCollected3);
     }
 
     void Update()
@@ -30,29 +30,29 @@ public class unique_object : MonoBehaviour
             var selection = hit.transform;
             if (selection.gameObject == uniquepickup1)
             {
-                Player.unique_collected_1 = true;
+                Player.UniqueCollected1 = true;
                 Destroy(uniquepickup1);
             }
             if (selection.gameObject == uniquepickup2)
             {
-                Player.unique_collected_2 = true;
+                Player.UniqueCollected2 = true;
                 Destroy(uniquepickup2);
             }
             if (selection.gameObject == uniquepickup3)
             {
-                Player.unique_collected_3 = true;
+                Player.UniqueCollected3 = true;
                 Destroy(uniquepickup3);
             }
         }
-        if (Player.unique_collected_1 == true && uniqueobject1 != null)
+        if (Player.UniqueCollected1 == true && uniqueobject1 != null)
         {
             uniqueobject1.SetActive(true);
         }
-        if (Player.unique_collected_2 == true && uniqueobject2 != null)
+        if (Player.UniqueCollected2 == true && uniqueobject2 != null)
         {
             uniqueobject2.SetActive(true);
         }
-        if (Player.unique_collected_3 == true && uniqueobject3 != null)
+        if (Player.UniqueCollected3 == true && uniqueobject3 != null)
         {
             uniqueobject3.SetActive(true);
         }

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
@@ -34,5 +35,17 @@ public class SaveSystem
 
         Debug.LogError("Save file not found! " + Path);
         return null;
+    }
+
+    public static void DeleteData()
+    {
+        try
+        {
+            File.Delete(Path);
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
     }
 }
