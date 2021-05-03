@@ -9,6 +9,27 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScenes/MainMenu.unity
     guid: a14001cf0f520f442a252058dcf17fba
   - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 64e6126c62026ef4fba21eec256c013c
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/1_dzien.unity
+    guid: 48c344fb84c952647b6895be6e47db7d
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/2_dzien.unity
+    guid: 0c3de6131c333474e94c068e1c622dd0
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/3_dzien.unity
+    guid: 6170802b642c71642a31c1de5a5b3413
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/ODL_changes/RETROSPEKCJA 1.unity
+    guid: 8c7286544139fe148aaca1e7d4740cd3
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/4_dzien.unity
+    guid: b381d338fb18c03499f5ccb026fade3f
+  - enabled: 1
+    path: "Assets/Scenes/Dni/old_days/Drugi dzie\u0144.unity"
+    guid: e0458ead9e2d9544b97172335dfd6698
+  - enabled: 1
     path: Assets/Scenes/MenuScenes/SettingsMenu.unity
     guid: eed1ed3c46d7a7f429705333a75cebe3
   - enabled: 1

@@ -38,13 +38,15 @@ public class ItemUseOnObject : MonoBehaviour
                 if (barometerInfo.flagColorID == holdingFlagId)
                 {
                     GameObject mainFlag = GameObject.Find("main_flag/Flag");
-                    Debug.Log(mainFlag);
                     ColorChange flagMat = new ColorChange(mainFlag, holdingFlagId - 1);
 
                     RemoveFromInventory();
                 }
                 break;
-            
+            case ObjectType.TagPlaceholder:
+                return;
+                break;
+
             default:
                 return;
         }
@@ -64,5 +66,6 @@ public enum ObjectType
 {
     DoorAnimation,
     BookPutaway,
-    FlagSetup
+    FlagSetup,
+    TagPlaceholder
 }

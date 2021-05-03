@@ -15,10 +15,11 @@ public class ItemPickup : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+        //DontDestroyOnLoad(itemButton);
     }
 
-    private void OnDestroy()
-    {
+    public void pickUpItem()
+    {   
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
@@ -28,7 +29,8 @@ public class ItemPickup : MonoBehaviour
                 inventory.itemIcon[i].SetActive(true);
                 inventory.items[i] = GameObject.Find("First Person Player/HeldItem/" + gameObject.name);
                 inventory.itemTag[i] = itemTag;
-                break;
+                inventory.lastAddedID = i;
+                return;
             }
         }
     }
