@@ -36,74 +36,98 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        level = SceneManager.GetActiveScene().buildIndex + 1;
         // Ustawienie UI questów żeby dostosowało się do ilości questów
-        
         level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
         _canvas = GameObject.Find("UICanvas/QuestPanel");
+        questSetups = new QuestSetup[quests.Length];
         foreach (Quest quest in quests)
         {
-            // Nie testowana zmiana - powinna działać, ale w razie co jest zostawiona w komentarzu niżej wersja, która działa
-            _questSetup = new QuestSetup(_canvas, quest.title, quest.questName, quest.strike, numberOfActiveQuests);
-            if (!quest.isActive)
+            if (!isRetrospection)
             {
-                _questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
-                _lighthouseQuestID = _numberOfAllQuestes;
-                // Debug.Log(quest.questName);
-            }
+                // Nie testowana zmiana - powinna działać, ale w razie co jest zostawiona w komentarzu niżej wersja, która działa
+                _questSetup = new QuestSetup(_canvas, quest.title, quest.questName, quest.strike, numberOfActiveQuests);
+                if (!quest.isActive)
+                {
+                    _questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
+                    _lighthouseQuestID = _numberOfAllQuestes;
+                }
 
-            quest.questName = _questSetup.newQuestUI.GetComponent<Text>();
-            quest.strike = _questSetup.newQuestStrikeUI.GetComponent<Text>();
+                quest.questName = _questSetup.newQuestUI.GetComponent<Text>();
+                quest.strike = _questSetup.newQuestStrikeUI.GetComponent<Text>();
 
                 if (quest.questGoal.goalType == GoalType.color)
                 {
                     Randomizer barometr = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
-                    quest.questItem[0] = GameObject.Find("flag_"+barometr.flagColorID);
+                    quest.questItem[0] = GameObject.Find("flag_" + barometr.flagColorID);
                     quest.questGoal.goalType = GoalType.collect;
                     quest.questItem[0].GetComponent<ItemPickup>().nonQuestRelated = false;
                     quest.questItem[0].GetComponent<ItemPickup>().itemTag = "flag";
                 }
 
-              numberOfActiveQuests += quest.isActive ? 1 : 0;
-              _numberOfAllQuestes++;
+                numberOfActiveQuests += quest.isActive ? 1 : 0;
+                _numberOfAllQuestes++;
             }
             else
             {
-                questSetups[numberOfAllQuestes] = new QuestSetup(canvas, quest.title, quest.questName, quest.strike, numberOfAllQuestes);
-                if (numberOfAllQuestes == 0)
+                questSetups[_numberOfAllQuestes] = new QuestSetup(_canvas, quest.title, quest.questName, quest.strike, _numberOfAllQuestes);
+                if (_numberOfAllQuestes == 0)
                 {
                     quest.isActive = true;
-                    quest.questName = questSetups[numberOfAllQuestes].newQuestUI.GetComponent<Text>();
-                    quest.strike = questSetups[numberOfAllQuestes].newQuestStrikeUI.GetComponent<Text>();
+                    quest.questName = questSetups[_numberOfAllQuestes].newQuestUI.GetComponent<Text>();
+                    quest.strike = questSetups[_numberOfAllQuestes].newQuestStrikeUI.GetComponent<Text>();
                     numberOfActiveQuests = 1;
                     activeQuestID = 0;
                 }
                 else
                 {
-                    questSetups[numberOfAllQuestes].newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
+                    questSetups[_numberOfAllQuestes].newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
                 }
-                quest.questName = questSetups[numberOfAllQuestes].newQuestUI.GetComponent<Text>();
-                quest.strike = questSetups[numberOfAllQuestes].newQuestStrikeUI.GetComponent<Text>();
-                numberOfAllQuestes++;
+                quest.questName = questSetups[_numberOfAllQuestes].newQuestUI.GetComponent<Text>();
+                quest.strike = questSetups[_numberOfAllQuestes].newQuestStrikeUI.GetComponent<Text>();
+                _numberOfAllQuestes++;
             }
-            
             quest.itemID = new int[quest.questItem.Length];
             quest.questItemLength = quest.questItem.Length;
 
-        }
 
-//         _questSetup.SetCanvasPosition(_canvas, numberOfActiveQuests);
-//         _playerInventory = GetComponent<PlayerInventory>();
-        
-        if(!isRetrospection)
+            //if (quest.isActive)
+            //{
+            //    questSetup = new QuestSetup(_canvas, quest.title, quest.questName, quest.strike, numberOfActiveQuests);
+            //    quest.questName = questSetup.newQuestUI.GetComponent<Text>();
+            //    quest.strike = questSetup.newQuestStrikeUI.GetComponent<Text>();
+            //    numberOfActiveQuests += quest.isActive ? 1 : 0;
+            //    if (quest.questGoal.goalType == GoalType.color)
+            //    {
+            //        random barometr = new random();
+            //        barometr.liczby();
+            //        quest.questGoal.requiredAmmount = barometr.zmienna;
+            //    }
+            //}
+            //else
+            //{
+            //    questSetup = new QuestSetup(_canvas, quest.title, quest.questName, quest.strike, numberOfActiveQuests);
+            //    questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0x00);
+            //    quest.questName = questSetup.newQuestUI.GetComponent<Text>();
+            //    quest.strike = questSetup.newQuestStrikeUI.GetComponent<Text>();
+            //    lighthouseQuestID = numberOfAllQuestes;
+            //}
+            //numberOfAllQuestes++;
+        }
+        if (!isRetrospection)
         {
-            _questSetup.SetCanvasPosition(canvas, numberOfActiveQuests);
+           _questSetup.SetCanvasPosition(_canvas, numberOfActiveQuests);
         }
         else
         {
-            questSetups[0].SetCanvasPosition(canvas, numberOfActiveQuests);
+            questSetups[0].SetCanvasPosition(_canvas, numberOfActiveQuests);
         }
+
     }
+    //         _questSetup.SetCanvasPosition(__canvas, numberOfActiveQuests);
+    //         _playerInventory = GetComponent<PlayerInventory>();
+
+
+
 
     private void Update()
     {
@@ -117,12 +141,12 @@ public class Player : MonoBehaviour
             }
             else
             {
-                if(!quests[numberOfAllQuestes-1].isCompleted)
+                if(!quests[_numberOfAllQuestes-1].isCompleted)
                 {
                     numberOfActiveQuests = 1;
                     activeQuestID++;
                     quests[activeQuestID].isActive = true;
-                    questSetups[activeQuestID].SetCanvasPosition(canvas, activeQuestID+1);
+                    questSetups[activeQuestID].SetCanvasPosition(_canvas, activeQuestID+1);
                     questSetups[activeQuestID].newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
                 }
             }
@@ -206,7 +230,7 @@ public class Player : MonoBehaviour
                             case GoalType.light:
                             case GoalType.lighthouse:
                                 if(!quest.questItem[1].GetComponent<ItemUseOnObject>() || (gameObject.GetComponent<PlayerInventory>().isActive && gameObject.GetComponent<PlayerInventory>().itemTag[gameObject.GetComponent<PlayerInventory>().activeItemID] == quest.questItem[1].GetComponent<ItemUseOnObject>().requiredItemTag))
-                                    lightSwitch = new LightSwitch(quest.questItem[0]);
+                                    _lightSwitch = new LightSwitch(quest.questItem[0]);
                                 else
                                     quest.questGoal.currentAmmount--;
                                 break;

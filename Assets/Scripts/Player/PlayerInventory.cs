@@ -16,6 +16,7 @@ public class PlayerInventory : MonoBehaviour
 
     [HideInInspector] public bool isActive = false;
     [HideInInspector] public int activeItemID = 0;
+    [HideInInspector] public int lastAddedID = 0;
 
     private void Start()
     {
