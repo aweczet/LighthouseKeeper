@@ -121,6 +121,8 @@ public class Player : MonoBehaviour
         {
             questSetups[0].SetCanvasPosition(_canvas, numberOfActiveQuests);
         }
+        //_questSetup.SetCanvasPosition(__canvas, numberOfActiveQuests);
+        _playerInventory = GetComponent<PlayerInventory>();
 
     }
     //         _questSetup.SetCanvasPosition(__canvas, numberOfActiveQuests);
