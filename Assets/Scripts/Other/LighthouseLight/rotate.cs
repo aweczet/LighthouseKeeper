@@ -11,17 +11,19 @@ using UnityEngine.SceneManagement;
 
 public class rotate : MonoBehaviour
 {
-    public Player player;
+    private Player _player;
     public float sec = 5f;
     int nextScene;
     int lighter_used;
     // Start is called before the first frame update
     void Start()
     {
+        _player = GameObject.FindWithTag("Player").GetComponent<Player>();
         // Dodaje scene następną (dzień 2) do Stosu (dlatego +1)
         //player.addSceneToStack(SceneManager.GetActiveScene().buildIndex +1);
         if (gameObject.active)
         {
+            SaveSystem.SaveGame(_player);
             nextScene = SceneManager.GetActiveScene().buildIndex + 1;
             StartCoroutine(LateCall());
         }

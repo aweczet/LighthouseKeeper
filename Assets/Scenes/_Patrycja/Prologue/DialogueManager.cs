@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         // Dodaje scene do Stosu
-        player.addSceneToStack(SceneManager.GetActiveScene().buildIndex);
+        // player.addSceneToStack(SceneManager.GetActiveScene().buildIndex);
 
         sentences = new Queue<string>();
         StartDialogue(dialogue);
@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour {
     void EndDialogue() {
         animator.SetBool("IsOpen", false);
         // Dodaje następną scene (dzień 1) do Stosu (dlatego +1)
-        player.addSceneToStack(SceneManager.GetActiveScene().buildIndex +1);
+        // player.addSceneToStack(SceneManager.GetActiveScene().buildIndex +1);
         SceneManager.LoadScene(player.level);
     }
 }
