@@ -2544,6 +2544,7 @@ MonoBehaviour:
   directionalLight: {fileID: 416349267}
   preset: {fileID: 11400000, guid: aad13b53a3c83844e99810077a42484b, type: 2}
   timeOfDay: 12
+  lighthouse: {fileID: 843340953}
 --- !u!108 &416349267
 Light:
   m_ObjectHideFlags: 0
@@ -4709,7 +4710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727885879}
   m_LocalRotation: {x: 0.10448128, y: -0.8428515, z: 0.17707236, w: 0.49732327}
-  m_LocalPosition: {x: 83.15972, y: 45.21, z: 48.36989}
+  m_LocalPosition: {x: 84.5, y: 58.1, z: 106.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005298949}
@@ -5630,7 +5631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532e4fab7ba79fb48b8bd77386b3b23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   sec: 5
 --- !u!1001 &881290843
 PrefabInstance:

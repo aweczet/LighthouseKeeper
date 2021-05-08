@@ -22,6 +22,8 @@ public class LightingManager : MonoBehaviour
     private int _numberOfCurrentQuests;
     private bool _lastQuest = false;
 
+    public GameObject lighthouse;
+
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -85,11 +87,13 @@ public class LightingManager : MonoBehaviour
     // Sets max time independently of quests in floating menu
     private void SetTimeOnMenu()
     {
-        if (SceneManager.GetActiveScene().name != "MenuFloating")
+        if (SceneManager.GetActiveScene().name != "MenuFloating" && SceneManager.GetActiveScene().name != "MenuFloatingWithBackground")
             return;
         _maxTime = 24;
-        if (timeOfDay < 5 || timeOfDay > 19)
-            timeOfDay = 5;
+        if (timeOfDay < 6 || timeOfDay > 18)
+            lighthouse.SetActive(true);
+        else
+            lighthouse.SetActive(false);
     }
 
     // Metoda obsługująca obracanie się światła i ustawienie kolorów
