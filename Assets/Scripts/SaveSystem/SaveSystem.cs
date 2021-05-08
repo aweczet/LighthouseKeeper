@@ -2,6 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class SaveSystem
 {
@@ -29,7 +30,7 @@ public class SaveSystem
 
             LighthouseData data = binaryFormatter.Deserialize(stream) as LighthouseData;
             stream.Close();
-
+            
             return data;
         }
 
