@@ -40,5 +40,8 @@ EditorBuildSettings:
     guid: 5f2d3645b78758b49b347ee0fb54fb89
   - enabled: 1
     path: Assets/Scenes/_Albert/20210415_2.unity
+    guid: 4fdd5536d2ef3a14bae6c9e5e1ac6e89
+  - enabled: 1
+    path: Assets/Scenes/_Albert/20210415_3.unity
     guid: 8af90f35379d3ed4382c217606ff2b2a
   m_configObjects: {}

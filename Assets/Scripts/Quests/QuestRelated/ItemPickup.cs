@@ -7,12 +7,13 @@ using UnityEngine;
 ///</summary>
 public class ItemPickup : MonoBehaviour
 {
-    private PlayerInventory inventory;
+    public PlayerInventory inventory;
     public GameObject itemButton;
     public string itemTag;
     public bool nonQuestRelated = false;
     public bool foodWithBook = false;
-    private void Start()
+    
+    public void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
         //DontDestroyOnLoad(itemButton);
