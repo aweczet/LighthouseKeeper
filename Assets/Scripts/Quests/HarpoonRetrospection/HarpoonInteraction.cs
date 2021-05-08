@@ -20,6 +20,10 @@ public class HarpoonInteraction : MonoBehaviour
 
     private bool _lockedIn;
 
+    
+
+    
+
     private void Start()
     {
         _origin = transform.GetChild(0);
@@ -33,7 +37,7 @@ public class HarpoonInteraction : MonoBehaviour
     {
         if (_harpoon == null || _harpoon.velocity == Vector3.zero) return;
         _harpoon.rotation = Quaternion.LookRotation(_harpoon.velocity);
-        if (_harpoon.position.y <= _origin.position.y - 5)
+        if (_harpoon.position.y <= _origin.position.y - 20)
         {
             Destroy(_harpoon.gameObject);
         }
@@ -91,10 +95,10 @@ public class HarpoonInteraction : MonoBehaviour
     public void Shoot(float time)
     {
         Vector3 calculatedVelocity = CalculateVelocity(time);
-        // Rigidbody _harpoon = Instantiate(harpoonPrefab, _origin.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+        //Rigidbody _harpoon = Instantiate(harpoonPrefab, _origin.position, Quaternion.Euler(new Vector3(0, 0, 90)));
         _harpoon = Instantiate(harpoonPrefab, _origin.position, Quaternion.identity);
         _harpoon.velocity = calculatedVelocity;
-        // _harpoon.rotation = Quaternion.LookRotation(_harpoon.velocity);
+        //_harpoon.rotation = Quaternion.LookRotation(_harpoon.velocity);
     }
 
     private Vector3 CalculateVelocity(float time)

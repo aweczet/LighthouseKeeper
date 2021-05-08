@@ -8,6 +8,8 @@ TagManager:
   - light
   - barometr
   - monolog
+  - shark
+  - harpoon
   layers:
   - Default
   - TransparentFX
