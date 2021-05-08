@@ -262,7 +262,8 @@ public class Player : MonoBehaviour
                     else if (item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated &&
                              !playerInventory.isEqFull())
                     {
-                        Destroy(item);
+                        questItem.GetComponent<ItemPickup>().pickUpItem();
+                        questItem.SetActive(false);
                     }
                 }
             }
