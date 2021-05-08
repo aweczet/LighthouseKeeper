@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class LighthouseData
@@ -7,69 +8,30 @@ public class LighthouseData
     public int sceneId;
     
     public bool uniqueCollected1;
-    // public bool unique_collected_2;
-    // public bool unique_collected_3;
-    
-    // public float[] playerPosition;
-    // public int numberOfActiveQuests;
-    //
-    // public bool[] questsStatus;
-    
-    //     level = data.level;
-    //     quests = data.quests;
-    //     loadedLevels = data.loadedLevels;
-    //
-    //     // numberOfActiveQuests = data.numberOfActiveQuests;
-    //     // uniquepickup = data.uniquepickup;
-    //     // uniqueobject = data.uniqueobject;
-    //     // collectedUnique = data.collectedUnique;
-    //     // questSetup = data.questSetup;
-    //     // canvas = data.canvas;
-    //     // lightSwitch = data.lightSwitch;
-    //     // colorChange = data.colorChange;
-    //     // barometr = data.barometr;
-    //     // allDone = data.allDone;
-    //     // numberOfAllQuestes = data.numberOfAllQuestes;
-    //     // lighthouseQuestID = data.lighthouseQuestID;
+
+    public int itemsCount;
+    public string[] itemNames;
 
     public LighthouseData(Player player)
     {
         sceneId = player.level;
+        
         uniqueCollected1 = Player.UniqueCollected1;
         
-        
-        // var playerTransform = player.GetComponent<Transform>();
-        // playerPosition = Vector3ToFloats(playerTransform.position);
-        //
-        // numberOfActiveQuests = player.numberOfActiveQuests;
-        //
-        // questsStatus = new bool[player.quests.Length-1];
-        //
-        // for (int i = 0; i < player.quests.Length-1; i++)
-        // {
-        //     questsStatus[i] = player.quests[i].isActive;
-        // }
+        itemNames = SaveItems(player);
+        itemsCount = itemNames.Length;
     }
 
-    // private float[] Vector3ToFloats(Vector3 vector3)
-    // {
-    //     float[] floats = new float[3];
-    //     for (int i = 0; i < 3; i++)
-    //     {
-    //         floats[i] = vector3[i];
-    //     }
-    //
-    //     return floats;
-    // }
-    //
-    // public Vector3 FloatsToVector3(float[] floats)
-    // {
-    //     Vector3 vector3 = new Vector3();
-    //     for (int i = 0; i < 3; i++)
-    //     {
-    //         vector3[i] = floats[i];
-    //     }
-    //
-    //     return vector3;
-    // }
+    private string[] SaveItems(Player player)
+    {
+        List<string> itemsToSave = new List<string>();
+        
+        foreach (var item in player.playerInventory.items)
+        {
+            if (item == null) continue;
+            itemsToSave.Add(item.name);
+        }
+        
+        return itemsToSave.ToArray();
+    }
 }
