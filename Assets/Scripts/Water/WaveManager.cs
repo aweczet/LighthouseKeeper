@@ -9,6 +9,7 @@ public class WaveManager : MonoBehaviour
     public float lenght = 2f;
     public float speed = 1f;
     public float offset = 0f;
+    public Material material; 
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class WaveManager : MonoBehaviour
     private void Update()
     {
         offset += Time.deltaTime * speed;
+        material.SetTextureOffset("_MainTex",new Vector2(offset*0.01f,0));
     }
     public float GetWaveHeight(float _x)
     {

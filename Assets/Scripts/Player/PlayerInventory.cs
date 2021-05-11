@@ -18,7 +18,7 @@ public class PlayerInventory : MonoBehaviour
     [HideInInspector] public int activeItemID = 0;
     [HideInInspector] public int lastAddedID = 0;
 
-    private void Start()
+    private void Awake()
     {
         isFull = new bool[items.Length];
         slots = new GameObject[items.Length];
@@ -66,7 +66,6 @@ public class PlayerInventory : MonoBehaviour
     {
         for (int i = 0; i < isFull.Length; i++)
         {
-            Debug.Log(isFull[i]);
             if (!isFull[i])
                 return false;
         }

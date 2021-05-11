@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private QuestSetup _questSetup;
     private QuestSetup[] questSetups;
     private GameObject _canvas;
-    private PlayerInventory _playerInventory;
+    public PlayerInventory playerInventory;
 
     private LightSwitch _lightSwitch;
     private ColorChange _colorChange;
@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
             questSetups[0].SetCanvasPosition(_canvas, numberOfActiveQuests);
         }
         //_questSetup.SetCanvasPosition(__canvas, numberOfActiveQuests);
-        _playerInventory = GetComponent<PlayerInventory>();
+        playerInventory = GetComponent<PlayerInventory>();
 
     }
     //         _questSetup.SetCanvasPosition(__canvas, numberOfActiveQuests);
@@ -215,7 +215,7 @@ public class Player : MonoBehaviour
                                 quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 break;
                             case GoalType.collect:
-                                if (!_playerInventory.isEqFull())
+                                if (!playerInventory.isEqFull())
                                 {
                                     questItem.GetComponent<ItemPickup>().pickUpItem();
                                     questItem.SetActive(false);
@@ -260,9 +260,10 @@ public class Player : MonoBehaviour
                         }
                     }
                     else if (item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated &&
-                             !_playerInventory.isEqFull())
+                             !playerInventory.isEqFull())
                     {
-                        Destroy(item);
+                        questItem.GetComponent<ItemPickup>().pickUpItem();
+                        questItem.SetActive(false);
                     }
                 }
             }
