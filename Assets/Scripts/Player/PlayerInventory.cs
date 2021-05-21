@@ -85,7 +85,7 @@ public class PlayerInventory : MonoBehaviour
 
         if(Input.GetKeyUp(KeyCode.J))
         {
-            Blackout.blackout();
+            StartCoroutine(Blackout.blackout());
         }
     }
 
