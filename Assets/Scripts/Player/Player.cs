@@ -214,7 +214,7 @@ public class Player : MonoBehaviour
                                 // Np. Wciśnij 3 przyciski -> dzięki temu nie można wcisnąć jednego przycisku 3 razy żeby zrobić questa
                                 quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 break;
-                            case GoalType.collect:
+                            case GoalType.collect: case GoalType.color:
                                 if (!playerInventory.isEqFull())
                                 {
                                     questItem.GetComponent<ItemPickup>().pickUpItem();

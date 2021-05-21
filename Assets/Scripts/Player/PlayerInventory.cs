@@ -30,15 +30,48 @@ public class PlayerInventory : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Tab) && !isEqEmpty())
+        if (Input.GetKeyUp(KeyCode.Alpha1) && !isEqEmpty())
         {
-            if (isActive)
+            if(isActive && activeItemID == 0)
             {
-                nextItem();
+                stopHolding();
             }
             else
             {
-                holdFirstItem();
+                holdXItem(0);
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha2) && !isEqEmpty())
+        {
+            if(isActive && activeItemID == 1)
+            {
+                stopHolding();
+            }
+            else
+            {
+                holdXItem(1);
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha3) && !isEqEmpty())
+        {
+            if(isActive && activeItemID == 2)
+            {
+                stopHolding();
+            }
+            else
+            {
+                holdXItem(2);
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha4) && !isEqEmpty())
+        {
+            if(isActive && activeItemID == 3)
+            {
+                stopHolding();
+            }
+            else
+            {
+                holdXItem(3);
             }
         }
 
@@ -48,6 +81,11 @@ public class PlayerInventory : MonoBehaviour
             {
                 dropItem();
             }
+        }
+
+        if(Input.GetKeyUp(KeyCode.J))
+        {
+            Blackout.blackout();
         }
     }
 
@@ -135,5 +173,25 @@ public class PlayerInventory : MonoBehaviour
                 break;
             }
         }
+    }
+
+    private void holdXItem(int id)
+    {
+        if(isFull[id])
+        {
+            if(isActive)
+            {
+                items[activeItemID].SetActive(false);
+            }
+            items[id].SetActive(true);
+            activeItemID = id;
+            isActive = true;
+        }
+    }
+
+    private void stopHolding(){
+        items[activeItemID].SetActive(false);
+        activeItemID = 0;
+        isActive = false;
     }
 }
