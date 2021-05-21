@@ -33,7 +33,7 @@ public class SaveManager : MonoBehaviour
     }
 
     private void Start()
-    {        
+    {
         LighthouseData data = SaveSystem.LoadGame();
         if (data == null) return;
         SceneManager.LoadScene(data.sceneId);

@@ -10,26 +10,19 @@ public class MainMenu : MonoBehaviour
 {
     private Player _player;
     public GameObject CanvasMainMenu, CanvasSettingsMenu;
-    
+    private LightingManager _lightingManager;
+
     private void Start() {
         SetUpCursor();
         _player = GameObject.FindWithTag("Player").transform.GetComponent<Player>();
         CanvasSettingsMenu.gameObject.SetActive(false);
+        _lightingManager = FindObjectOfType<LightingManager>();
     }
 
     private void SetUpCursor()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-    }
-
-    public void ContinueGame() {
-        SceneManager.LoadScene(_player.level);
-    }
-
-    // instead of scene index use name of scene - that will be easier to manipulate order of scenes in build manager
-    public void PlayGame() {
-        SceneManager.LoadScene(1);
     }
 
     public void GoToSettingsMenu() {

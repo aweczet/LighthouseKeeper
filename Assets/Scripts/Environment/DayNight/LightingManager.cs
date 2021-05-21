@@ -32,6 +32,7 @@ public class LightingManager : MonoBehaviour
         // Obliczenie o godzin ma się przesunąć czas (w zależności od ilości questów)
         _timeInterval = (12f / _numberOfCurrentQuests);
         _maxTime += _timeInterval;
+        Debug.LogWarning(_maxTime);
     }
 
     private void Update()
@@ -89,7 +90,7 @@ public class LightingManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "MenuFloating" && SceneManager.GetActiveScene().name != "MenuFloatingWithBackground")
             return;
-        _maxTime = 24;
+        _maxTime = 12;
         if (timeOfDay < 6 || timeOfDay > 18)
             lighthouse.SetActive(true);
         else
