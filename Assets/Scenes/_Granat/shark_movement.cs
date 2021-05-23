@@ -35,7 +35,6 @@ public class shark_movement : MonoBehaviour
 
         if (distance > stop_distance && waypoints.Length > 0)
         {
-            //jak już będzie animacja to tutaj ustawić bool moving = true i bool idle = false
             target = waypoints[current_waypoint];
         }
         else if (distance <= stop_distance && waypoints.Length > 0)
@@ -43,7 +42,6 @@ public class shark_movement : MonoBehaviour
             //if (current_timer > 0)
             //{
             //    current_timer -= 0.01f;
-            //    //jak już będzie animacja to tutaj ustawić bool moving = false i bool idle = true
             //}
             //if (current_timer <= 0)
             //{
