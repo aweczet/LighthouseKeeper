@@ -8521,42 +8521,42 @@ PrefabInstance:
     - target: {fileID: 5660857694896891399, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5660857694896891399, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5660857694896891399, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 750.5
       objectReference: {fileID: 0}
     - target: {fileID: 5660857694896891399, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380418196268, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380418196268, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380418196268, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 400.5
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380418196268, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380418196271, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
@@ -8571,22 +8571,22 @@ PrefabInstance:
     - target: {fileID: 5981568380571538586, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380571538586, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380571538586, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 575.5
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380571538586, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 5981568380571538589, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
@@ -8707,6 +8707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: testUIPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981568381236773009, guid: d6a397935ea28dd45b80dea93fa4ea14,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6a397935ea28dd45b80dea93fa4ea14, type: 3}
@@ -23261,7 +23266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1114886604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24133,7 +24138,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Creators:\n\nMaciej Marek\nAlbert J\u0119drzejczak\nMicha\u0142 Granat\nPiotr
+  m_Text: "Creators:\n\nMaciej Marek\nAlbert Jendrzejczak SORY\nMicha\u0142 Granat\nPiotr
     Wr\xF3bel\nPatrycja Trzci\u0144ska\nJakub D\u0105browski\n\nThank you for playing!\n\nYou
     can support us\nby planting a bomb during sesja at\nWest Pomeranian University
     of Technology in Szczecin\nFaculty of Computer Science and Information Technology"

@@ -17,6 +17,8 @@ public class PlayerInventory : MonoBehaviour
     [HideInInspector] public bool isActive = false;
     [HideInInspector] public int activeItemID = 0;
     [HideInInspector] public int lastAddedID = 0;
+    [HideInInspector] private GameObject Helpbox;
+    [HideInInspector] private Camera camera;
 
     private void Awake()
     {
@@ -26,6 +28,9 @@ public class PlayerInventory : MonoBehaviour
             slots[i] = GameObject.Find("UICanvas/Inventory/Inv" + (i + 1));
         itemIcon = new GameObject[items.Length];
         itemTag = new string[items.Length];
+        Helpbox = GameObject.FindGameObjectWithTag("Helpbox");
+        Helpbox.SetActive(false);
+        camera = Camera.main;
     }
 
     private void Update()
@@ -87,6 +92,32 @@ public class PlayerInventory : MonoBehaviour
         {
             StartCoroutine(Blackout.blackout());
         }
+
+        if(Input.GetKeyUp(KeyCode.F1))
+        {
+            if(Helpbox.activeSelf)
+            {
+                gameObject.GetComponent<PlayerMovement>().enabled = true;
+                camera.GetComponent<MouseLook>().enabled = true;
+            }
+            else
+            {
+                gameObject.GetComponent<PlayerMovement>().enabled = false;
+                camera.GetComponent<MouseLook>().enabled = false;
+            }
+
+            Helpbox.SetActive(!Helpbox.activeSelf);
+        }
+        else if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            if(Helpbox.activeSelf)
+            {
+                gameObject.GetComponent<PlayerMovement>().enabled = true;
+                camera.GetComponent<MouseLook>().enabled = true;
+            }
+            Helpbox.SetActive(!Helpbox.activeSelf);
+        }
+
     }
 
     private bool isEqEmpty()

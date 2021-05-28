@@ -88,6 +88,7 @@ public class Player : MonoBehaviour
             }
             quest.itemID = new int[quest.questItem.Length];
             quest.questItemLength = quest.questItem.Length;
+            Blackout.textbg = monologbox;
 
 
             //if (quest.isActive)

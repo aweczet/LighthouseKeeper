@@ -10,6 +10,7 @@ TagManager:
   - monolog
   - shark
   - harpoon
+  - Helpbox
   layers:
   - Default
   - TransparentFX

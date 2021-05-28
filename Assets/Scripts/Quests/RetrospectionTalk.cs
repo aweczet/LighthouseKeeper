@@ -40,17 +40,17 @@ public class RetrospectionTalk : MonoBehaviour
         text.SetText("");
         movement.enabled = true;
         mouselook.enabled = true;
-
-        for (int i = 0; i < inventory.slots.Length; i++) {
-            if(inventory.isFull[i] == false) {
-                inventory.isFull[i] = true;
-                GameObject uiitem = Instantiate(key, inventory.slots[i].transform, false);
-                uiitem.SetActive(true);
-                inventory.items[i] = GameObject.Find("First Person Player/HeldItem/key");
-                inventory.itemTag[i] = "key";
-                break;
+        if(key != null)
+            for (int i = 0; i < inventory.slots.Length; i++) {
+                if(inventory.isFull[i] == false) {
+                    inventory.isFull[i] = true;
+                    GameObject uiitem = Instantiate(key, inventory.slots[i].transform, false);
+                    uiitem.SetActive(true);
+                    inventory.items[i] = GameObject.Find("First Person Player/HeldItem/key");
+                    inventory.itemTag[i] = "key";
+                    break;
+                }
             }
-        }
     }
 
     IEnumerator WaitForClick(){
