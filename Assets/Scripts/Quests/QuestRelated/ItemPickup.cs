@@ -7,7 +7,7 @@ using UnityEngine;
 ///</summary>
 public class ItemPickup : MonoBehaviour
 {
-    public PlayerInventory inventory;
+    [HideInInspector] public PlayerInventory inventory;
     public GameObject itemButton;
     public string itemTag;
     public bool nonQuestRelated = false;
