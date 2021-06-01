@@ -19,7 +19,9 @@ public class Blackout
         Animator anim = GameObject.Find("UICanvas/Blackout").GetComponent<Animator>();
         Animator cred = GameObject.Find("UICanvas/Credits").GetComponent<Animator>();
         anim.enabled = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
+        textbg.SetActive(false);
+        anim.enabled = false;
         Debug.Log("end wait");
         cred.enabled = true;
         yield return new WaitForSeconds(18);

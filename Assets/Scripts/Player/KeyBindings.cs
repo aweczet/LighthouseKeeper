@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 ///<summary>
 ///Klasa posiadająca bindy klawiszy
@@ -12,6 +13,13 @@ public class KeyBindings : MonoBehaviour
     [HideInInspector] private GameObject Helpbox;
     [HideInInspector] private Camera camera;
     [HideInInspector] private GameObject hud;
+    [HideInInspector] private GameObject doors;
+    [HideInInspector] private TextMeshProUGUI text;
+    public GameObject textbg;
+    public GameObject ship;
+    public Animation dOpen;
+    public Animation dClose;
+    [HideInInspector] private bool doorsOpened = false;
 
     void Start(){
         inv = gameObject.GetComponent<PlayerInventory>();
@@ -19,6 +27,8 @@ public class KeyBindings : MonoBehaviour
         Helpbox.SetActive(false);
         camera = Camera.main;
         hud = GameObject.Find("UICanvas");
+        text = textbg.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+        doors = GameObject.Find("Environment/Buildings/lighthouse_house/House.002");
     }
     void Update()
     {
@@ -108,5 +118,36 @@ public class KeyBindings : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.H)){
             hud.SetActive(!hud.activeSelf);
         }
+
+        if(Input.GetKeyUp(KeyCode.M)){
+            StartCoroutine(this.hoursPass());
+        }
+
+        // if(Input.GetKeyUp(KeyCode.P)){
+        //     Animation temp = doors.GetComponent<Animation>();
+        //     if(doorsOpened){
+        //         dOpen.wrapMode = WrapMode.Once;
+        //         temp.Play("houseDoorClose");
+        //     }
+        //     else{
+        //         temp["houseDoor"].wrapMode = WrapMode.Once;
+        //         temp.Play("houseDoor");
+        //     }
+        //     doorsOpened = !doorsOpened;
+        // }
+    }
+
+    private IEnumerator hoursPass(){
+        Debug.Log("hoursPass");
+        Animator anim = GameObject.Find("UICanvas/Blackout").GetComponent<Animator>();
+        anim.enabled = true;
+        yield return new WaitForSeconds(3);
+        text.SetText("6 godzin później...");
+        textbg.SetActive(true);
+        yield return new WaitForSeconds(5);
+        textbg.SetActive(false);
+        yield return new WaitForSeconds(2);
+        anim.enabled = false;
+        ship.SetActive(true);
     }
 }
