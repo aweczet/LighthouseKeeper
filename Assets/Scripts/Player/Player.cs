@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public static bool UniqueCollected1 = false;
     public static bool UniqueCollected2 = false;
     public static bool UniqueCollected3 = false;
+    public static bool flagMissionCompleted = false;
 
     private QuestSetup _questSetup;
     private QuestSetup[] questSetups;
@@ -246,7 +247,10 @@ public class Player : MonoBehaviour
                                 quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 item.GetComponent<RetrospectionTalk>().onMouseDown();
                                 break;
-
+                            case GoalType.flag:
+                                if(!flagMissionCompleted)
+                                    quest.questGoal.currentAmmount--;
+                                break;
                             default:
                                 break;
                         }

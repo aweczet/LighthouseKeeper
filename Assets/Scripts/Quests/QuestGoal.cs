@@ -69,5 +69,6 @@ public enum GoalType
     area,
     talk,
     retrospection,
-    lighthouse
+    lighthouse,
+    flag
 }

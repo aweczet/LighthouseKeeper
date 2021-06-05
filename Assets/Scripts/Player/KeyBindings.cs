@@ -123,18 +123,16 @@ public class KeyBindings : MonoBehaviour
             StartCoroutine(this.hoursPass());
         }
 
-        // if(Input.GetKeyUp(KeyCode.P)){
-        //     Animation temp = doors.GetComponent<Animation>();
-        //     if(doorsOpened){
-        //         dOpen.wrapMode = WrapMode.Once;
-        //         temp.Play("houseDoorClose");
-        //     }
-        //     else{
-        //         temp["houseDoor"].wrapMode = WrapMode.Once;
-        //         temp.Play("houseDoor");
-        //     }
-        //     doorsOpened = !doorsOpened;
-        // }
+        if(Input.GetKeyUp(KeyCode.P)){
+            Animator temp = doors.GetComponent<Animator>();
+            if(doorsOpened){
+                temp.SetBool("isOpen", false);
+            }
+            else{
+                temp.SetBool("isOpen", true);
+            }
+            doorsOpened = !doorsOpened;
+        }
     }
 
     private IEnumerator hoursPass(){
