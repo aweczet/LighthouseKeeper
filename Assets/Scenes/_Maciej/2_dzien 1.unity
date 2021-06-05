@@ -1497,12 +1497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1779901795}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &139662319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,12 +1697,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 640571106}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &185975085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,12 +2518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1779901795}
   itemTag: doorbook
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!1 &333630094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3542,12 +3533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 465754595}
   itemTag: lighter
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!4 &465754601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bba59e026f0184b4dbb16bf034c3bf7d,
@@ -8543,7 +8531,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1003774794}
     - target: {fileID: 5981568380418196271, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -8573,7 +8561,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1003774794}
     - target: {fileID: 5981568380571538589, guid: d6a397935ea28dd45b80dea93fa4ea14,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -8728,12 +8716,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1135524678}
   itemTag: flag
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &483916165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8799,7 +8784,7 @@ Transform:
   - {fileID: 945354760}
   - {fileID: 2024118714}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &500256303 stripped
 Transform:
@@ -8923,12 +8908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1135524678}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &514369441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14306,6 +14288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532e4fab7ba79fb48b8bd77386b3b23e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   sec: 5
 --- !u!1001 &597148539
 PrefabInstance:
@@ -14774,12 +14757,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 668338357}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!1 &688443169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd26373e9522d6243aa02d6933a138f8,
@@ -14822,12 +14802,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 835789435}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!65 &688443173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14949,7 +14926,6 @@ MonoBehaviour:
   directionalLight: {fileID: 705507994}
   preset: {fileID: 11400000, guid: aad13b53a3c83844e99810077a42484b, type: 2}
   timeOfDay: 6
-  lighthouse: {fileID: 0}
 --- !u!1001 &707417549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15490,12 +15466,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1939583726}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!65 &747456360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15804,7 +15777,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests:
   - isActive: 1
-    isCompleted: 0
     title: "Id\u017A przed dom"
     questName: {fileID: 0}
     strike: {fileID: 0}
@@ -15815,11 +15787,7 @@ MonoBehaviour:
       monolog: "Zamkni\u0119te.. Klucze dostan\u0119 p\xF3\u017Aniej"
     questItem:
     - {fileID: 884580559}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
   - isActive: 1
-    isCompleted: 0
     title: "Id\u017A do latarni"
     questName: {fileID: 0}
     strike: {fileID: 0}
@@ -15830,11 +15798,7 @@ MonoBehaviour:
       monolog: "A wi\u0119c to ona... "
     questItem:
     - {fileID: 1058442690}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
   - isActive: 1
-    isCompleted: 0
     title: "Wejd\u017A na latarni\u0119"
     questName: {fileID: 0}
     strike: {fileID: 0}
@@ -15845,11 +15809,7 @@ MonoBehaviour:
       monolog: "Pi\u0119kny widok"
     questItem:
     - {fileID: 1820543359}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
   - isActive: 1
-    isCompleted: 0
     title: "Zbierz porzucone ksi\u0105\u017Cki"
     questName: {fileID: 0}
     strike: {fileID: 0}
@@ -15862,11 +15822,7 @@ MonoBehaviour:
     - {fileID: 1831825014}
     - {fileID: 322469765}
     - {fileID: 1403354347}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
   - isActive: 1
-    isCompleted: 0
     title: "Podnie\u015B zapalniczke"
     questName: {fileID: 0}
     strike: {fileID: 0}
@@ -15877,11 +15833,7 @@ MonoBehaviour:
       monolog: Zapalniczka jest mi potrzebna do zapalenia latarni
     questItem:
     - {fileID: 465754595}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
   - isActive: 1
-    isCompleted: 0
     title: "PODNIE\u015A FLAG\u0118"
     questName: {fileID: 0}
     strike: {fileID: 0}
@@ -15895,11 +15847,7 @@ MonoBehaviour:
     - {fileID: 1694371111}
     - {fileID: 2041888785}
     - {fileID: 483916161}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
   - isActive: 0
-    isCompleted: 0
     title: "Zapal latarni\u0119"
     questName: {fileID: 0}
     strike: {fileID: 0}
@@ -15911,12 +15859,7 @@ MonoBehaviour:
     questItem:
     - {fileID: 583457826}
     - {fileID: 1057378052}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
   numberOfActiveQuests: 0
-  playerInventory: {fileID: 0}
-  isRetrospection: 0
   level: 1
   monologbox: {fileID: 70469269}
 --- !u!114 &791647997
@@ -15954,7 +15897,6 @@ MonoBehaviour:
   - 
   isActive: 0
   activeItemID: 0
-  lastAddedID: 0
 --- !u!1 &802222355
 GameObject:
   m_ObjectHideFlags: 0
@@ -22112,7 +22054,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 150
   playerBody: {fileID: 791647994}
-  harpooning: 0
 --- !u!45 &963194230
 Skybox:
   m_ObjectHideFlags: 0
@@ -22565,6 +22506,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 268106176}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1003774794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6587608327007682869, guid: 9127c1b06ad2f2c45968893994722a22,
+    type: 3}
+  m_PrefabInstance: {fileID: 431584826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd0e16a7591e5f4ea7690b6508060cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1004438777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23335,12 +23288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 135750766}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &1121928720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23858,163 +23808,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253266573}
   m_CullTransparentMesh: 0
---- !u!1001 &1259957042
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -52.95
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 21.3066
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.76
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000007769011
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.30070576
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.000000024495597
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.953717
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.02199
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.02273
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.03298
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_Name
-      value: FixedDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Selectable
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 458cce495c0cf4f4d8abe944ec91a35e, type: 3}
---- !u!1 &1259957043 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 458cce495c0cf4f4d8abe944ec91a35e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1259957042}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1259957044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259957043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82991f9df32a8a944a18ca6e02bce28d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1259957045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259957043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0.922, b: 0.475, a: 1}
-  outlineWidth: 0
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
---- !u!95 &1259957046
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259957043}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1ee12a1ac80291146b74772d1d7b9734, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &1259957047
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259957043}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 177.47, y: 202.5, z: 23.53}
-  m_Center: {x: -87.57, y: 102.3, z: -4.56}
 --- !u!1 &1270199400
 GameObject:
   m_ObjectHideFlags: 0
@@ -24757,12 +24550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 835789435}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &1403354351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25719,12 +25509,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1632648819}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &1580324603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26709,12 +26496,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1632648819}
   itemTag: flag
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &1694371115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27684,12 +27468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1939583726}
   itemTag: 
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &1831825018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28290,12 +28071,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 1886321030}
   itemTag: flag
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &1886321034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29527,12 +29305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   itemButton: {fileID: 135750766}
   itemTag: flag
   nonQuestRelated: 0
-  foodWithBook: 0
-  Food: 0
 --- !u!114 &2041888789
 MonoBehaviour:
   m_ObjectHideFlags: 0
