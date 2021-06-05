@@ -1357,6 +1357,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &139662319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1562,6 +1563,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000002, y: 2.0004752, z: 2.0000002}
   m_Center: {x: 0, y: 0.00023746493, z: 0}
+--- !u!114 &176768225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176768220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f60d06d961ed1468b219244dba3a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  itemButton: {fileID: 0}
+  itemTag: 
+  nonQuestRelated: 0
+  foodWithBook: 0
+  Food: 1
 --- !u!1001 &178926519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2419,6 +2438,7 @@ MonoBehaviour:
   itemTag: doorbook
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!1 &333630094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9012,6 +9032,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!65 &688443173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9324,6 +9345,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!65 &747456360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17217,6 +17239,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1403354351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19298,6 +19321,7 @@ MonoBehaviour:
   itemTag: asdf
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1831825018
 MonoBehaviour:
   m_ObjectHideFlags: 0

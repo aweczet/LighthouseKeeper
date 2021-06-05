@@ -10,11 +10,13 @@ public class HouseDoor : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
     }
     void OnMouseUp(){
+        if(gameObject.GetComponent<Outline>().OutlineWidth > 0){
             if(anim.GetBool("isOpen")){
                 anim.SetBool("isOpen", false);
             }
             else{
                 anim.SetBool("isOpen", true);
             }
+        }
     }
 }
