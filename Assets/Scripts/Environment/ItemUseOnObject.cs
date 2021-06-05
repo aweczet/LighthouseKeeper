@@ -41,7 +41,7 @@ public class ItemUseOnObject : MonoBehaviour
                     GameObject mainFlag = GameObject.Find("main_flag/Flag");
                     ColorChange flagMat = new ColorChange(mainFlag, holdingFlagId - 1);
 
-                    RemoveFromInventory();
+                    _playerInventory.removeItemAfterQuest(_playerInventory.activeItemID);
                 }
                 break;
             case ObjectType.TagPlaceholder:
@@ -51,15 +51,6 @@ public class ItemUseOnObject : MonoBehaviour
             default:
                 return;
         }
-    }
-
-    private void RemoveFromInventory()
-    {
-        _playerInventory.isFull[_playerInventory.activeItemID] = false;
-        _playerInventory.items[_playerInventory.activeItemID].SetActive(false);
-        _playerInventory.items[_playerInventory.activeItemID] = null;
-        _playerInventory.itemTag[_playerInventory.activeItemID] = "";
-        _playerInventory.isActive = false;
     }
 }
 
