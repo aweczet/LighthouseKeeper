@@ -12,6 +12,7 @@ public class ItemPickup : MonoBehaviour
     public string itemTag;
     public bool nonQuestRelated = false;
     public bool foodWithBook = false;
+    public bool Food = false;
     private GameObject arrow;
     
     public void Start()
@@ -25,6 +26,9 @@ public class ItemPickup : MonoBehaviour
 
     public void pickUpItem()
     {   
+        if(Food){
+            return;
+        }
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
