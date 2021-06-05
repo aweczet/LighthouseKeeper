@@ -871,6 +871,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &277153739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,7 +1504,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88d1b1fef5e4d01478229c6dce482282, type: 2}
+  - {fileID: 2100000, guid: 2e486b573e9bc2d47a49c6e3aec7ec6f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2175,6 +2176,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!65 &1053402922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3212,6 +3214,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!65 &1635403459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3405,6 +3408,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1689944949
 MonoBehaviour:
   m_ObjectHideFlags: 0
