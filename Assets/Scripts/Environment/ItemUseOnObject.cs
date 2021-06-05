@@ -25,7 +25,7 @@ public class ItemUseOnObject : MonoBehaviour
                 break;
 
             case ObjectType.BookPutaway:
-                RemoveFromInventory();
+                _playerInventory.removeItemAfterQuest(_playerInventory.activeItemID);
                 break;
 
             case ObjectType.FlagSetup:
