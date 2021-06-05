@@ -10152,8 +10152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   itemButton: {fileID: 1135524678}
-  itemTag: flag
-  nonQuestRelated: 0
+  itemTag: 
+  nonQuestRelated: 1
   foodWithBook: 0
 --- !u!114 &483916165
 MonoBehaviour:
@@ -16788,7 +16788,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fd4b3fd31b80c7143b4940d698def5a7,
         type: 3}
       propertyPath: m_Name
-      value: flag_g_1
+      value: flag_1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fd4b3fd31b80c7143b4940d698def5a7,
         type: 3}
@@ -17939,14 +17939,14 @@ MonoBehaviour:
   quests:
   - isActive: 1
     isCompleted: 0
-    title: "Id\u017A przed dom"
+    title: "P\xF3jd\u017A po \u017Cywno\u015B\u0107"
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: "Zamkni\u0119te.. Klucze dostan\u0119 p\xF3\u017Aniej"
+      monolog: "A\u017C leci mi \u015Blinka"
     questItem:
     - {fileID: 884580559}
     destroyItems: 0
@@ -17954,14 +17954,14 @@ MonoBehaviour:
     questItemLength: 0
   - isActive: 1
     isCompleted: 0
-    title: "Id\u017A do latarni"
+    title: "Odbierz \u017Cywnos\u0107"
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
-      goalType: 4
+      goalType: 1
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: "A wi\u0119c to ona... "
+      monolog: "Takie mamy dzisiaj ci\u015Bnienie"
     questItem:
     - {fileID: 1058442690}
     destroyItems: 0
@@ -17969,14 +17969,14 @@ MonoBehaviour:
     questItemLength: 0
   - isActive: 1
     isCompleted: 0
-    title: "Wejd\u017A na latarni\u0119"
+    title: "Sprawd\u017A barometr "
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: "Pi\u0119kny widok"
+      monolog: "Takie jest ci\u015Bnienie"
     questItem:
     - {fileID: 1820543359}
     destroyItems: 0
@@ -17984,67 +17984,31 @@ MonoBehaviour:
     questItemLength: 0
   - isActive: 1
     isCompleted: 0
-    title: "Zbierz porzucone ksi\u0105\u017Cki"
+    title: "Podnie\u015B flag\u0119"
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
-      goalType: 1
-      requiredAmmount: 3
+      goalType: 3
+      requiredAmmount: 1
       currentAmmount: 0
-      monolog: "Ba\u0142agan posprz\u0105tany"
+      monolog: "A tera zmusz\u0119 j\u0105 zawiesi\u0107"
     questItem:
-    - {fileID: 0}
-    - {fileID: 322469765}
     - {fileID: 0}
     destroyItems: 0
     itemID: 
     questItemLength: 0
   - isActive: 1
     isCompleted: 0
-    title: "Podnie\u015B zapalniczke"
+    title: "Podnie\u015B flag\u0119"
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
-      goalType: 1
+      goalType: 3
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: Zapalniczka jest mi potrzebna do zapalenia latarni
+      monolog: "A tera zmusz\u0119 j\u0105 zawiesi\u0107"
     questItem:
-    - {fileID: 465754595}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
-  - isActive: 0
-    isCompleted: 0
-    title: "Podnie\u015B flage"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 1
-      requiredAmmount: 4
-      currentAmmount: 0
-      monolog: "A teraz musze j\u0105 zawiesi\u0107"
-    questItem:
-    - {fileID: 1886321030}
-    - {fileID: 1694371111}
-    - {fileID: 2041888785}
-    - {fileID: 483916161}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
-  - isActive: 0
-    isCompleted: 0
-    title: "Zapal latarni\u0119"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 7
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: 
-    questItem:
-    - {fileID: 583457826}
-    - {fileID: 1057378052}
+    - {fileID: 0}
     destroyItems: 0
     itemID: 
     questItemLength: 0
@@ -23888,7 +23852,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 456960b507917e644b99fd849874cb63,
         type: 3}
       propertyPath: m_Name
-      value: flag_b_2
+      value: flag_2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 456960b507917e644b99fd849874cb63,
         type: 3}
@@ -26326,7 +26290,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f0391306448720640a7ee4ab216db616,
         type: 3}
       propertyPath: m_Name
-      value: flag_r_4
+      value: flag_4
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f0391306448720640a7ee4ab216db616,
         type: 3}
@@ -29553,7 +29517,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 12f647dce456c5344886db2b2e5ad4cb,
         type: 3}
       propertyPath: m_Name
-      value: flag_y_3
+      value: flag_3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 12f647dce456c5344886db2b2e5ad4cb,
         type: 3}
@@ -30106,8 +30070,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   itemButton: {fileID: 1632648819}
-  itemTag: flag
-  nonQuestRelated: 0
+  itemTag: 
+  nonQuestRelated: 1
   foodWithBook: 0
 --- !u!114 &1694371115
 MonoBehaviour:
@@ -32080,8 +32044,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   itemButton: {fileID: 1886321030}
-  itemTag: flag
-  nonQuestRelated: 0
+  itemTag: 
+  nonQuestRelated: 1
   foodWithBook: 0
 --- !u!114 &1886321034
 MonoBehaviour:
@@ -33766,8 +33730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   itemButton: {fileID: 135750766}
-  itemTag: flag
-  nonQuestRelated: 0
+  itemTag: 
+  nonQuestRelated: 1
   foodWithBook: 0
 --- !u!114 &2041888789
 MonoBehaviour:
