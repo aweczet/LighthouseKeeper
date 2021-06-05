@@ -201,7 +201,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 456960b507917e644b99fd849874cb63,
         type: 3}
       propertyPath: m_Name
-      value: flag_b_2
+      value: flag_2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 456960b507917e644b99fd849874cb63,
         type: 3}
@@ -1431,7 +1431,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 12f647dce456c5344886db2b2e5ad4cb,
         type: 3}
       propertyPath: m_Name
-      value: flag_y_3
+      value: flag_3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 12f647dce456c5344886db2b2e5ad4cb,
         type: 3}
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 135750769}
   - component: {fileID: 135750768}
   m_Layer: 5
-  m_Name: flag_b_2
+  m_Name: flag_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16036,7 +16036,7 @@ GameObject:
   - component: {fileID: 640571109}
   - component: {fileID: 640571108}
   m_Layer: 5
-  m_Name: flag_y_3
+  m_Name: flag_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17837,7 +17837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789393382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.16, y: 20.65, z: -0.84}
+  m_LocalPosition: {x: 48.2, y: 15.99, z: 63.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1865005209}
@@ -17999,16 +17999,31 @@ MonoBehaviour:
     questItemLength: 0
   - isActive: 1
     isCompleted: 0
-    title: "Podnie\u015B flag\u0119"
+    title: "Wywie\u015B flag\u0119"
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
-      goalType: 3
+      goalType: 8
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: "A tera zmusz\u0119 j\u0105 zawiesi\u0107"
+      monolog: Ale wisi
     questItem:
-    - {fileID: 0}
+    - {fileID: 1793897360}
+    destroyItems: 0
+    itemID: 
+    questItemLength: 0
+  - isActive: 0
+    isCompleted: 0
+    title: Zapal latarnie
+    questName: {fileID: 0}
+    strike: {fileID: 0}
+    questGoal:
+      goalType: 7
+      requiredAmmount: 1
+      currentAmmount: 0
+      monolog: "Uda\u0142o sie"
+    questItem:
+    - {fileID: 1793897360}
     destroyItems: 0
     itemID: 
     questItemLength: 0
@@ -25966,7 +25981,7 @@ GameObject:
   - component: {fileID: 1135524681}
   - component: {fileID: 1135524680}
   m_Layer: 5
-  m_Name: flag_r_4
+  m_Name: flag_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26926,6 +26941,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: barometr (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ed44b98272c22d488f250da062fd382,
+        type: 3}
+      propertyPath: m_TagString
+      value: barometr
       objectReference: {fileID: 0}
     - target: {fileID: 4839216831526503871, guid: 2ed44b98272c22d488f250da062fd382,
         type: 3}
@@ -29875,7 +29895,7 @@ GameObject:
   - component: {fileID: 1632648822}
   - component: {fileID: 1632648821}
   m_Layer: 5
-  m_Name: flag_g_1
+  m_Name: flag_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31097,7 +31117,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fd4b3fd31b80c7143b4940d698def5a7,
         type: 3}
       propertyPath: m_Name
-      value: flag_g_1
+      value: flag_1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fd4b3fd31b80c7143b4940d698def5a7,
         type: 3}
@@ -32043,7 +32063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 1886321030}
+  itemButton: {fileID: 640571106}
   itemTag: 
   nonQuestRelated: 1
   foodWithBook: 0
@@ -32772,7 +32792,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f0391306448720640a7ee4ab216db616,
         type: 3}
       propertyPath: m_Name
-      value: flag_r_4
+      value: flag_4
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f0391306448720640a7ee4ab216db616,
         type: 3}
@@ -34208,7 +34228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2104579606}
   m_Layer: 0
-  m_Name: dom
+  m_Name: barometr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34222,7 +34242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104579605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.83, y: 21.3, z: 3.78}
+  m_LocalPosition: {x: -41, y: 22.07, z: 1.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 911973093}
