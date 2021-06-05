@@ -29,6 +29,7 @@ public class ItemUseOnObject : MonoBehaviour
                 break;
 
             case ObjectType.FlagSetup:
+                Player.flagMissionCompleted = true;
                 Randomizer barometerInfo = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
 
                 string holdingFlagName = _playerInventory.items[_playerInventory.activeItemID].gameObject.name;
