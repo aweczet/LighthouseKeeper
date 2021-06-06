@@ -29,7 +29,6 @@ public class ItemUseOnObject : MonoBehaviour
                 break;
 
             case ObjectType.FlagSetup:
-                Player.flagMissionCompleted = true;
                 Randomizer barometerInfo = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
 
                 string holdingFlagName = _playerInventory.items[_playerInventory.activeItemID].gameObject.name;
@@ -38,6 +37,7 @@ public class ItemUseOnObject : MonoBehaviour
                 // How does it work?
                 if (barometerInfo.flagColorID == holdingFlagId)
                 {
+                    Player.flagMissionCompleted = true;
                     GameObject mainFlag = GameObject.Find("main_flag/Flag");
                     ColorChange flagMat = new ColorChange(mainFlag, holdingFlagId - 1);
 
