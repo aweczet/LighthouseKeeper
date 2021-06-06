@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/_Maciej/Playable/MenuFloatingWithBackground.unity
+    path: Assets/Scenes/_Maciej/Playable/trash/MenuFloatingWithBackground.unity
     guid: 0953261edfdc4124e8253b3e0234d994
   - enabled: 1
     path: Assets/Scenes/_Maciej/Playable/1_dzien.unity

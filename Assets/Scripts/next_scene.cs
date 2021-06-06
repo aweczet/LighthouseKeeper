@@ -8,6 +8,9 @@ public class next_scene : MonoBehaviour
     
     void Update()
     {
+        Debug.Log(gameObject.name);
+        Debug.Log("lol");
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
