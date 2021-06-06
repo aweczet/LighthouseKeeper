@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class shark_collision : MonoBehaviour
 {
     private int _sharkHealth;
     public int _sharkMaxHealth = 100;
     public int _harpoonDamage;
+    int nextScene;
+    
 
     public GameObject _sharkHealthBarUI;
     public Slider _sharkHealthBar;
@@ -31,6 +34,8 @@ public class shark_collision : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(_sharkHealthBarUI);
+            nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+            SceneManager.LoadScene(nextScene);
         }
     }
 }

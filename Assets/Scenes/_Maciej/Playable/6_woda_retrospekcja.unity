@@ -430,86 +430,6 @@ MonoBehaviour:
     destroyItems: 0
     itemID: 
     questItemLength: 0
-  - isActive: 1
-    isCompleted: 0
-    title: "Sprawd\u017A barometr"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 4
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: "Takiego ci\u015Bnienia si\u0119 nie spodziewa\u0142em!"
-    questItem:
-    - {fileID: 0}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
-  - isActive: 1
-    isCompleted: 0
-    title: Ustaw kolor flagi
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 3
-      requiredAmmount: 5
-      currentAmmount: 0
-      monolog: "Taki kolor powinien by\u0107"
-    questItem:
-    - {fileID: 0}
-    - {fileID: 0}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
-  - isActive: 1
-    isCompleted: 0
-    title: "Zbierz porzucone ksi\u0105\u017Cki"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 1
-      requiredAmmount: 3
-      currentAmmount: 0
-      monolog: "Ba\u0142agan posprz\u0105tany"
-    questItem:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
-  - isActive: 1
-    isCompleted: 0
-    title: "Wejd\u017A na latarni\u0119"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 4
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: 
-    questItem:
-    - {fileID: 0}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
-  - isActive: 0
-    isCompleted: 0
-    title: "Zapal latarni\u0119"
-    questName: {fileID: 0}
-    strike: {fileID: 0}
-    questGoal:
-      goalType: 6
-      requiredAmmount: 1
-      currentAmmount: 0
-      monolog: 
-    questItem:
-    - {fileID: 0}
-    - {fileID: 0}
-    destroyItems: 0
-    itemID: 
-    questItemLength: 0
   numberOfActiveQuests: 0
   playerInventory: {fileID: 0}
   isRetrospection: 0
@@ -861,7 +781,7 @@ PrefabInstance:
     - target: {fileID: 3412388441490071859, guid: c2ba24910d255ad4981ec8c972472464,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 3412388441490071859, guid: c2ba24910d255ad4981ec8c972472464,
         type: 3}
@@ -1360,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4130a98ca4c17ae46a7541d42fd525e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.2
+  amplitude: 0.05
   lenght: 2
   speed: 1
   offset: 0
@@ -3308,7 +3228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.05
-  lenght: 1.07
+  lenght: 1
   speed: 1
   offset: 0
   material: {fileID: 2100000, guid: 2e486b573e9bc2d47a49c6e3aec7ec6f, type: 2}

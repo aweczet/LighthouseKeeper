@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScenes/MainMenu.unity
     guid: a14001cf0f520f442a252058dcf17fba
   - enabled: 1
+    path: Assets/Scenes/_Maciej/Playable/6_woda_retrospekcja.unity
+    guid: d85f9236628078748b61db808ca959b2
+  - enabled: 1
     path: Assets/Scenes/_Maciej/Playable/1_dzien.unity
     guid: 63fc8d6f1f182a74ba6b249a18db5d11
   - enabled: 1
