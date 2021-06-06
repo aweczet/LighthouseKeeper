@@ -17,9 +17,11 @@ public class ItemPickup : MonoBehaviour
     
     public void Start()
     {
-        arrow = GameObject.Find("Environment/QuestRelated/Locations/czytanie");
-        if(arrow)
+        if(foodWithBook){
+            arrow = GameObject.Find("Environment/QuestRelated/Locations/czytanie");
             arrow.SetActive(false);
+        }
+        
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
         //DontDestroyOnLoad(itemButton);
     }
@@ -40,6 +42,7 @@ public class ItemPickup : MonoBehaviour
                     inventory.items[i] = GameObject.Find("First Person Player/HeldItem/book1");
                     Debug.Log(arrow.activeSelf);
                     arrow.SetActive(true);
+                    Debug.Log(arrow.activeSelf);
                 }
                 else
                     inventory.items[i] = GameObject.Find("First Person Player/HeldItem/" + gameObject.name);

@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     private QuestSetup _questSetup;
     private QuestSetup[] questSetups;
     private GameObject _canvas;
-    public PlayerInventory playerInventory;
+    [HideInInspector] public PlayerInventory playerInventory;
 
     private LightSwitch _lightSwitch;
     private ColorChange _colorChange;
