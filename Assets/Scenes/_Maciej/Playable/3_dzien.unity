@@ -18229,7 +18229,7 @@ MonoBehaviour:
   playerInventory: {fileID: 0}
   isRetrospection: 0
   level: 1
-  monologbox: {fileID: 0}
+  monologbox: {fileID: 1022923417}
 --- !u!114 &791647997
 MonoBehaviour:
   m_ObjectHideFlags: 0
