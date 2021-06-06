@@ -107,7 +107,7 @@ public class KeyBindings : MonoBehaviour
         }
         else if(Input.GetKeyUp(KeyCode.Escape))
         {
-            if(Helpbox.activeSelf)
+            if(Helpbox && Helpbox.activeSelf)
             {
                 gameObject.GetComponent<PlayerMovement>().enabled = true;
                 camera.GetComponent<MouseLook>().enabled = true;

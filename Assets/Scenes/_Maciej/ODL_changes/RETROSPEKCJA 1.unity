@@ -7897,12 +7897,11 @@ MonoBehaviour:
     questName: {fileID: 0}
     strike: {fileID: 0}
     questGoal:
-      goalType: 7
+      goalType: 0
       requiredAmmount: 1
       currentAmmount: 0
       monolog: "Znowu moge pracowa\u0107"
     questItem:
-    - {fileID: 2058248006}
     - {fileID: 264294485}
     destroyItems: 0
     itemID: 
@@ -16045,7 +16044,6 @@ GameObject:
   - component: {fileID: 2058248007}
   - component: {fileID: 2058248009}
   - component: {fileID: 2058248008}
-  - component: {fileID: 2058248010}
   - component: {fileID: 2058248011}
   m_Layer: 0
   m_Name: Point Light
@@ -16148,18 +16146,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &2058248010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058248006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc64af16dada10a47b2dc34ecc5b2548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2058248011
 MonoBehaviour:
   m_ObjectHideFlags: 0

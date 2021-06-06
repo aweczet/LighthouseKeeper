@@ -136,6 +136,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         if (!isRetrospection) return;
+        playerInventory = gameObject.GetComponent<PlayerInventory>();
         DeleteAllItems();
     }
 
@@ -168,7 +169,7 @@ public class Player : MonoBehaviour
                     questSetups[activeQuestID].newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
                 }
                 if(quests[quests.Length - 1].isCompleted){
-                    retroNextScene();
+                    StartCoroutine(retroNextScene());
                 }
             }
         }
@@ -227,7 +228,6 @@ public class Player : MonoBehaviour
                         switch (quest.questGoal.goalType)
                         {
                             case GoalType.press:
-                                quest.questGoal.FlipModel(item.transform);
                                 // To usuwa obiekt z listy obiektów potrzebnych do questa
                                 // Rozwiązuje to problem korzystania z tego samego obiektu w celu wykoania questa
                                 // Np. Wciśnij 3 przyciski -> dzięki temu nie można wcisnąć jednego przycisku 3 razy żeby zrobić questa
@@ -282,12 +282,12 @@ public class Player : MonoBehaviour
                         
                         if (quest.questGoal.IsReached())
                         {
-                            Debug.Log(quest.questName + "Reached");
+                            //Debug.Log(quest.questName + "Reached");
                             quest.completed();
                             StartCoroutine(quest.questGoal.showMonolog(monologbox));
                             numberOfActiveQuests--;
                         }
-                        Debug.Log(quest.questName + " | " + numberOfActiveQuests);
+                        //Debug.Log(quest.questName + " | " + numberOfActiveQuests);
                     }
                     else if (item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated &&
                              !playerInventory.isEqFull())
