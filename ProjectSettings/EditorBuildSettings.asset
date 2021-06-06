@@ -18,9 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/_Maciej/Playable/3_dzien.unity
     guid: 282b63caa0ab575428b039b7b1249935
   - enabled: 1
-    path: Assets/Scenes/_Maciej/ODL_changes/RETROSPEKCJA 1.unity
-    guid: 8c7286544139fe148aaca1e7d4740cd3
+    path: Assets/Scenes/_Maciej/Playable/4_kopalnia_retrospekcja.unity
+    guid: 04abd45bb7443ce4382454093c8975a6
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/Playable/5_dzien.unity
+    guid: c8c41a6bf56f2b04592469a0e43325c8
   - enabled: 1
     path: Assets/Scenes/_Maciej/Playable/6_woda_retrospekcja.unity
     guid: d85f9236628078748b61db808ca959b2
+  - enabled: 1
+    path: Assets/Scenes/_Maciej/Playable/end.unity
+    guid: 5758c9f0a3b84ca48b71ac90f7ee1e41
   m_configObjects: {}
