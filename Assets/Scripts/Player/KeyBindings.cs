@@ -27,7 +27,8 @@ public class KeyBindings : MonoBehaviour
         Helpbox.SetActive(false);
         camera = Camera.main;
         hud = GameObject.Find("UICanvas");
-        text = textbg.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+        if(textbg)
+            text = textbg.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         doors = GameObject.Find("Environment/Buildings/lighthouse_house/House.002");
     }
     void Update()
