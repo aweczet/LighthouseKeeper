@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -131,7 +132,19 @@ public class Player : MonoBehaviour
     //         _playerInventory = GetComponent<PlayerInventory>();
 
 
+    private void Start()
+    {
+        if (!isRetrospection) return;
+        DeleteAllItems();
+    }
 
+    private void DeleteAllItems()
+    {
+        for (int i = 0; i < playerInventory.slots.Length; i++)
+        {
+            playerInventory.removeItemAfterQuest(i);
+        }
+    }
 
     private void Update()
     {
@@ -236,7 +249,10 @@ public class Player : MonoBehaviour
                                 if(!quest.questItem[1].GetComponent<ItemUseOnObject>() || (gameObject.GetComponent<PlayerInventory>().isActive && gameObject.GetComponent<PlayerInventory>().itemTag[gameObject.GetComponent<PlayerInventory>().activeItemID] == quest.questItem[1].GetComponent<ItemUseOnObject>().requiredItemTag))
                                     _lightSwitch = new LightSwitch(quest.questItem[0]);
                                 else
+                                {
+                                    DeleteAllItems();
                                     quest.questGoal.currentAmmount--;
+                                }
                                 break;
 
                             // case GoalType.color:

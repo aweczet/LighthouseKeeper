@@ -8598,7 +8598,7 @@ MonoBehaviour:
     questItemLength: 0
   numberOfActiveQuests: 0
   playerInventory: {fileID: 0}
-  isRetrospection: 0
+  isRetrospection: 1
   level: 0
   monologbox: {fileID: 1534724034}
 --- !u!114 &791647997
