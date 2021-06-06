@@ -262,6 +262,7 @@ public class Player : MonoBehaviour
                             case GoalType.talk:
                                 quest.questItem = quest.questItem.Where(e => e != questItem).ToArray();
                                 item.GetComponent<RetrospectionTalk>().onMouseDown();
+                                // quest.questGoal.currentAmmount--;
                                 break;
                             case GoalType.flag:
                                 if(!flagMissionCompleted)

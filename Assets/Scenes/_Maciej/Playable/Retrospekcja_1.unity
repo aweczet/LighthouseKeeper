@@ -8457,6 +8457,7 @@ GameObject:
   - component: {fileID: 791647996}
   - component: {fileID: 791647995}
   - component: {fileID: 791647997}
+  - component: {fileID: 791647998}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Player
@@ -8637,6 +8638,22 @@ MonoBehaviour:
   isActive: 0
   activeItemID: 0
   lastAddedID: 0
+--- !u!114 &791647998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791647992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a14350fa8c2eb4dbb82588c4e155cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbg: {fileID: 0}
+  ship: {fileID: 0}
+  dOpen: {fileID: 0}
+  dClose: {fileID: 0}
 --- !u!1 &796693664
 GameObject:
   m_ObjectHideFlags: 0
