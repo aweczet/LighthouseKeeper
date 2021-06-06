@@ -895,7 +895,7 @@ Animator:
   m_GameObject: {fileID: 70469269}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 93271b8c1fa280447b569bf5c1752d9f, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ccf2d8b1ae6fcd45af93dd75be08771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 70469273}
+  animator: {fileID: 0}
 --- !u!1001 &71254716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4184,7 +4184,7 @@ PrefabInstance:
     - target: {fileID: 3198600476069428909, guid: 9127c1b06ad2f2c45968893994722a22,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6587608327007682867, guid: 9127c1b06ad2f2c45968893994722a22,
         type: 3}
@@ -17889,7 +17889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791647992}
   m_LocalRotation: {x: 0, y: 0.9961947, z: 0, w: 0.08715588}
-  m_LocalPosition: {x: -55.14, y: 22.5, z: -0.2}
+  m_LocalPosition: {x: 43.55, y: 16.92, z: 63.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 66272385}
@@ -17936,6 +17936,21 @@ MonoBehaviour:
   quests:
   - isActive: 1
     isCompleted: 0
+    title: Porozmawiaj z konsulem
+    questName: {fileID: 0}
+    strike: {fileID: 0}
+    questGoal:
+      goalType: 5
+      requiredAmmount: 1
+      currentAmmount: 0
+      monolog: 
+    questItem:
+    - {fileID: 1686079844}
+    destroyItems: 0
+    itemID: 
+    questItemLength: 0
+  - isActive: 1
+    isCompleted: 0
     title: "Id\u017A przed dom"
     questName: {fileID: 0}
     strike: {fileID: 0}
@@ -17943,7 +17958,7 @@ MonoBehaviour:
       goalType: 4
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: "Zamkni\u0119te.. Klucze dostan\u0119 p\xF3\u017Aniej"
+      monolog: "M\xF3j dom"
     questItem:
     - {fileID: 884580559}
     destroyItems: 0
@@ -30249,6 +30264,198 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ce5e439ebaca684fad07fc5eb281fa2, type: 3}
+--- !u!1001 &1686079843
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.51
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 56.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4127069
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91086394
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -48.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_Name
+      value: npc_character
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 006215755504f3f41a64e1501b5c696d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Selectable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 006215755504f3f41a64e1501b5c696d, type: 3}
+--- !u!1 &1686079844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 006215755504f3f41a64e1501b5c696d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1686079843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1686079845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686079844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.922, b: 0.475, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1686079846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686079844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c9ae2deec32d546bfd52f0e6a7cb8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 791647992}
+  dialogi:
+  - 'NPC: Witaj na wyspie'
+  - "NPC: To jest tw\xF3j nowy dom"
+  - "NPC: Twoim zadaniem jest ostrzeganie statk\xF3w przed niebezpiecze\u0144stwem"
+  - "NPC: Pami\u0119taj o zapaleniu latarni codziennie wieczorem"
+  - "NPC: Aby zapali\u0107 latarni\u0119 musisz wcisn\u0105\u0107 przycisk do podnoszenia
+    kopu\u0142y i zapali\u0107 knot od zapalniczki"
+  - "NPC: Je\u017Celi potrzebujesz pomocy naci\u015Bnij F1"
+  - 'Ja: No to do roboty...'
+  key: {fileID: 0}
+--- !u!95 &1686079847
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686079844}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b0cec09770c4604d87ef510cb11b214, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!23 &1686079848
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686079844}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1686079849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686079844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.4, z: 0.91}
+  m_Center: {x: 0, y: 1.78, z: 0}
 --- !u!1 &1688418305
 GameObject:
   m_ObjectHideFlags: 0
