@@ -8,6 +8,7 @@ public class LighthouseData
     public int sceneId;
     
     public bool uniqueCollected1;
+    public bool uniqueCollected2;
 
     public int itemsCount;
     public string[] itemNames;
@@ -17,6 +18,7 @@ public class LighthouseData
         sceneId = player.level;
         
         uniqueCollected1 = Player.UniqueCollected1;
+        uniqueCollected2 = Player.UniqueCollected2;
         
         itemNames = SaveItems(player);
         itemsCount = itemNames.Length;
