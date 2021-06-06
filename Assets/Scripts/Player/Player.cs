@@ -148,6 +148,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("Number of active quests: " + numberOfActiveQuests);
         // W przypadku gdy skończymy wszystkie questy to dodawany jest quest latarni
         if (numberOfActiveQuests == 0)
         {
@@ -158,9 +159,10 @@ public class Player : MonoBehaviour
             }
             else
             {
+                Debug.Log("halo");
                 if(!quests[_numberOfAllQuestes-1].isCompleted)
                 {
-                    numberOfActiveQuests = 1;
+                    // numberOfActiveQuests = 1;
                     activeQuestID++;
                     quests[activeQuestID].isActive = true;
                     questSetups[activeQuestID].SetCanvasPosition(_canvas, activeQuestID+1);
@@ -250,9 +252,11 @@ public class Player : MonoBehaviour
                                     _lightSwitch = new LightSwitch(quest.questItem[0]);
                                 else
                                 {
-                                    DeleteAllItems();
                                     quest.questGoal.currentAmmount--;
                                 }
+
+                                if (isRetrospection)
+                                    DeleteAllItems();
                                 break;
 
                             // case GoalType.color:
@@ -273,13 +277,15 @@ public class Player : MonoBehaviour
                         }
 
                         quest.questGoal.currentAmmount++;
-
+                        
                         if (quest.questGoal.IsReached())
                         {
+                            Debug.Log(quest.questName + "Reached");
                             quest.completed();
                             StartCoroutine(quest.questGoal.showMonolog(monologbox));
                             numberOfActiveQuests--;
                         }
+                        Debug.Log(quest.questName + " | " + numberOfActiveQuests);
                     }
                     else if (item.GetComponent<ItemPickup>() && item.GetComponent<ItemPickup>().nonQuestRelated &&
                              !playerInventory.isEqFull())
