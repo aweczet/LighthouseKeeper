@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.105996765, g: 0.12846531, b: 0.15792958, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.10599667, g: 0.1284653, b: 0.15792944, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3149,7 +3149,7 @@ GameObject:
   - component: {fileID: 352407207}
   - component: {fileID: 352407206}
   m_Layer: 5
-  m_Name: flag_y_3
+  m_Name: flag_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9409,8 +9409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
-  itemTag: 
+  itemButton: {fileID: 1174789337}
+  itemTag: flag
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
@@ -17129,7 +17129,7 @@ GameObject:
   - component: {fileID: 743811733}
   - component: {fileID: 743811732}
   m_Layer: 5
-  m_Name: flag_g_1
+  m_Name: flag_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18288,7 +18288,7 @@ GameObject:
   - component: {fileID: 848770689}
   - component: {fileID: 848770688}
   m_Layer: 5
-  m_Name: flag_b_2
+  m_Name: flag_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21189,7 +21189,7 @@ GameObject:
   - component: {fileID: 1174789340}
   - component: {fileID: 1174789339}
   m_Layer: 5
-  m_Name: flag_r_4
+  m_Name: flag_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21202,7 +21202,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174789337}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.37123, y: 0.37123, z: 0.37123}
   m_Children: []
@@ -25344,8 +25344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
-  itemTag: 
+  itemButton: {fileID: 743811730}
+  itemTag: flag
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
@@ -27294,8 +27294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
-  itemTag: 
+  itemButton: {fileID: 352407204}
+  itemTag: flag
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
@@ -28829,8 +28829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
-  itemTag: 
+  itemButton: {fileID: 848770686}
+  itemTag: flag
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
