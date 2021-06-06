@@ -79,13 +79,15 @@ public class PlayerInventory : MonoBehaviour
 
     public void removeItemAfterQuest(int id){
         Debug.Log("removeitemafterquest "+id);
-        isFull[id] = false;
-        items[id].SetActive(false);
-        Destroy(itemIcon[id]);
-        items[id] = null;
-        itemTag[id] = "";
-        if(activeItemID == id)
-            isActive = false;
+        if(items[id]){
+            isFull[id] = false;
+            items[id].SetActive(false);
+            Destroy(itemIcon[id]);
+            items[id] = null;
+            itemTag[id] = "";
+            if(activeItemID == id)
+                isActive = false;
+        }
     }
 
     public void nextItem()
