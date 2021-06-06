@@ -1609,6 +1609,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &139662319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1811,6 +1812,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &185975085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1936,17 +1938,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.684
+      value: 0.6839999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.859
+      value: -0.85900015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.655
+      value: 2.6550002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
@@ -1961,7 +1963,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.7763566e-15
+      value: 3.5527133e-15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
@@ -1971,7 +1973,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
@@ -1991,7 +1993,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.008143934
+      value: 0.008143935
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.008743933
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 458cce495c0cf4f4d8abe944ec91a35e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.012215903
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 458cce495c0cf4f4d8abe944ec91a35e,
         type: 3}
@@ -2797,6 +2809,7 @@ MonoBehaviour:
   itemTag: doorbook
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!1001 &325214373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4446,6 +4459,7 @@ MonoBehaviour:
   itemTag: lighter
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!4 &465754601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bba59e026f0184b4dbb16bf034c3bf7d,
@@ -9656,6 +9670,7 @@ MonoBehaviour:
   itemTag: flag
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &483916165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9944,6 +9959,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &514369441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11091,6 +11107,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!1 &688443169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd26373e9522d6243aa02d6933a138f8,
@@ -11138,6 +11155,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!65 &688443173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11179,8 +11197,8 @@ Transform:
   m_LocalScale: {x: 2.7000003, y: 2.6, z: 2.7000003}
   m_Children:
   - {fileID: 795395734}
-  - {fileID: 454398310}
   - {fileID: 1430057885}
+  - {fileID: 454398310}
   m_Father: {fileID: 149309817}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -35, z: 0}
@@ -11844,6 +11862,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!65 &747456360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19981,6 +20000,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1121928720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20556,6 +20576,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!64 &1246627276
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21752,6 +21773,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1403354351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21895,7 +21917,7 @@ Transform:
   - {fileID: 1702853649}
   - {fileID: 734189428}
   m_Father: {fileID: 695601754}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1431206190
 GameObject:
@@ -22753,6 +22775,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1580324603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23937,6 +23960,7 @@ MonoBehaviour:
   itemTag: flag
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1694371115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24084,6 +24108,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 1
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1704269653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25156,6 +25181,7 @@ MonoBehaviour:
   itemTag: endgame
   nonQuestRelated: 0
   foodWithBook: 1
+  Food: 0
 --- !u!114 &1816185360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25290,6 +25316,7 @@ MonoBehaviour:
   itemTag: 
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1831825018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25901,6 +25928,7 @@ MonoBehaviour:
   itemTag: flag
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &1886321034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27187,6 +27215,7 @@ MonoBehaviour:
   itemTag: flag
   nonQuestRelated: 0
   foodWithBook: 0
+  Food: 0
 --- !u!114 &2041888789
 MonoBehaviour:
   m_ObjectHideFlags: 0

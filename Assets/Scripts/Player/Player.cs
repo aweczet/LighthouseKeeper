@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 /// <summary>
 /// Klasa odpowiadająca za wszystkie informacje o graczu
@@ -148,7 +149,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Number of active quests: " + numberOfActiveQuests);
         // W przypadku gdy skończymy wszystkie questy to dodawany jest quest latarni
         if (numberOfActiveQuests == 0)
         {
@@ -159,14 +159,16 @@ public class Player : MonoBehaviour
             }
             else
             {
-                Debug.Log("halo");
                 if(!quests[_numberOfAllQuestes-1].isCompleted)
                 {
-                    // numberOfActiveQuests = 1;
+                    numberOfActiveQuests = 1;
                     activeQuestID++;
                     quests[activeQuestID].isActive = true;
                     questSetups[activeQuestID].SetCanvasPosition(_canvas, activeQuestID+1);
                     questSetups[activeQuestID].newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
+                }
+                if(quests[quests.Length - 1].isCompleted){
+                    retroNextScene();
                 }
             }
         }
@@ -315,5 +317,11 @@ public class Player : MonoBehaviour
         _questSetup.SetCanvasPosition(_canvas, _numberOfAllQuestes);
         _questSetup.newQuestUI.GetComponent<Text>().color = new Color32(0x33, 0x33, 0x33, 0xFF);
         numberOfActiveQuests++;
+    }
+
+    private IEnumerator retroNextScene(){
+        yield return new WaitForSeconds(2);
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextScene);
     }
 }

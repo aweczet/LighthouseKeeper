@@ -7861,7 +7861,7 @@ MonoBehaviour:
     destroyItems: 0
     itemID: 
     questItemLength: 0
-  - isActive: 1
+  - isActive: 0
     isCompleted: 0
     title: "Zapytaj zarz\u0105dce o lamp\u0119"
     questName: {fileID: 0}
@@ -7876,7 +7876,7 @@ MonoBehaviour:
     destroyItems: 0
     itemID: 
     questItemLength: 0
-  - isActive: 1
+  - isActive: 0
     isCompleted: 0
     title: "We\u017A lamp\u0119"
     questName: {fileID: 0}
