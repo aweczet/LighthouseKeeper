@@ -88,9 +88,9 @@ public class LightingManager : MonoBehaviour
     // Sets max time independently of quests in floating menu
     private void SetTimeOnMenu()
     {
-        if (SceneManager.GetActiveScene().name != "MenuFloating" && SceneManager.GetActiveScene().name != "MenuFloatingWithBackground")
+        if (SceneManager.GetActiveScene().name != "MenuFloating" && SceneManager.GetActiveScene().name != "MenuFloatingWithBackground" && SceneManager.GetActiveScene().name != "MainMenu")
             return;
-        _maxTime = 12;
+        _maxTime = 24;
         if (timeOfDay < 6 || timeOfDay > 18)
             lighthouse.SetActive(true);
         else
