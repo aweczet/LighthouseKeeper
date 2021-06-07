@@ -2423,6 +2423,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1819311728008800091, guid: 0722ca049bbeb724c8b18717a5aef35a,
+        type: 3}
+      propertyPath: sounds.Array.data[0].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819311728008800091, guid: 0722ca049bbeb724c8b18717a5aef35a,
+        type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ed50f529562676a448e583c9130ccf14, type: 3}
     - target: {fileID: 2136984756883316889, guid: 0722ca049bbeb724c8b18717a5aef35a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16976,7 +16986,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1853958282
 PrefabInstance:
