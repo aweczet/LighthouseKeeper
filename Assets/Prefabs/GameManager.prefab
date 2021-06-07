@@ -58,30 +58,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
   sounds:
-  - name: background
+  - name: MainBackground
     clip: {fileID: 8300000, guid: 6fe487522614f7045b44b50bb1267203, type: 3}
     volume: 0.1
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1
-    loop: 0
+    loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: switch_on
-    clip: {fileID: 8300000, guid: 6bf64a80f9494d840943e0dbefad4e5f, type: 3}
-    volume: 0.5
+  - name: MainCave
+    clip: {fileID: 8300000, guid: ed50f529562676a448e583c9130ccf14, type: 3}
+    volume: 0.1
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1
-    loop: 0
+    loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: switch_off
-    clip: {fileID: 8300000, guid: 44f1c37dc82b7af479a7644a8648d43c, type: 3}
-    volume: 0.5
+  - name: MainHarpoon
+    clip: {fileID: 8300000, guid: 0e47201726eff644fa6eaa3e53a65f74, type: 3}
+    volume: 0.1
     volumeVariance: 0.1
     pitch: 1
     pitchVariance: 0.1
-    loop: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Ending
+    clip: {fileID: 8300000, guid: 85ed81116b8cd9d419eaaac8aa49671b, type: 3}
+    volume: 0.1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: MainMenu
+    clip: {fileID: 8300000, guid: 2da6fc9b43d3c5f47b24b2b883280262, type: 3}
+    volume: 0.1
+    volumeVariance: 0.1
+    pitch: 1
+    pitchVariance: 0.1
+    loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}

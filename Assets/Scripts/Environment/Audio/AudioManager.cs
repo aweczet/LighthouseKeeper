@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
-    void Awake()
+    private void Awake()
     {
         if (instance != null)
         {
@@ -35,9 +35,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Start()
+    public void StopAll()
     {
-        Play("background");
+        foreach (var sound in sounds)
+        {
+            sound.source.Stop();
+        }
     }
 
     public void Play(string soundName)

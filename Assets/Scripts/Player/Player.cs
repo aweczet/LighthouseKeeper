@@ -135,6 +135,32 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        AudioManager audioManager = GameObject.Find("GameManager").GetComponent<AudioManager>();
+        audioManager.StopAll();
+        switch (SceneManager.GetActiveScene().buildIndex)
+        {
+            // Main menu
+            case 0:
+                audioManager.Play("MainMenu");
+                break;
+            // Cave retrospection
+            case 4:
+                audioManager.Play("MainCave");
+                break;
+            // Shark retrospection
+            case 6:
+                audioManager.Play("MainHarpoon");
+                break;
+            // Ending scene
+            case 8:
+                audioManager.Play("Ending");
+                break;
+            // Regular scenes
+            default:
+                audioManager.Play("MainBackground");
+                break;
+        }
+        
         if (!isRetrospection) return;
         playerInventory = gameObject.GetComponent<PlayerInventory>();
         DeleteAllItems();
