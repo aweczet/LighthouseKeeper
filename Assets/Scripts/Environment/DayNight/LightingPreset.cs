@@ -4,8 +4,8 @@
 /// Preset, który służy do zmian kolorów oświetlenia
 /// </summary>
 [System.Serializable]
-[CreateAssetMenu(fileName = "Lighting preset", menuName = "Scriptables/Lighting preset", order = 1)]
-public class Lightingpreset : ScriptableObject
+[CreateAssetMenu(fileName = "LightingPreset", menuName = "Scriptables/LightingPreset", order = 1)]
+public class LightingPreset : ScriptableObject
 {
     public Gradient ambientColor;
     public Gradient directionalColor;
