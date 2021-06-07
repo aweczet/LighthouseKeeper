@@ -297,8 +297,16 @@ public class Player : MonoBehaviour
                                 // quest.questGoal.currentAmmount--;
                                 break;
                             case GoalType.flag:
-                                if(!flagMissionCompleted)
-                                    quest.questGoal.currentAmmount--;
+                                Randomizer barometerInfo = GameObject.FindGameObjectWithTag("barometr").GetComponent<Randomizer>();
+                                if(flagMissionCompleted){
+                                    break;
+                                }
+                                string holdingFlagName = playerInventory.items[playerInventory.activeItemID].gameObject.name;
+                                int holdingFlagId = int.Parse(holdingFlagName.Substring(holdingFlagName.Length - 1));
+                                if (barometerInfo.flagColorID == holdingFlagId){
+                                    break;
+                                }
+                                quest.questGoal.currentAmmount--;
                                 break;
                             default:
                                 break;
