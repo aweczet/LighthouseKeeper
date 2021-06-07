@@ -39,14 +39,7 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-
-        // Spowolnienie gracza po naciśnięciu klawisza LeftShift
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded)
-            speed = 6f;
-
-        if (Input.GetKeyUp(KeyCode.LeftShift) && isGrounded)
-            speed = 12f;
-
+        
 
         controller.Move(move * speed * Time.deltaTime);
 
