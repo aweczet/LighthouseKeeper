@@ -17,6 +17,7 @@ public class KeyBindings : MonoBehaviour
     [HideInInspector] private TextMeshProUGUI text;
     public GameObject textbg;
     public GameObject ship;
+    public GameObject openBook;
     public Animation dOpen;
     public Animation dClose;
     [HideInInspector] private bool doorsOpened = false;
@@ -117,23 +118,21 @@ public class KeyBindings : MonoBehaviour
         }
 
         if(Input.GetKeyUp(KeyCode.H)){
-            hud.SetActive(!hud.activeSelf);
+            GameObject.Find("UICanvas/Inventory").SetActive(false);
+            GameObject.Find("UICanvas/QuestPanel").SetActive(false);
+            GameObject.Find("UICanvas/Text").SetActive(false);
         }
 
         if(Input.GetKeyUp(KeyCode.M)){
             StartCoroutine(this.hoursPass());
         }
 
-        if(Input.GetKeyUp(KeyCode.P)){
-            Animator temp = doors.GetComponent<Animator>();
-            if(doorsOpened){
-                temp.SetBool("isOpen", false);
-            }
-            else{
-                temp.SetBool("isOpen", true);
-            }
-            doorsOpened = !doorsOpened;
+        if(Input.GetKeyUp(KeyCode.N)){
+            openBook.SetActive(!openBook.activeSelf);
         }
+
+
+
     }
 
     private IEnumerator hoursPass(){
