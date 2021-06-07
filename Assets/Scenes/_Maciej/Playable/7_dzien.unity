@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.105996884, g: 0.12846571, b: 0.1579299, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.105996765, g: 0.12846531, b: 0.15792958, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1563,7 +1563,7 @@ PrefabInstance:
     - target: {fileID: 7683225219276070656, guid: 0722ca049bbeb724c8b18717a5aef35a,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0722ca049bbeb724c8b18717a5aef35a, type: 3}
@@ -1676,6 +1676,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &139662319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2104,6 +2105,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &185975085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3601,6 +3603,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!1 &333630094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,11 +4370,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
+  itemButton: {fileID: 171497855}
   itemTag: lighter
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &450192895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4676,6 +4680,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!4 &465754601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bba59e026f0184b4dbb16bf034c3bf7d,
@@ -5247,11 +5252,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
+  itemButton: {fileID: 1364024001}
   itemTag: 
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &483916165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5539,7 +5545,7 @@ GameObject:
   - component: {fileID: 511979324}
   - component: {fileID: 511979323}
   m_Layer: 5
-  m_Name: flag_b_2
+  m_Name: flag_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5631,6 +5637,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &514369441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11763,6 +11770,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &668338359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12120,6 +12128,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!65 &688443173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13202,6 +13211,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!65 &747456360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13227,7 +13237,7 @@ GameObject:
   - component: {fileID: 753188097}
   - component: {fileID: 753188096}
   m_Layer: 5
-  m_Name: flag_g_1
+  m_Name: flag_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13716,6 +13726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textbg: {fileID: 0}
   ship: {fileID: 0}
+  openBook: {fileID: 0}
   dOpen: {fileID: 0}
   dClose: {fileID: 0}
 --- !u!1 &798877880
@@ -19247,7 +19258,7 @@ GameObject:
   - component: {fileID: 869012905}
   - component: {fileID: 869012904}
   m_Layer: 5
-  m_Name: flag_y_3
+  m_Name: flag_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21409,6 +21420,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &1121928720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22893,7 +22905,7 @@ GameObject:
   - component: {fileID: 1364024004}
   - component: {fileID: 1364024003}
   m_Layer: 5
-  m_Name: flag_r_4
+  m_Name: flag_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24954,6 +24966,7 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &1580324603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25716,11 +25729,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
+  itemButton: {fileID: 753188094}
   itemTag: 
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &1694371115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27386,11 +27400,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
+  itemButton: {fileID: 869012902}
   itemTag: 
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &1886321034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28849,11 +28864,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 0}
+  itemButton: {fileID: 511979321}
   itemTag: 
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
+  textbg: {fileID: 0}
 --- !u!114 &2041888789
 MonoBehaviour:
   m_ObjectHideFlags: 0
