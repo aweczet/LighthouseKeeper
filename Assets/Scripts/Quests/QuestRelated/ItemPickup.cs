@@ -14,6 +14,7 @@ public class ItemPickup : MonoBehaviour
     public bool foodWithBook = false;
     public bool Food = false;
     private GameObject arrow;
+    public GameObject textbg;
     
     public void Start()
     {
@@ -23,6 +24,7 @@ public class ItemPickup : MonoBehaviour
         }
         
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+        textbg = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().monologbox;
         //DontDestroyOnLoad(itemButton);
     }
 
@@ -51,6 +53,11 @@ public class ItemPickup : MonoBehaviour
                 return;
             }
         }
+        text = textbg.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+        text.SetText("Masz pełny ekwipunek");
+        textbg.SetActive(true);
+        yield return new WaitForSeconds(2);
+        textbg.SetActive(false);
     }
 
     public void pickupFoodWithBook(){
