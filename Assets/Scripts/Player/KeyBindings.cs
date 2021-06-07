@@ -118,7 +118,9 @@ public class KeyBindings : MonoBehaviour
         }
 
         if(Input.GetKeyUp(KeyCode.H)){
-            hud.SetActive(!hud.activeSelf);
+            GameObject.Find("UICanvas/Inventory").SetActive(false);
+            GameObject.Find("UICanvas/QuestPanel").SetActive(false);
+            GameObject.Find("UICanvas/Text").SetActive(false);
         }
 
         if(Input.GetKeyUp(KeyCode.M)){
