@@ -2,7 +2,6 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public class SaveSystem
 {

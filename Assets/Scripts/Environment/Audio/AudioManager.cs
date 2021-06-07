@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Klasa odpowiadająca za odtworzenie wybranego dźwięku/melodii
@@ -32,6 +33,14 @@ public class AudioManager : MonoBehaviour
             sound.source.loop = sound.loop;
 
             sound.source.outputAudioMixerGroup = mixerGroup;
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
