@@ -8,7 +8,7 @@ using UnityEngine;
 public class LightingManager : MonoBehaviour
 {
     [SerializeField] private Light directionalLight;
-    [SerializeField] private Lightingpreset preset;
+    [SerializeField] private LightingPreset preset;
 
     [SerializeField, Range(0, 24)] private float timeOfDay; // aktualna godzina
     private float _timeSpeed = .5f; // zmienna wpływająca na prędkość zmiany godziny
