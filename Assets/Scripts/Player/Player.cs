@@ -301,9 +301,9 @@ public class Player : MonoBehaviour
                                 if(flagMissionCompleted){
                                     break;
                                 }
-                                string holdingFlagName = playerInventory.items[playerInventory.activeItemID].gameObject.name;
+                                string holdingFlagName = playerInventory.lastItemName;
                                 int holdingFlagId = int.Parse(holdingFlagName.Substring(holdingFlagName.Length - 1));
-                                if (barometerInfo.flagColorID == holdingFlagId){
+                                if (barometerInfo.flagColorID == holdingFlagId && playerInventory.removed){
                                     break;
                                 }
                                 quest.questGoal.currentAmmount--;

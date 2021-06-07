@@ -15,9 +15,11 @@ public class PlayerInventory : MonoBehaviour
     [HideInInspector] public string[] itemTag;
 
     [HideInInspector] public bool isActive = false;
+    [HideInInspector] public bool removed = false;
     [HideInInspector] public int activeItemID = 0;
     [HideInInspector] public int lastAddedID = 0;
     [HideInInspector] private Camera camera;
+    [HideInInspector] public string lastItemName;
 
     private void Awake()
     {
@@ -86,43 +88,47 @@ public class PlayerInventory : MonoBehaviour
             Destroy(itemIcon[id]);
             items[id] = null;
             itemTag[id] = "";
-            if(activeItemID == id)
+            if(activeItemID == id){
                 isActive = false;
-        }
-    }
-
-    public void nextItem()
-    {
-        for (int i = activeItemID + 1; i < isFull.Length; i++)
-        {
-            if (isFull[i])
-            {
-                items[activeItemID].SetActive(false);
-                items[i].SetActive(true);
-                activeItemID = i;
-                return;
-            }
-        }
-
-        items[activeItemID].SetActive(false);
-        activeItemID = 0;
-        isActive = false;
-    }
-
-    public void holdFirstItem()
-    {
-        activeItemID = 0;
-        for (int i = activeItemID; i < isFull.Length; i++)
-        {
-            if (isFull[i])
-            {
-                items[i].SetActive(true);
-                activeItemID = i;
-                isActive = true;
-                break;
+                removed = true;
             }
         }
     }
+
+    // public void nextItem()
+    // {
+    //     for (int i = activeItemID + 1; i < isFull.Length; i++)
+    //     {
+    //         if (isFull[i])
+    //         {
+    //             items[activeItemID].SetActive(false);
+    //             items[i].SetActive(true);
+    //             activeItemID = i;
+    //             lastItemName = items[i].name;
+    //             return;
+    //         }
+    //     }
+
+    //     items[activeItemID].SetActive(false);
+    //     activeItemID = 0;
+    //     isActive = false;
+    // }
+
+    // public void holdFirstItem()
+    // {
+    //     activeItemID = 0;
+    //     for (int i = activeItemID; i < isFull.Length; i++)
+    //     {
+    //         if (isFull[i])
+    //         {
+    //             items[i].SetActive(true);
+    //             activeItemID = i;
+    //             isActive = true;
+    //             lastItemName = items[i].name;
+    //             break;
+    //         }
+    //     }
+    // }
 
     public void holdXItem(int id)
     {
@@ -135,6 +141,8 @@ public class PlayerInventory : MonoBehaviour
             items[id].SetActive(true);
             activeItemID = id;
             isActive = true;
+            removed = false;
+            lastItemName = items[id].name;
         }
     }
 
@@ -142,5 +150,6 @@ public class PlayerInventory : MonoBehaviour
         items[activeItemID].SetActive(false);
         activeItemID = 0;
         isActive = false;
+        removed = false;
     }
 }
