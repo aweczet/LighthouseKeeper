@@ -70,6 +70,7 @@ public class PlayerInventory : MonoBehaviour
         dropped.SetActive(true);
         dropped.GetComponent<ItemPickup>().nonQuestRelated = true;
         dropped.GetComponent<ItemPickup>().itemTag = itemTag[activeItemID];
+        dropped.GetComponent<ItemPickup>().itemButton = GameObject.Find("UICanvas/Inventory/"+items[activeItemID].name);
         dropped.name = items[activeItemID].name;
         dropped.AddComponent<Rigidbody>();
         items[activeItemID] = null;
