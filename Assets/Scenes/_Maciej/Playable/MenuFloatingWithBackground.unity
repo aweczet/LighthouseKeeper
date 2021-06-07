@@ -3544,7 +3544,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &413592416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11971,6 +11971,7 @@ MonoBehaviour:
   quests: []
   numberOfActiveQuests: 0
   playerInventory: {fileID: 0}
+  activeQuestID: 0
   isRetrospection: 0
   level: 1
   monologbox: {fileID: 0}
