@@ -45,6 +45,7 @@ public class SaveManager : MonoBehaviour
         LighthouseData data = SaveSystem.LoadGame();
         if (data == null || data.sceneId != SceneManager.GetActiveScene().buildIndex) return;
         Player.UniqueCollected1 = data.uniqueCollected1;
+        Player.UniqueCollected2 = data.uniqueCollected2;
 
         Transform inventoryImages = GameObject.Find("UICanvas/Inventory").transform;
         Transform inventoryObjects = GameObject.Find("First Person Player/HeldItem").transform;

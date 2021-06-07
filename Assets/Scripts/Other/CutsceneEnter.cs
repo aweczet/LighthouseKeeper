@@ -7,6 +7,7 @@ public class CutsceneEnter : MonoBehaviour
     public GameObject thePlayer;
     public GameObject cutsceneImageDisplay;
     public GameObject cutsceneVideoPlayer;
+    public GameObject blackScreen;
 
     public int timeDisplay;
 
@@ -23,7 +24,7 @@ public class CutsceneEnter : MonoBehaviour
 
     IEnumerator FinishCut() {
         yield return new WaitForSeconds(timeDisplay);
-        thePlayer.SetActive(true);
+        blackScreen.SetActive(true);
         cutsceneImageDisplay.SetActive(false);
         cutsceneVideoPlayer.SetActive(false);
     }

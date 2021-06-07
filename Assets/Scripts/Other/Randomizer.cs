@@ -22,7 +22,7 @@ public class Randomizer : MonoBehaviour
     
     public void SetUpFlagColorID()
     {
-        while( (randomAngle <= 74 && randomAngle >= 59) || (randomAngle <= 9 && randomAngle >= -9) || (randomAngle <= -59 && randomAngle >= -74)) {
+        while( (randomAngle <= 74 && randomAngle >= 51) || (randomAngle <= 9 && randomAngle >= -9) || (randomAngle <= -51 && randomAngle >= -74)) {
             Awake();
         }
         if (randomAngle <= 115 && randomAngle >= 75)

@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/_Maciej/Playable/6_woda_retrospekcja.unity
     guid: d85f9236628078748b61db808ca959b2
   - enabled: 1
+    path: Assets/Scenes/_Maciej/Playable/7_dzien.unity
+    guid: 03a66cf16c0d9e74a9e2b67dee0d59ad
+  - enabled: 1
     path: Assets/Scenes/_Maciej/Playable/end.unity
     guid: 5758c9f0a3b84ca48b71ac90f7ee1e41
   m_configObjects: {}
