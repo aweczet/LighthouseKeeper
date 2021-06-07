@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     private QuestSetup[] questSetups;
     private GameObject _canvas;
     [HideInInspector] public PlayerInventory playerInventory;
+    [HideInInspector] public int activeQuestID;
 
     private LightSwitch _lightSwitch;
     private ColorChange _colorChange;
@@ -30,7 +31,6 @@ public class Player : MonoBehaviour
 
     private int _numberOfAllQuestes;
     private int _lighthouseQuestID;
-    private int activeQuestID;
 
     public bool isRetrospection = false;
     public int level;
