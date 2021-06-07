@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.105996884, g: 0.12846571, b: 0.1579299, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.105996765, g: 0.12846531, b: 0.15792958, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17559,7 +17559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 791647993}
-  speed: 12
+  speed: 10
   gravity: -19.62
   jumpHeight: 2
   groundCheck: {fileID: 2113930309}
@@ -17674,6 +17674,7 @@ MonoBehaviour:
     questItemLength: 0
   numberOfActiveQuests: 0
   playerInventory: {fileID: 0}
+  activeQuestID: 0
   isRetrospection: 0
   level: 1
   monologbox: {fileID: 908840531}
