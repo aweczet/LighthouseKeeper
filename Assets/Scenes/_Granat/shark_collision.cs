@@ -30,12 +30,10 @@ public class shark_collision : MonoBehaviour
 
     private void Update()
     {
-        if (_sharkHealth <= 0)
-        {
-            Destroy(gameObject);
-            Destroy(_sharkHealthBarUI);
-            nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-            SceneManager.LoadScene(nextScene);
-        }
+        if (_sharkHealth > 0) return;
+        Destroy(gameObject);
+        Destroy(_sharkHealthBarUI);
+        nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextScene);
     }
 }
