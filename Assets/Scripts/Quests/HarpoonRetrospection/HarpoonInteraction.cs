@@ -20,10 +20,6 @@ public class HarpoonInteraction : MonoBehaviour
 
     private bool _lockedIn;
 
-    
-
-    
-
     private void Start()
     {
         _origin = transform.GetChild(0);
@@ -37,7 +33,7 @@ public class HarpoonInteraction : MonoBehaviour
     {
         if (_harpoon == null || _harpoon.velocity == Vector3.zero) return;
         _harpoon.rotation = Quaternion.LookRotation(_harpoon.velocity);
-        if (_harpoon.position.y <= _origin.position.y - 20)
+        if (_harpoon.position.y <= _origin.position.y - 10)
         {
             Destroy(_harpoon.gameObject);
         }
@@ -53,9 +49,7 @@ public class HarpoonInteraction : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             if (_harpoon != null)
-            {
-                Destroy(_harpoon.gameObject);
-            }
+                return;
 
             Shoot(Mathf.Clamp(_newTargetPositionX / 10, .5f, 1.5f));
         }
