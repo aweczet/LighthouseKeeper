@@ -35,7 +35,7 @@ public class ItemUseOnObject : MonoBehaviour
                 int holdingFlagId = int.Parse(holdingFlagName.Substring(holdingFlagName.Length - 1));
 
                 // How does it work?
-                if (barometerInfo.flagColorID == holdingFlagId)
+                if (barometerInfo.flagColorID == holdingFlagId && _playerInventory.isActive)
                 {
                     Player.flagMissionCompleted = true;
                     GameObject mainFlag = GameObject.Find("main_flag/Flag");

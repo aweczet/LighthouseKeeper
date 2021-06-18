@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -71,6 +72,16 @@ public class HarpoonInteraction : MonoBehaviour
         transform.parent = _player;
         transform.tag = "Untagged";
         _lockedIn = true;
+        StartCoroutine(LockInText());
+    }
+
+    private IEnumerator LockInText(){
+        GameObject textbg = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().monologbox;
+        TextMeshProUGUI text = textbg.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+        text.SetText("Aby strzelić naciśnij Spację");
+        textbg.SetActive(true);
+        yield return new WaitForSeconds(3);
+        textbg.SetActive(false);
     }
 
     private void LockOut()
