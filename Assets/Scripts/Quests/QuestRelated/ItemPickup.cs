@@ -15,7 +15,6 @@ public class ItemPickup : MonoBehaviour
     public bool foodWithBook = false;
     public bool Food = false;
     private GameObject arrow;
-    public GameObject textbg;
     
     public void Start()
     {
@@ -55,23 +54,6 @@ public class ItemPickup : MonoBehaviour
             }
         }
         
-    }
-
-    public void pickupFoodWithBook(){
-        for (int i = 0; i < inventory.slots.Length; i++)
-        {
-            if (inventory.isFull[i] == false)
-            {
-                inventory.isFull[i] = true;
-                inventory.itemIcon[i] = Instantiate(itemButton, inventory.slots[i].transform, false);
-                inventory.itemIcon[i].SetActive(true);
-                inventory.items[i] = GameObject.Find("First Person Player/HeldItem/book1");
-                inventory.itemTag[i] = itemTag;
-                inventory.lastAddedID = i;
-            
-                return;
-            }
-        }
     }
     
 }

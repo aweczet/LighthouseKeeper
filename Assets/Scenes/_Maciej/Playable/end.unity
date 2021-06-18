@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.10599667, g: 0.1284653, b: 0.15792944, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.105996884, g: 0.12846571, b: 0.1579299, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1447,7 +1447,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cd0b043e163af5446b0d84b0e372544a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.660042
+      value: 6.237
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd0b043e163af5446b0d84b0e372544a,
         type: 3}
@@ -1684,7 +1684,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &139662319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1888,7 +1887,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &185975085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2917,7 +2915,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!1001 &325214373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4474,7 +4471,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!4 &465754601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bba59e026f0184b4dbb16bf034c3bf7d,
@@ -9930,7 +9926,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &514369441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10928,7 +10923,6 @@ MonoBehaviour:
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!65 &612394095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11409,7 +11403,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!1 &688443169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd26373e9522d6243aa02d6933a138f8,
@@ -11458,7 +11451,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!65 &688443173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12311,7 +12303,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!65 &747456360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20896,7 +20887,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1121928720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21656,7 +21646,6 @@ MonoBehaviour:
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!65 &1230590620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21766,7 +21755,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!64 &1246627276
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23177,7 +23165,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1403354351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24577,7 +24564,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1580324603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25679,7 +25665,6 @@ MonoBehaviour:
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1704269653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25844,7 +25829,6 @@ MonoBehaviour:
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!65 &1714965010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27481,7 +27465,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 1
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1816185360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27617,7 +27600,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1831825018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27985,7 +27967,6 @@ MonoBehaviour:
   nonQuestRelated: 1
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!65 &1854422699
 BoxCollider:
   m_ObjectHideFlags: 0
