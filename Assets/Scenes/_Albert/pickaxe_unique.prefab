@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6670468931468232887}
   - component: {fileID: 8202822990465278445}
   m_Layer: 0
-  m_Name: pickaxe
+  m_Name: pickaxe_unique
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,15 +103,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6330254073077551629}
-  m_LocalRotation: {x: 0, y: 0.81915206, z: 0, w: 0.57357645}
-  m_LocalPosition: {x: -88.08, y: 21.154, z: 1.624}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalRotation: {x: 0.6764181, y: 0.19371672, z: -0.19091363, w: 0.6844592}
+  m_LocalPosition: {x: -23.298, y: 3.972, z: 33.69}
+  m_LocalScale: {x: 0.050000012, y: 0.05, z: 0.050000012}
   m_Children:
   - {fileID: 7558133865710916562}
   - {fileID: 6779161305975541998}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 110, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.310005, y: 35.001003, z: 3.436}
 --- !u!114 &8202822990465278445
 MonoBehaviour:
   m_ObjectHideFlags: 0
