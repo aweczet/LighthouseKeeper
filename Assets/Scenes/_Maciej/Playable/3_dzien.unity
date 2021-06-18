@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.105996884, g: 0.12846571, b: 0.1579299, a: 0.6}
+  m_IndirectSpecularColor: {r: 0.105996765, g: 0.12846531, b: 0.15792958, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17827,7 +17827,7 @@ MonoBehaviour:
       goalType: 3
       requiredAmmount: 1
       currentAmmount: 0
-      monolog: "A tera zmusz\u0119 j\u0105 zawiesi\u0107"
+      monolog: "A teraz musz\u0119 j\u0105 zawiesi\u0107"
     questItem:
     - {fileID: 0}
     destroyItems: 0
@@ -34165,7 +34165,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 767bdd7c8b125fc42982592615f4991f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 767bdd7c8b125fc42982592615f4991f,
         type: 3}
