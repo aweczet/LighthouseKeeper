@@ -2523,7 +2523,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &428722093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14785,7 +14784,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!64 &982389837
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14899,7 +14897,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!1 &1012939116
 GameObject:
   m_ObjectHideFlags: 0
@@ -15325,7 +15322,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Kilkana\u015Bcie lat temu..."
+  m_Text: "Kilkadziesi\u0105t lat temu..."
 --- !u!222 &1121938857
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15576,7 +15573,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1249772912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15973,7 +15969,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1322952978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22431,7 +22426,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &1979227564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22848,7 +22842,6 @@ MonoBehaviour:
   nonQuestRelated: 0
   foodWithBook: 0
   Food: 0
-  textbg: {fileID: 0}
 --- !u!114 &2097240558
 MonoBehaviour:
   m_ObjectHideFlags: 0
